@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:ldml="http:///schemas/ldml/_8lVTEKG2EeuBYPHHopVtiQ/1" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/ldml/_8lVTEKG2EeuBYPHHopVtiQ/1 ldml.profile.uml#_8lXIQKG2EeuBYPHHopVtiQ">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:ldml="http:///schemas/ldml/_1hj0EDToEe2lE6RhA1xIxQ/3" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/ldml/_1hj0EDToEe2lE6RhA1xIxQ/3 ldml.profile.uml#_1hj0ETToEe2lE6RhA1xIxQ">
   <uml:Model xmi:id="_3xOcUJz_EeuyF7meMlB1iQ" name="uldm">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_3x0SMJz_EeuyF7meMlB1iQ">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -10,6 +10,125 @@
         <packagedElement xmi:type="uml:Package" xmi:id="_Mu_RkKDjEeuXwMLKVSwySg" name="SalesTransaction">
           <packagedElement xmi:type="uml:Package" xmi:id="_Ocwa8KDjEeuXwMLKVSwySg" name="PointOfSale"/>
           <packagedElement xmi:type="uml:Package" xmi:id="_bsytoKDjEeuXwMLKVSwySg" name="CustomerOrder"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_tuotQG_KEey8yOs7T6D48g" name="SalesTransaction">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_1kLtMG_KEey8yOs7T6D48g" name="transactionId" type="_q9tDgJ0gEeuosN6Nd1GBJQ"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_3F0fEG_KEey8yOs7T6D48g" name="transactionOrigin" type="_a22yIG_OEey8yOs7T6D48g"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_41RDcG_KEey8yOs7T6D48g" name="originatingTransactionId" type="_q9tDgJ0gEeuosN6Nd1GBJQ"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_QfWBMG_NEey8yOs7T6D48g" name="date" type="_v0B5QJ0gEeuosN6Nd1GBJQ"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_RQP5sG_NEey8yOs7T6D48g" name="time" type="_xpKO4J0gEeuosN6Nd1GBJQ">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VWR68G_NEey8yOs7T6D48g"/>
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="_VWR68W_NEey8yOs7T6D48g" value="1"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_Cv6usG_LEey8yOs7T6D48g" name="TransactionLine" isAbstract="true"/>
+          <packagedElement xmi:type="uml:Association" xmi:id="_F1zhkG_LEey8yOs7T6D48g" memberEnd="_F1_HwG_LEey8yOs7T6D48g _F1_u0G_LEey8yOs7T6D48g">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_F1-gsG_LEey8yOs7T6D48g" source="org.eclipse.papyrus">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F1-gsW_LEey8yOs7T6D48g" key="nature" value="UML_Nature"/>
+            </eAnnotations>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_F1_HwG_LEey8yOs7T6D48g" name="transactionline" type="_Cv6usG_LEey8yOs7T6D48g" association="_F1zhkG_LEey8yOs7T6D48g">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GzPaMW_LEey8yOs7T6D48g" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GzPaMm_LEey8yOs7T6D48g" value="*"/>
+            </ownedEnd>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_F1_u0G_LEey8yOs7T6D48g" name="salestransaction" type="_tuotQG_KEey8yOs7T6D48g" association="_F1zhkG_LEey8yOs7T6D48g">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GzOzIG_LEey8yOs7T6D48g" value="1"/>
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="_GzPaMG_LEey8yOs7T6D48g" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_KF4PoG_LEey8yOs7T6D48g" name="FundsExchange" isAbstract="true">
+            <generalization xmi:type="uml:Generalization" xmi:id="_QZWY0G_LEey8yOs7T6D48g" general="_Cv6usG_LEey8yOs7T6D48g"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_W6vpQG_LEey8yOs7T6D48g" name="exchangeType" type="_e1mVEG_NEey8yOs7T6D48g"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_SrBggG_LEey8yOs7T6D48g" name="amount" type="_pn7c0KHVEeuDk9H_gpfrgQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_NX5aAG_LEey8yOs7T6D48g" name="ProductExchange">
+            <generalization xmi:type="uml:Generalization" xmi:id="_RTcpkG_LEey8yOs7T6D48g" general="_Cv6usG_LEey8yOs7T6D48g"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_Ztrq8G_LEey8yOs7T6D48g" name="exchangeType" type="_lqB2QG_NEey8yOs7T6D48g"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_ctPMUG_LEey8yOs7T6D48g" name="quantity" type="_TRuJQKaKEeuFv72Lf76jxQ"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_drYPkG_LEey8yOs7T6D48g" name="pricePaid" type="_pn7c0KHVEeuDk9H_gpfrgQ"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_goC1AG_LEey8yOs7T6D48g" name="priceAdjustment" visibility="public" type="_SfJyQG_MEey8yOs7T6D48g">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ml-zEG_LEey8yOs7T6D48g"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ml_aIG_LEey8yOs7T6D48g" value="*"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_fAqngG_LEey8yOs7T6D48g" name="appliedCharge" type="_KEOuwL4fEeujfLsUf8U-Bw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nMMegG_LEey8yOs7T6D48g"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nMMegW_LEey8yOs7T6D48g" value="*"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_tupygKZzEeuFv72Lf76jxQ" name="Charge">
+            <packagedElement xmi:type="uml:Class" xmi:id="_FG4OkL1cEeu2H99e-q4qgQ" name="Charge" isAbstract="true">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_AfUfcL4eEeujfLsUf8U-Bw" name="jurisdiction" type="_PL_S0L1bEeu2H99e-q4qgQ"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_BqpDEL4eEeujfLsUf8U-Bw" name="rateType" type="_V8FYcL4dEeujfLsUf8U-Bw"/>
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Kjlu4L1cEeu2H99e-q4qgQ" client="_FG4OkL1cEeu2H99e-q4qgQ" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_BiYUYL4dEeujfLsUf8U-Bw" name="ChargeType">
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Z8SegL4dEeujfLsUf8U-Bw" client="_BiYUYL4dEeujfLsUf8U-Bw" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_V8FYcL4dEeujfLsUf8U-Bw" name="RateType">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_4vjXYL4dEeujfLsUf8U-Bw" name="chargeType" type="_BiYUYL4dEeujfLsUf8U-Bw"/>
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_av2CYL4dEeujfLsUf8U-Bw" client="_V8FYcL4dEeujfLsUf8U-Bw" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_hPsasL4dEeujfLsUf8U-Bw" name="FixedCharge">
+              <generalization xmi:type="uml:Generalization" xmi:id="_toEsoL4dEeujfLsUf8U-Bw" general="_FG4OkL1cEeu2H99e-q4qgQ"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_wdurIL4dEeujfLsUf8U-Bw" name="amount" type="_pn7c0KHVEeuDk9H_gpfrgQ"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_xqXdYL4dEeujfLsUf8U-Bw" name="quantity" type="_TRuJQKaKEeuFv72Lf76jxQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_iT4bkL4dEeujfLsUf8U-Bw" name="PercentageCharge">
+              <generalization xmi:type="uml:Generalization" xmi:id="_uMGmwL4dEeujfLsUf8U-Bw" general="_FG4OkL1cEeu2H99e-q4qgQ"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_2HrWML4dEeujfLsUf8U-Bw" name="rate" type="_W1-gQJ0gEeuosN6Nd1GBJQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:DataType" xmi:id="_KEOuwL4fEeujfLsUf8U-Bw" name="AppliedCharge">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_Q1ws8L4fEeujfLsUf8U-Bw" name="charge" type="_FG4OkL1cEeu2H99e-q4qgQ"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_Sk7kgL4fEeujfLsUf8U-Bw" name="compositeChargeRate" type="_W1-gQJ0gEeuosN6Nd1GBJQ">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_X2SJYL4fEeujfLsUf8U-Bw"/>
+              </ownedAttribute>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_vGyDEKZzEeuFv72Lf76jxQ" name="Restriction">
+            <packagedElement xmi:type="uml:Class" xmi:id="_78KRYMK_EeujfLsUf8U-Bw" name="SellingRestriction" isAbstract="true">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_x2P74MLAEeujfLsUf8U-Bw" name="jurisdiction" type="_PL_S0L1bEeu2H99e-q4qgQ"/>
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_EkpxMMLAEeujfLsUf8U-Bw" client="_78KRYMK_EeujfLsUf8U-Bw" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_JgGXgMLAEeujfLsUf8U-Bw" name="AgeRestriction">
+              <generalization xmi:type="uml:Generalization" xmi:id="_TIcx0MLAEeujfLsUf8U-Bw" general="_78KRYMK_EeujfLsUf8U-Bw"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_TyRK4MLAEeujfLsUf8U-Bw" name="minimumAge" type="_Ujp4UJ0gEeuosN6Nd1GBJQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_M2edcMLAEeujfLsUf8U-Bw" name="TimeOfDayRestriction">
+              <generalization xmi:type="uml:Generalization" xmi:id="_SgKp0MLAEeujfLsUf8U-Bw" general="_78KRYMK_EeujfLsUf8U-Bw"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_fMTlQMLAEeujfLsUf8U-Bw" name="after" type="_xpKO4J0gEeuosN6Nd1GBJQ">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wqBZUMLAEeujfLsUf8U-Bw"/>
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="_wqBZUcLAEeujfLsUf8U-Bw" value="1"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3CKkMLAEeujfLsUf8U-Bw" name="before" type="_xpKO4J0gEeuosN6Nd1GBJQ">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_v9qpoMLAEeujfLsUf8U-Bw"/>
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="_v9qpocLAEeujfLsUf8U-Bw" value="1"/>
+              </ownedAttribute>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_PIKzQMLAEeujfLsUf8U-Bw" name="QuantityRestriction">
+              <generalization xmi:type="uml:Generalization" xmi:id="_R5WhcMLAEeujfLsUf8U-Bw" general="_78KRYMK_EeujfLsUf8U-Bw"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_lWIqQMLAEeujfLsUf8U-Bw" name="maximumQuantity" type="_TRuJQKaKEeuFv72Lf76jxQ"/>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_JzMuwG_MEey8yOs7T6D48g" name="PriceAdjustment">
+            <packagedElement xmi:type="uml:DataType" xmi:id="_SfJyQG_MEey8yOs7T6D48g" name="PriceAdjustment">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_U_ExUG_MEey8yOs7T6D48g" name="adjustmentType" type="_q9tDgJ0gEeuosN6Nd1GBJQ"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_W7YF8G_MEey8yOs7T6D48g" name="amount" type="_pn7c0KHVEeuDk9H_gpfrgQ"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_YvquEG_MEey8yOs7T6D48g" name="percentage" type="_W1-gQJ0gEeuosN6Nd1GBJQ">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pYx1YG_MEey8yOs7T6D48g"/>
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="_pYyccG_MEey8yOs7T6D48g" value="1"/>
+              </ownedAttribute>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_r61icG_MEey8yOs7T6D48g" name="AdjustmentType">
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_2t7RkG_MEey8yOs7T6D48g" client="_r61icG_MEey8yOs7T6D48g" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_e1mVEG_NEey8yOs7T6D48g" name="FundsExchangeType">
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_pVVqYG_NEey8yOs7T6D48g" client="_e1mVEG_NEey8yOs7T6D48g" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_lqB2QG_NEey8yOs7T6D48g" name="ProductExchangeType">
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_qE-XkG_NEey8yOs7T6D48g" client="_lqB2QG_NEey8yOs7T6D48g" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_a22yIG_OEey8yOs7T6D48g" name="TransactionOrigin">
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_eY6joG_OEey8yOs7T6D48g" client="_a22yIG_OEey8yOs7T6D48g" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+          </packagedElement>
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="_mbsgUKDjEeuXwMLKVSwySg" name="Product">
           <packagedElement xmi:type="uml:Class" xmi:id="_DMnUcNTNEeuW8fcvHu-kJw" name="Product">
@@ -87,7 +206,7 @@
           </packagedElement>
         </packagedElement>
       </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_3RV5sKDhEeuXwMLKVSwySg" name="LogicalSupplyChain">
+      <packagedElement xmi:type="uml:Package" xmi:id="_3RV5sKDhEeuXwMLKVSwySg" name="Trading">
         <packagedElement xmi:type="uml:Package" xmi:id="_noHQIKDjEeuXwMLKVSwySg" name="Line">
           <packagedElement xmi:type="uml:Package" xmi:id="_kKxogKZzEeuFv72Lf76jxQ" name="Description">
             <packagedElement xmi:type="uml:Class" xmi:id="_ATiGIKZ4EeuFv72Lf76jxQ" name="NameType">
@@ -285,60 +404,6 @@
               </eAnnotations>
               <ownedEnd xmi:type="uml:Property" xmi:id="_MufbgAzBEeyuhKbTMn6kag" name="listvalue" type="_dF2OcL4zEeujfLsUf8U-Bw" association="_MuSAIAzBEeyuhKbTMn6kag"/>
               <ownedEnd xmi:type="uml:Property" xmi:id="_MuhQsAzBEeyuhKbTMn6kag" name="valueset" type="_DqwUIL4zEeujfLsUf8U-Bw" association="_MuSAIAzBEeyuhKbTMn6kag"/>
-            </packagedElement>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Package" xmi:id="_tupygKZzEeuFv72Lf76jxQ" name="Charge">
-            <packagedElement xmi:type="uml:Class" xmi:id="_FG4OkL1cEeu2H99e-q4qgQ" name="Charge" isAbstract="true">
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_AfUfcL4eEeujfLsUf8U-Bw" name="jurisdiction" type="_PL_S0L1bEeu2H99e-q4qgQ"/>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_BqpDEL4eEeujfLsUf8U-Bw" name="rateType" type="_V8FYcL4dEeujfLsUf8U-Bw"/>
-              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Kjlu4L1cEeu2H99e-q4qgQ" client="_FG4OkL1cEeu2H99e-q4qgQ" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_BiYUYL4dEeujfLsUf8U-Bw" name="ChargeType">
-              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Z8SegL4dEeujfLsUf8U-Bw" client="_BiYUYL4dEeujfLsUf8U-Bw" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_V8FYcL4dEeujfLsUf8U-Bw" name="RateType">
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_4vjXYL4dEeujfLsUf8U-Bw" name="chargeType" type="_BiYUYL4dEeujfLsUf8U-Bw"/>
-              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_av2CYL4dEeujfLsUf8U-Bw" client="_V8FYcL4dEeujfLsUf8U-Bw" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_hPsasL4dEeujfLsUf8U-Bw" name="FixedCharge">
-              <generalization xmi:type="uml:Generalization" xmi:id="_toEsoL4dEeujfLsUf8U-Bw" general="_FG4OkL1cEeu2H99e-q4qgQ"/>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_wdurIL4dEeujfLsUf8U-Bw" name="amount" type="_pn7c0KHVEeuDk9H_gpfrgQ"/>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_xqXdYL4dEeujfLsUf8U-Bw" name="quantity" type="_TRuJQKaKEeuFv72Lf76jxQ"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_iT4bkL4dEeujfLsUf8U-Bw" name="PercentageCharge">
-              <generalization xmi:type="uml:Generalization" xmi:id="_uMGmwL4dEeujfLsUf8U-Bw" general="_FG4OkL1cEeu2H99e-q4qgQ"/>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_2HrWML4dEeujfLsUf8U-Bw" name="rate" type="_W1-gQJ0gEeuosN6Nd1GBJQ"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:DataType" xmi:id="_KEOuwL4fEeujfLsUf8U-Bw" name="AppliedCharge">
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_Q1ws8L4fEeujfLsUf8U-Bw" name="charge" type="_FG4OkL1cEeu2H99e-q4qgQ"/>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_Sk7kgL4fEeujfLsUf8U-Bw" name="compositeChargeRate" type="_W1-gQJ0gEeuosN6Nd1GBJQ">
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_X2SJYL4fEeujfLsUf8U-Bw"/>
-              </ownedAttribute>
-            </packagedElement>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Package" xmi:id="_vGyDEKZzEeuFv72Lf76jxQ" name="Restriction">
-            <packagedElement xmi:type="uml:Class" xmi:id="_78KRYMK_EeujfLsUf8U-Bw" name="SellingRestriction" isAbstract="true">
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_x2P74MLAEeujfLsUf8U-Bw" name="jurisdiction" type="_PL_S0L1bEeu2H99e-q4qgQ"/>
-              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_EkpxMMLAEeujfLsUf8U-Bw" client="_78KRYMK_EeujfLsUf8U-Bw" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_JgGXgMLAEeujfLsUf8U-Bw" name="AgeRestriction">
-              <generalization xmi:type="uml:Generalization" xmi:id="_TIcx0MLAEeujfLsUf8U-Bw" general="_78KRYMK_EeujfLsUf8U-Bw"/>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_TyRK4MLAEeujfLsUf8U-Bw" name="minimumAge" type="_Ujp4UJ0gEeuosN6Nd1GBJQ"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_M2edcMLAEeujfLsUf8U-Bw" name="TimeOfDayRestriction">
-              <generalization xmi:type="uml:Generalization" xmi:id="_SgKp0MLAEeujfLsUf8U-Bw" general="_78KRYMK_EeujfLsUf8U-Bw"/>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_fMTlQMLAEeujfLsUf8U-Bw" name="after" type="_xpKO4J0gEeuosN6Nd1GBJQ">
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wqBZUMLAEeujfLsUf8U-Bw"/>
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="_wqBZUcLAEeujfLsUf8U-Bw" value="1"/>
-              </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_i3CKkMLAEeujfLsUf8U-Bw" name="before" type="_xpKO4J0gEeuosN6Nd1GBJQ">
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_v9qpoMLAEeujfLsUf8U-Bw"/>
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="_v9qpocLAEeujfLsUf8U-Bw" value="1"/>
-              </ownedAttribute>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_PIKzQMLAEeujfLsUf8U-Bw" name="QuantityRestriction">
-              <generalization xmi:type="uml:Generalization" xmi:id="_R5WhcMLAEeujfLsUf8U-Bw" general="_78KRYMK_EeujfLsUf8U-Bw"/>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_lWIqQMLAEeujfLsUf8U-Bw" name="maximumQuantity" type="_TRuJQKaKEeuFv72Lf76jxQ"/>
             </packagedElement>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_hVxU0KZ0EeuFv72Lf76jxQ" name="Line" isAbstract="true">
@@ -569,7 +634,7 @@
         <packagedElement xmi:type="uml:Package" xmi:id="_HuP7kKDjEeuXwMLKVSwySg" name="StockLedger"/>
         <packagedElement xmi:type="uml:Package" xmi:id="_LfKBYKDjEeuXwMLKVSwySg" name="Supplier"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_4xPmMKDhEeuXwMLKVSwySg" name="PhysicalSupplyChain">
+      <packagedElement xmi:type="uml:Package" xmi:id="_4xPmMKDhEeuXwMLKVSwySg" name="SupplyChain">
         <packagedElement xmi:type="uml:Package" xmi:id="_0U3sEKDiEeuXwMLKVSwySg" name="TransportManagement"/>
         <packagedElement xmi:type="uml:Package" xmi:id="_10-M4KDiEeuXwMLKVSwySg" name="WarehouseManagement"/>
         <packagedElement xmi:type="uml:Package" xmi:id="_3bthMKDiEeuXwMLKVSwySg" name="YardManagement"/>
@@ -867,158 +932,302 @@
         <packagedElement xmi:type="uml:Package" xmi:id="_kRfvEKDiEeuXwMLKVSwySg" name="Learning"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_AKGqIKDiEeuXwMLKVSwySg" name="Finance">
-        <packagedElement xmi:type="uml:Package" xmi:id="_QOOOAKDiEeuXwMLKVSwySg" name="FinancialAccounting">
-          <packagedElement xmi:type="uml:Package" xmi:id="_EIU8AAvGEeyuhKbTMn6kag" name="GeneralLedger">
-            <packagedElement xmi:type="uml:Class" xmi:id="_FvixcAvGEeyuhKbTMn6kag" name="Posting" isAbstract="true">
-              <ownedComment xmi:type="uml:Comment" xmi:id="_FvixcQvGEeyuhKbTMn6kag" annotatedElement="_FvixcAvGEeyuhKbTMn6kag">
-                <body>The generic entity of Posting captures the concept of crediting or debiting an amount to an Account. It is declared as abstract with two concrete sub-entities simply to enforce the basic double entry principle that every posted transaction must involve at least one CreditPosting and at least one DebitPosting. In another context, one might use a type attribute on the Posting entity but the accounting significance of this relationship implies the need for a more robust expression in the model.</body>
+        <packagedElement xmi:type="uml:Package" xmi:id="_EIU8AAvGEeyuhKbTMn6kag" name="BookKeeping">
+          <packagedElement xmi:type="uml:Class" xmi:id="_FvixcAvGEeyuhKbTMn6kag" name="Posting" isAbstract="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_FvixcQvGEeyuhKbTMn6kag" annotatedElement="_FvixcAvGEeyuhKbTMn6kag">
+              <body>&lt;p>The generic entity of Posting captures the concept of crediting or debiting an amount to an Account. It is declared as abstract with two concrete sub-entities simply to enforce the basic double entry principle that every posted transaction must involve at least one CreditPosting and at least one DebitPosting. In another context, one might use a type attribute on the Posting entity but the accounting significance of this relationship implies the need for a more robust expression in the model.&lt;/p>
+</body>
+            </ownedComment>
+            <ownedComment xmi:type="uml:Comment" xmi:id="_ptNesNA_EeyIL5G2wmXgzQ">
+              <body>&lt;p>Each posting will carry some of the same properties as the corresponding JournalEntry (i.e. Accounting Transaction) which could be considered to represent a denormalisation of the data (as it could be inferred from the JournalEntry). However, A Journal is not an authoritative record of the state of the accounts and not all transactions are necessarily recorded in a Journal, so it is important that Postings to the Ledgers are complete records in their own right.&lt;/p>
+</body>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_yzWiUAvHEeyuhKbTMn6kag" name="account" type="_I1H50NzhEeyORqA-BnZOvA">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_kwUcANBBEeyIL5G2wmXgzQ">
+                <body>&lt;p>The identity of the account to be credited or debited.&lt;/p>
+</body>
               </ownedComment>
-              <ownedComment xmi:type="uml:Comment" xmi:id="_FvixcgvGEeyuhKbTMn6kag">
-                <body>When a posting is made to an Account that is designated a Primary Element (could be a Primary Cost Element or a Primary Revenue Element), the posting must be associated to a ControllingObject to support management accounting functions.</body>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_FvixcwvGEeyuhKbTMn6kag" name="value" type="_pn7c0KHVEeuDk9H_gpfrgQ">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_o_HXsNBBEeyIL5G2wmXgzQ">
+                <body>&lt;p>The value of the posting to the specified account.&lt;/p>
+</body>
               </ownedComment>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_FvixcwvGEeyuhKbTMn6kag" name="value">
-                <type xmi:type="uml:DataType" href="../pldm/pldm.uml#_eOD1YHU3EeinFdmoC_dv5g"/>
-              </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_FvixdAvGEeyuhKbTMn6kag" name="description">
-                <type xmi:type="uml:PrimitiveType" href="../pldm/pldm.uml#_t_iDIGr8EeiCVYz0Ib4CDg"/>
-              </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_yzWiUAvHEeyuhKbTMn6kag" name="account" type="_FvnC4AvGEeyuhKbTMn6kag"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_FvjYgAvGEeyuhKbTMn6kag" name="DebitPosting">
-              <generalization xmi:type="uml:Generalization" xmi:id="_FvjYgQvGEeyuhKbTMn6kag" general="_FvixcAvGEeyuhKbTMn6kag"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_Fvj_kAvGEeyuhKbTMn6kag" name="CreditPosting">
-              <generalization xmi:type="uml:Generalization" xmi:id="_Fvj_kQvGEeyuhKbTMn6kag" general="_FvixcAvGEeyuhKbTMn6kag"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_FvkmoAvGEeyuhKbTMn6kag" name="JournalEntry" isAbstract="true">
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_FvkmoQvGEeyuhKbTMn6kag" name="transactionId">
-                <type xmi:type="uml:PrimitiveType" href="../pldm/pldm.uml#_huZ6oG1rEeiCVYz0Ib4CDg"/>
-              </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_FvkmogvGEeyuhKbTMn6kag" name="transactionDate">
-                <type xmi:type="uml:DataType" href="../pldm/pldm.uml#_hAWlAGr-EeiCVYz0Ib4CDg"/>
-              </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_FvkmowvGEeyuhKbTMn6kag" name="postingDate">
-                <type xmi:type="uml:DataType" href="../pldm/pldm.uml#_hAWlAGr-EeiCVYz0Ib4CDg"/>
-              </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_s6BtMCsxEeyvWLBv3yth3w" name="accountingPeriod" type="_w6iSECstEeyvWLBv3yth3w"/>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_FvkmpAvGEeyuhKbTMn6kag" name="journal" type="_Fvnp8AvGEeyuhKbTMn6kag"/>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_FvkmpQvGEeyuhKbTMn6kag" name="description">
-                <type xmi:type="uml:PrimitiveType" href="../pldm/pldm.uml#_t_iDIGr8EeiCVYz0Ib4CDg"/>
-              </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_FvkmpgvGEeyuhKbTMn6kag" name="originatingTransactionId">
-                <type xmi:type="uml:PrimitiveType" href="../pldm/pldm.uml#_huZ6oG1rEeiCVYz0Ib4CDg"/>
-              </ownedAttribute>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="_FvkmpwvGEeyuhKbTMn6kag" name="debitPostingPartOfTransaction" memberEnd="_FvkmqAvGEeyuhKbTMn6kag _FvkmqwvGEeyuhKbTMn6kag">
-              <ownedEnd xmi:type="uml:Property" xmi:id="_FvkmqAvGEeyuhKbTMn6kag" name="transaction" type="_FvkmoAvGEeyuhKbTMn6kag" association="_FvkmpwvGEeyuhKbTMn6kag">
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FvkmqQvGEeyuhKbTMn6kag" value="1"/>
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FvkmqgvGEeyuhKbTMn6kag" value="1"/>
-              </ownedEnd>
-              <ownedEnd xmi:type="uml:Property" xmi:id="_FvkmqwvGEeyuhKbTMn6kag" name="debitPosting" type="_FvjYgAvGEeyuhKbTMn6kag" association="_FvkmpwvGEeyuhKbTMn6kag">
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FvkmrAvGEeyuhKbTMn6kag" value="1"/>
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FvkmrQvGEeyuhKbTMn6kag" value="*"/>
-              </ownedEnd>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="_FvlNsAvGEeyuhKbTMn6kag" name="creditPostingPartOfTransaction" memberEnd="_FvlNsQvGEeyuhKbTMn6kag _FvlNtAvGEeyuhKbTMn6kag">
-              <ownedEnd xmi:type="uml:Property" xmi:id="_FvlNsQvGEeyuhKbTMn6kag" name="transaction" type="_FvkmoAvGEeyuhKbTMn6kag" association="_FvlNsAvGEeyuhKbTMn6kag">
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FvlNsgvGEeyuhKbTMn6kag" value="1"/>
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FvlNswvGEeyuhKbTMn6kag" value="1"/>
-              </ownedEnd>
-              <ownedEnd xmi:type="uml:Property" xmi:id="_FvlNtAvGEeyuhKbTMn6kag" name="creditPosting" type="_Fvj_kAvGEeyuhKbTMn6kag" association="_FvlNsAvGEeyuhKbTMn6kag">
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FvlNtQvGEeyuhKbTMn6kag" value="1"/>
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FvlNtgvGEeyuhKbTMn6kag" value="*"/>
-              </ownedEnd>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_Fvmb1wvGEeyuhKbTMn6kag" name="AccountingTransaction" isAbstract="true">
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_Fvmb2AvGEeyuhKbTMn6kag" name="transactionId">
-                <type xmi:type="uml:PrimitiveType" href="../pldm/pldm.uml#_huZ6oG1rEeiCVYz0Ib4CDg"/>
-              </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_Fvmb2QvGEeyuhKbTMn6kag" name="reference">
-                <type xmi:type="uml:PrimitiveType" href="../pldm/pldm.uml#_t_iDIGr8EeiCVYz0Ib4CDg"/>
-              </ownedAttribute>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_FvnC4AvGEeyuhKbTMn6kag" name="Account" isAbstract="true">
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_FvnC4QvGEeyuhKbTMn6kag" name="accountId">
-                <type xmi:type="uml:PrimitiveType" href="../pldm/pldm.uml#_huZ6oG1rEeiCVYz0Ib4CDg"/>
-              </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_FvnC5AvGEeyuhKbTMn6kag" name="isPrimaryElement">
-                <type xmi:type="uml:PrimitiveType" href="../pldm/pldm.uml#_qn1ukGr8EeiCVYz0Ib4CDg"/>
-              </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_FvnC5QvGEeyuhKbTMn6kag" name="accountType" type="_FvoRAAvGEeyuhKbTMn6kag"/>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_FvnC5gvGEeyuhKbTMn6kag" name="ledger" type="_FvqtQAvGEeyuhKbTMn6kag"/>
-              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_RUajcCsuEeyvWLBv3yth3w" client="_FvnC4AvGEeyuhKbTMn6kag" supplier="_j2_KYJ0eEeuosN6Nd1GBJQ" contract="_j2_KYJ0eEeuosN6Nd1GBJQ"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_Fvnp8AvGEeyuhKbTMn6kag" name="Journal">
-              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_pkVZMCswEeyvWLBv3yth3w" client="_Fvnp8AvGEeyuhKbTMn6kag" supplier="_j2_KYJ0eEeuosN6Nd1GBJQ" contract="_j2_KYJ0eEeuosN6Nd1GBJQ"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Enumeration" xmi:id="_FvoRAAvGEeyuhKbTMn6kag" name="AccountType">
-              <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FvoRAQvGEeyuhKbTMn6kag" name="Assets"/>
-              <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FvoRAgvGEeyuhKbTMn6kag" name="Liabilities"/>
-              <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FvoRAwvGEeyuhKbTMn6kag" name="Equity"/>
-              <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FvoRBAvGEeyuhKbTMn6kag" name="Revenue"/>
-              <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FvoRBQvGEeyuhKbTMn6kag" name="Expenses"/>
-              <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_hBaeoCtsEeyvWLBv3yth3w" name="Purchases"/>
-              <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_iU6t4CtsEeyvWLBv3yth3w" name="Sales"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_FvoRBgvGEeyuhKbTMn6kag" name="AccountBalance">
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_qv6tcCsuEeyvWLBv3yth3w" name="account" type="_FvnC4AvGEeyuhKbTMn6kag"/>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_z-f84CsuEeyvWLBv3yth3w" name="accountingPeriod" type="_w6iSECstEeyvWLBv3yth3w"/>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_FvoRBwvGEeyuhKbTMn6kag" name="openingBalance">
-                <type xmi:type="uml:DataType" href="../pldm/pldm.uml#_eOD1YHU3EeinFdmoC_dv5g"/>
-              </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_FvoRCAvGEeyuhKbTMn6kag" name="currentBalance">
-                <type xmi:type="uml:DataType" href="../pldm/pldm.uml#_eOD1YHU3EeinFdmoC_dv5g"/>
-              </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="_FvoRCQvGEeyuhKbTMn6kag" name="closingBalance">
-                <type xmi:type="uml:DataType" href="../pldm/pldm.uml#_eOD1YHU3EeinFdmoC_dv5g"/>
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8sQhwCsvEeyvWLBv3yth3w"/>
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="_8sSW8CsvEeyvWLBv3yth3w" value="1"/>
-              </ownedAttribute>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_FvpfJwvGEeyuhKbTMn6kag" name="ControlAccount">
-              <generalization xmi:type="uml:Generalization" xmi:id="_FvpfKAvGEeyuhKbTMn6kag" general="_FvnC4AvGEeyuhKbTMn6kag"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_FvqGMAvGEeyuhKbTMn6kag" name="SubsidiaryAccount">
-              <generalization xmi:type="uml:Generalization" xmi:id="_FvqGMQvGEeyuhKbTMn6kag" general="_FvnC4AvGEeyuhKbTMn6kag"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="_FvqGMgvGEeyuhKbTMn6kag" memberEnd="_FvqGNQvGEeyuhKbTMn6kag _FvqGOAvGEeyuhKbTMn6kag">
-              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FvqGMwvGEeyuhKbTMn6kag" source="org.eclipse.papyrus">
-                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FvqGNAvGEeyuhKbTMn6kag" key="nature" value="UML_Nature"/>
-              </eAnnotations>
-              <ownedEnd xmi:type="uml:Property" xmi:id="_FvqGNQvGEeyuhKbTMn6kag" name="subsidiaryaccount" type="_FvqGMAvGEeyuhKbTMn6kag" association="_FvqGMgvGEeyuhKbTMn6kag">
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FvqGNgvGEeyuhKbTMn6kag" value="1"/>
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FvqGNwvGEeyuhKbTMn6kag" value="*"/>
-              </ownedEnd>
-              <ownedEnd xmi:type="uml:Property" xmi:id="_FvqGOAvGEeyuhKbTMn6kag" name="controlaccount" type="_FvpfJwvGEeyuhKbTMn6kag" association="_FvqGMgvGEeyuhKbTMn6kag"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_FvqtQAvGEeyuhKbTMn6kag" name="Ledger">
-              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_qehJgCswEeyvWLBv3yth3w" client="_FvqtQAvGEeyuhKbTMn6kag" supplier="_j2_KYJ0eEeuosN6Nd1GBJQ" contract="_j2_KYJ0eEeuosN6Nd1GBJQ"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Abstraction" xmi:id="_FvqtQQvGEeyuhKbTMn6kag" client="_Fvmb1wvGEeyuhKbTMn6kag" supplier="_FvkmoAvGEeyuhKbTMn6kag"/>
-            <packagedElement xmi:type="uml:Class" xmi:id="_w6iSECstEeyvWLBv3yth3w" name="AccountingPeriod">
-              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_QEgawCsuEeyvWLBv3yth3w" client="_w6iSECstEeyvWLBv3yth3w" supplier="_j2_KYJ0eEeuosN6Nd1GBJQ" contract="_j2_KYJ0eEeuosN6Nd1GBJQ"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="_yw-2UCstEeyvWLBv3yth3w" name="FiscalYear">
-              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_PES68CsuEeyvWLBv3yth3w" client="_yw-2UCstEeyvWLBv3yth3w" supplier="_j2_KYJ0eEeuosN6Nd1GBJQ" contract="_j2_KYJ0eEeuosN6Nd1GBJQ"/>
-            </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="_XyINwCsuEeyvWLBv3yth3w" memberEnd="_XzjxISsuEeyvWLBv3yth3w _XzkYMCsuEeyvWLBv3yth3w">
-              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XzjKECsuEeyvWLBv3yth3w" source="org.eclipse.papyrus">
-                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XzjxICsuEeyvWLBv3yth3w" key="nature" value="UML_Nature"/>
-              </eAnnotations>
-              <ownedEnd xmi:type="uml:Property" xmi:id="_XzjxISsuEeyvWLBv3yth3w" name="accountingperiod" type="_w6iSECstEeyvWLBv3yth3w" association="_XyINwCsuEeyvWLBv3yth3w">
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YodY0CsuEeyvWLBv3yth3w"/>
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YodY0SsuEeyvWLBv3yth3w" value="*"/>
-              </ownedEnd>
-              <ownedEnd xmi:type="uml:Property" xmi:id="_XzkYMCsuEeyvWLBv3yth3w" name="fiscalyear" type="_yw-2UCstEeyvWLBv3yth3w" association="_XyINwCsuEeyvWLBv3yth3w">
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YocKsCsuEeyvWLBv3yth3w" value="1"/>
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="_YocxwCsuEeyvWLBv3yth3w" value="1"/>
-              </ownedEnd>
-            </packagedElement>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_v2TrQNA8EeyIL5G2wmXgzQ" name="postingDate" type="_v0B5QJ0gEeuosN6Nd1GBJQ">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_RRhEgNBCEeyIL5G2wmXgzQ">
+                <body>&lt;p>The date on which the posting was applied to the Ledger - this will be the same as the postingDate in the corresponding Journal Entry &lt;u>if&lt;/u> the transaction was recorded in a Journal.&lt;/p>
+</body>
+              </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_G81h8NA9EeyIL5G2wmXgzQ" name="accountingPeriod" type="_w6iSECstEeyvWLBv3yth3w">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_XiWJYNBCEeyIL5G2wmXgzQ">
+                <body>&lt;p>The Accounting Period in which the posting was recorded.&lt;/p>
+</body>
+              </ownedComment>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_FvjYgAvGEeyuhKbTMn6kag" name="DebitPosting">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_xO0HkNBCEeyIL5G2wmXgzQ">
+              <body>&lt;p>The DebitPosting entity is a concrete sub class of the abstract Posting entity such that a JournalEntry (i.e. an Accounting Transaction) can be declared to have at least one Debit element in accordance with the requirements of double entry bookkeeping.&lt;/p>
+</body>
+            </ownedComment>
+            <generalization xmi:type="uml:Generalization" xmi:id="_FvjYgQvGEeyuhKbTMn6kag" general="_FvixcAvGEeyuhKbTMn6kag"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_Fvj_kAvGEeyuhKbTMn6kag" name="CreditPosting">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_01zcYNBCEeyIL5G2wmXgzQ">
+              <body>&lt;p>The CreditPosting entity is a concrete sub class of the abstract Posting entity such that a JournalEntry (i.e. an Accounting Transaction) can be declared to have at least one&amp;nbsp;Credit element&amp;nbsp;in accordance with the requirements of double entry bookkeeping.&lt;/p>
+</body>
+            </ownedComment>
+            <generalization xmi:type="uml:Generalization" xmi:id="_Fvj_kQvGEeyuhKbTMn6kag" general="_FvixcAvGEeyuhKbTMn6kag"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_FvkmoAvGEeyuhKbTMn6kag" name="JournalEntry">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_FvkmoQvGEeyuhKbTMn6kag" name="transactionId" type="_q9tDgJ0gEeuosN6Nd1GBJQ">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_J7m_MNBIEeyIL5G2wmXgzQ">
+                <body>&lt;p>The identity of the recorded transaction within the Accouting System.&lt;/p>
+</body>
+              </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_FvkmogvGEeyuhKbTMn6kag" name="transactionDate" type="_v0B5QJ0gEeuosN6Nd1GBJQ">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_W_d3ENBIEeyIL5G2wmXgzQ">
+                <body>&lt;p>The date on which the transaction the accounting transaction occurred.&lt;/p>
+</body>
+              </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_FvkmowvGEeyuhKbTMn6kag" name="postingDate" type="_v0B5QJ0gEeuosN6Nd1GBJQ">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_hBRTMNBIEeyIL5G2wmXgzQ">
+                <body>&lt;p>The date on which the accounting transaction was recorded in the Journal and, thus, also posted to the relevant Account Ledgers.&lt;/p>
+</body>
+              </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_s6BtMCsxEeyvWLBv3yth3w" name="accountingPeriod" type="_w6iSECstEeyvWLBv3yth3w">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_lpZU4NBIEeyIL5G2wmXgzQ">
+                <body>&lt;p>The accounting period in which the JournalEntry was recorded.&lt;/p>
+</body>
+              </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_FvkmpAvGEeyuhKbTMn6kag" name="journal" type="_Fvnp8AvGEeyuhKbTMn6kag">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_pgosMNBIEeyIL5G2wmXgzQ">
+                <body>&lt;p>The Journal in which the JournalEntry was recorded.&lt;/p>
+</body>
+              </ownedComment>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__mfXwNBCEeyIL5G2wmXgzQ" value="1"/>
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="__mf-0NBCEeyIL5G2wmXgzQ" value="1"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_FvkmpQvGEeyuhKbTMn6kag" name="description" type="_ac5joJ0gEeuosN6Nd1GBJQ">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_s6eV0NBIEeyIL5G2wmXgzQ">
+                <body>&lt;p>A simple description of the accounting transaction.&lt;/p>
+</body>
+              </ownedComment>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tvD0cNBIEeyIL5G2wmXgzQ"/>
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="_tvFCkNBIEeyIL5G2wmXgzQ" value="1"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_FvkmpgvGEeyuhKbTMn6kag" name="originatingTransaction" visibility="public" type="_y2eXANBEEeyIL5G2wmXgzQ">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_Q4v7ANBJEeyIL5G2wmXgzQ">
+                <body>&lt;p>The identity of the originating transaction, which is expressed as a combination of a transaction origin and an originating transaction id.&lt;/p>
+</body>
+              </ownedComment>
+              <ownedComment xmi:type="uml:Comment" xmi:id="_Q4v7AdBJEeyIL5G2wmXgzQ">
+                <body>&lt;p>This optional field can be useful for linking a transaction recorded in the accounts back to its source (e.g. a Purchase Order, Sales Order, Invoice, GRN, etc.) in order to obtain more granular information.&lt;/p>
+</body>
+              </ownedComment>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GxLx8NBFEeyIL5G2wmXgzQ"/>
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="_GxNAENBFEeyIL5G2wmXgzQ" value="1"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_FvkmpwvGEeyuhKbTMn6kag" memberEnd="_FvkmqAvGEeyuhKbTMn6kag _FvkmqwvGEeyuhKbTMn6kag">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_FvkmqAvGEeyuhKbTMn6kag" name="transaction" type="_FvkmoAvGEeyuhKbTMn6kag" association="_FvkmpwvGEeyuhKbTMn6kag">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Dm5SINBDEeyIL5G2wmXgzQ"/>
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="_Dm55MNBDEeyIL5G2wmXgzQ" value="1"/>
+            </ownedEnd>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_FvkmqwvGEeyuhKbTMn6kag" name="debitPosting" type="_FvjYgAvGEeyuhKbTMn6kag" association="_FvkmpwvGEeyuhKbTMn6kag">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Dm55MdBDEeyIL5G2wmXgzQ" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Dm55MtBDEeyIL5G2wmXgzQ" value="*"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_FvlNsAvGEeyuhKbTMn6kag" memberEnd="_FvlNsQvGEeyuhKbTMn6kag _FvlNtAvGEeyuhKbTMn6kag">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_FvlNsQvGEeyuhKbTMn6kag" name="transaction" type="_FvkmoAvGEeyuhKbTMn6kag" association="_FvlNsAvGEeyuhKbTMn6kag">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EkjNMNBDEeyIL5G2wmXgzQ"/>
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="_EkjNMdBDEeyIL5G2wmXgzQ" value="1"/>
+            </ownedEnd>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_FvlNtAvGEeyuhKbTMn6kag" name="creditPosting" type="_Fvj_kAvGEeyuhKbTMn6kag" association="_FvlNsAvGEeyuhKbTMn6kag">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EkjNMtBDEeyIL5G2wmXgzQ" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EkjNM9BDEeyIL5G2wmXgzQ" value="*"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_FvoRBgvGEeyuhKbTMn6kag" name="AccountBalance">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_qv6tcCsuEeyvWLBv3yth3w" name="account" type="_I1H50NzhEeyORqA-BnZOvA"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_z-f84CsuEeyvWLBv3yth3w" name="accountingPeriod" type="_w6iSECstEeyvWLBv3yth3w"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_FvoRBwvGEeyuhKbTMn6kag" name="openingBalance" type="_pn7c0KHVEeuDk9H_gpfrgQ"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_FvoRCAvGEeyuhKbTMn6kag" name="currentBalance" type="_pn7c0KHVEeuDk9H_gpfrgQ"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_FvoRCQvGEeyuhKbTMn6kag" name="closingBalance" type="_pn7c0KHVEeuDk9H_gpfrgQ">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8sQhwCsvEeyvWLBv3yth3w"/>
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="_8sSW8CsvEeyvWLBv3yth3w" value="1"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_FvqtQAvGEeyuhKbTMn6kag" name="Ledger">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_J00LUOG6EeybPvVpZUerTw">
+              <body>&lt;p>A Ledger is (nominally) a book in which Accounts are maintained.&lt;/p>
+</body>
+            </ownedComment>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_qehJgCswEeyvWLBv3yth3w" client="_FvqtQAvGEeyuhKbTMn6kag" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_Fvnp8AvGEeyuhKbTMn6kag" name="Journal">
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_pkVZMCswEeyvWLBv3yth3w" client="_Fvnp8AvGEeyuhKbTMn6kag" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_w6iSECstEeyvWLBv3yth3w" name="AccountingPeriod">
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_QEgawCsuEeyvWLBv3yth3w" client="_w6iSECstEeyvWLBv3yth3w" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_yw-2UCstEeyvWLBv3yth3w" name="FiscalYear">
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_PES68CsuEeyvWLBv3yth3w" client="_yw-2UCstEeyvWLBv3yth3w" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_XyINwCsuEeyvWLBv3yth3w" memberEnd="_XzjxISsuEeyvWLBv3yth3w _XzkYMCsuEeyvWLBv3yth3w">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XzjKECsuEeyvWLBv3yth3w" source="org.eclipse.papyrus">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XzjxICsuEeyvWLBv3yth3w" key="nature" value="UML_Nature"/>
+            </eAnnotations>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_XzjxISsuEeyvWLBv3yth3w" name="accountingperiod" type="_w6iSECstEeyvWLBv3yth3w" association="_XyINwCsuEeyvWLBv3yth3w">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YodY0CsuEeyvWLBv3yth3w"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YodY0SsuEeyvWLBv3yth3w" value="*"/>
+            </ownedEnd>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_XzkYMCsuEeyvWLBv3yth3w" name="fiscalyear" type="_yw-2UCstEeyvWLBv3yth3w" association="_XyINwCsuEeyvWLBv3yth3w">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YocKsCsuEeyvWLBv3yth3w" value="1"/>
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="_YocxwCsuEeyvWLBv3yth3w" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_y2eXANBEEeyIL5G2wmXgzQ" name="OriginatingTransation">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_5ycqoNBEEeyIL5G2wmXgzQ" name="transactionOrigin" type="_q9tDgJ0gEeuosN6Nd1GBJQ"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_7ve_ENBEEeyIL5G2wmXgzQ" name="transactionId" type="_q9tDgJ0gEeuosN6Nd1GBJQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Enumeration" xmi:id="_FvoRAAvGEeyuhKbTMn6kag" name="AccountType">
+            <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FvoRAQvGEeyuhKbTMn6kag" name="Assets"/>
+            <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FvoRAgvGEeyuhKbTMn6kag" name="Liabilities"/>
+            <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FvoRAwvGEeyuhKbTMn6kag" name="Equity"/>
+            <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FvoRBAvGEeyuhKbTMn6kag" name="Revenue"/>
+            <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FvoRBQvGEeyuhKbTMn6kag" name="Expenses"/>
+            <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_hBaeoCtsEeyvWLBv3yth3w" name="Purchases"/>
+            <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_iU6t4CtsEeyvWLBv3yth3w" name="Sales"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_pBwaANBXEeytCvXriojvrw" name="SegmentHierarchyNode" isAbstract="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="__NfQkO5MEeyVg4QP7lSj1A">
+              <body>&lt;p>A SegmentHierarchyNode is an abstract entity that defines the identity space of all nodes&amp;nbsp;across all Sement Hierarchies. The concrete entities derived from this abstract entity are SegmentHierarchy (a root node), a Segment (a leaf node), and IntermediateHierarchyNode (any other node, which must have both a parent and child nodes).&lt;/p>
+</body>
+            </ownedComment>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_IvO7kNBcEeytCvXriojvrw" client="_pBwaANBXEeytCvXriojvrw" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_2xqfkNBXEeytCvXriojvrw" name="SegmentHierarchy">
+            <generalization xmi:type="uml:Generalization" xmi:id="_YDz1sNBYEeytCvXriojvrw" general="_6EHu0NBXEeytCvXriojvrw"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_pyqAkNBZEeytCvXriojvrw" name="segmentClass" type="_btsNMNzfEeyORqA-BnZOvA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_6EHu0NBXEeytCvXriojvrw" name="ParentHierarchyNode" isAbstract="true">
+            <generalization xmi:type="uml:Generalization" xmi:id="_8wpmgNBXEeytCvXriojvrw" general="_pBwaANBXEeytCvXriojvrw"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_7O-YYNBXEeytCvXriojvrw" name="Segment">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_ewwm4O5JEeyVg4QP7lSj1A">
+              <body>&lt;p>A Segment is a leaf node within a Segment Hierarchy and so its identity represents a value that can be used to classify an accounting&amp;nbsp;transaction such that costs may be tracked within the accounting system. In many cases, the identity of the Segment may be overloaded as the identity of a corresponding Account but it is more accurate to separate their identities (noting that not all Segment Hierarchy nodes are Segments) and so each Segment references the identity of the Account that is used to accrue its costs.&lt;/p>
+</body>
+            </ownedComment>
+            <generalization xmi:type="uml:Generalization" xmi:id="_9iiWcNBXEeytCvXriojvrw" general="_pBwaANBXEeytCvXriojvrw"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_FvDAENzpEeyORqA-BnZOvA" name="account" type="_I1H50NzhEeyORqA-BnZOvA"/>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_vKPlwNBYEeytCvXriojvrw" client="_7O-YYNBXEeytCvXriojvrw" supplier="_HLemoNBYEeytCvXriojvrw" contract="_HLemoNBYEeytCvXriojvrw"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_HLemoNBYEeytCvXriojvrw" name="IChildHierarchyNode"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZC234NBYEeytCvXriojvrw" name="IntermediateHierarchyNode">
+            <generalization xmi:type="uml:Generalization" xmi:id="_v7n_YNBYEeytCvXriojvrw" general="_6EHu0NBXEeytCvXriojvrw"/>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_uOtKkNBYEeytCvXriojvrw" client="_ZC234NBYEeytCvXriojvrw" supplier="_HLemoNBYEeytCvXriojvrw" contract="_HLemoNBYEeytCvXriojvrw"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_lC7XgNBYEeytCvXriojvrw" memberEnd="_lHPPwNBYEeytCvXriojvrw _lHP20NBYEeytCvXriojvrw">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lHOosNBYEeytCvXriojvrw" source="org.eclipse.papyrus">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_lHOosdBYEeytCvXriojvrw" key="nature" value="UML_Nature"/>
+            </eAnnotations>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_lHPPwNBYEeytCvXriojvrw" name="accountparentnode" type="_6EHu0NBXEeytCvXriojvrw" association="_lC7XgNBYEeytCvXriojvrw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rsDAkNBYEeytCvXriojvrw" value="1"/>
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="_rsDnoNBYEeytCvXriojvrw" value="1"/>
+            </ownedEnd>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_lHP20NBYEeytCvXriojvrw" name="ichildaccount" type="_HLemoNBYEeytCvXriojvrw" association="_lC7XgNBYEeytCvXriojvrw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rsDnodBYEeytCvXriojvrw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rsDnotBYEeytCvXriojvrw" value="*"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_btsNMNzfEeyORqA-BnZOvA" name="SegmentClass">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_Z6ROgO5IEeyVg4QP7lSj1A">
+              <body>&lt;p>In order to support both Finance Accounting and Cost Accounting, it is expected that AccountingTransactions will be classified using a nunmber of SegmentClass values. Typically, SegmentClasses will include Cost Centres, Business Units and Locations but can be considered arbitrary according to the Cost Accounting needs of the organisation. Within each SegmentClass, the actual values that can be used for classification will be&amp;nbsp;determined by the set of leaf nodes within a set of Segment Hierarchies, where the different hierarchies represent different ways of analysing costs within the SegmentClass.&lt;/p>
+
+&lt;p>Because each SegmentClass may have multiple hierarchies they must be declared separately from the hierarchies themselves and so the root node of each Segment Hierarchy identifies the SegmentClass to which it belongs.&lt;/p>
+</body>
+            </ownedComment>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_edQKwNzfEeyORqA-BnZOvA" client="_btsNMNzfEeyORqA-BnZOvA" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_I1H50NzhEeyORqA-BnZOvA" name="Account">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_x9nt4NzxEeyORqA-BnZOvA">
+              <body>&lt;p>An Account is the basic unit against which a record of the impact&amp;nbsp;financial transactions can be maintained. The individual postings to an Account arising from a transaction are conceptually recorded in a Ledger and it is the Accounts that are maintained within the General Ledger that are used to prepare the financial statements of an organisation.&lt;/p>
+</body>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_3aypANA_EeyIL5G2wmXgzQ" name="ledger" type="_FvqtQAvGEeyuhKbTMn6kag">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_3wHQ8NzxEeyORqA-BnZOvA">
+                <body>&lt;p>The Ledger in which postings to this Account are recorded.&lt;/p>
+</body>
+              </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_FvnC5QvGEeyuhKbTMn6kag" name="accountType" type="_FvoRAAvGEeyuhKbTMn6kag">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_6Hm3UNzyEeyORqA-BnZOvA">
+                <body>&lt;p>The type of the Account determines how a posting affects the balance of the Account. Asset and Expense Accounts are increased by a Debit Posting while Liability, Revenue&amp;nbsp;and&amp;nbsp;Equity Accounts&amp;nbsp;are increased by a Credit Posting.&lt;/p>
+</body>
+              </ownedComment>
+            </ownedAttribute>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_S_1aUNzhEeyORqA-BnZOvA" client="_I1H50NzhEeyORqA-BnZOvA" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_UHESsNziEeyORqA-BnZOvA" name="ControlAccount">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_-48kYOGdEey8IpheLQ_a1A">
+              <body>&lt;p>A control Account is a summary Account where the transaction detail is maintained in a separate Ledger and the Control Account is updated with the summary information on a periodic basis. While the Control Account will always balance from a double entry point of view, it may or may not be considered authoritative as the definitive view must derive from either the Control Account or the Subsidiary Ledger but&amp;nbsp;not both.&amp;nbsp;&lt;/p>
+</body>
+            </ownedComment>
+            <generalization xmi:type="uml:Generalization" xmi:id="_Xm9hANziEeyORqA-BnZOvA" general="_I1H50NzhEeyORqA-BnZOvA"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_YNUWYNziEeyORqA-BnZOvA" name="subsidaryLedger" type="_FyZL0NzlEeyORqA-BnZOvA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_FyZL0NzlEeyORqA-BnZOvA" name="SubsidiaryLedger">
+            <generalization xmi:type="uml:Generalization" xmi:id="_2ZaS0NzoEeyORqA-BnZOvA" general="_FvqtQAvGEeyuhKbTMn6kag"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_GbUssNzoEeyORqA-BnZOvA" name="ledgerAdjustmentAccount" type="_I1H50NzhEeyORqA-BnZOvA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wrv6gNzqEeyORqA-BnZOvA"/>
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="_wrv6gdzqEeyORqA-BnZOvA" value="1"/>
+            </ownedAttribute>
           </packagedElement>
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="_R3IFgKDiEeuXwMLKVSwySg" name="AccountsPayable"/>
         <packagedElement xmi:type="uml:Package" xmi:id="_TmpiYKDiEeuXwMLKVSwySg" name="AccountsReceivable"/>
-        <packagedElement xmi:type="uml:Package" xmi:id="_VJcK0KDiEeuXwMLKVSwySg" name="ManagementAccounting"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_VJcK0KDiEeuXwMLKVSwySg" name="ManagementAccounting">
+          <packagedElement xmi:type="uml:Class" xmi:id="_drOdEJDREeyax4bMuIxOyA" name="CostObject" isAbstract="true">
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_jcjigJDREeyax4bMuIxOyA" client="_drOdEJDREeyax4bMuIxOyA" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZhJC4JLtEeyax4bMuIxOyA" name="Organisation">
+            <generalization xmi:type="uml:Generalization" xmi:id="_Dvf0IJLwEeyax4bMuIxOyA" general="_a5SFEJLuEeyax4bMuIxOyA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_eMGWIJLtEeyax4bMuIxOyA" name="OrganisationUnit">
+            <generalization xmi:type="uml:Generalization" xmi:id="_EdgwsJLwEeyax4bMuIxOyA" general="_a5SFEJLuEeyax4bMuIxOyA"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_Neg3IJLwEeyax4bMuIxOyA" name="responsibilityType" type="_evWFwJLwEeyax4bMuIxOyA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_a5SFEJLuEeyax4bMuIxOyA" name="BusinessUnit" isAbstract="true">
+            <generalization xmi:type="uml:Generalization" xmi:id="_FFxDgJLwEeyax4bMuIxOyA" general="_drOdEJDREeyax4bMuIxOyA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_H2Nx4JLwEeyax4bMuIxOyA" memberEnd="_H2Nx45LwEeyax4bMuIxOyA _H2OY8JLwEeyax4bMuIxOyA">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_H2Nx4ZLwEeyax4bMuIxOyA" source="org.eclipse.papyrus">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_H2Nx4pLwEeyax4bMuIxOyA" key="nature" value="UML_Nature"/>
+            </eAnnotations>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_H2Nx45LwEeyax4bMuIxOyA" name="businessunit" type="_a5SFEJLuEeyax4bMuIxOyA" association="_H2Nx4JLwEeyax4bMuIxOyA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JDv8AJLwEeyax4bMuIxOyA" value="1"/>
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="_JDv8AZLwEeyax4bMuIxOyA" value="1"/>
+            </ownedEnd>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_H2OY8JLwEeyax4bMuIxOyA" name="organisationunit" type="_eMGWIJLtEeyax4bMuIxOyA" association="_H2Nx4JLwEeyax4bMuIxOyA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JDwjEJLwEeyax4bMuIxOyA"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JDwjEZLwEeyax4bMuIxOyA" value="*"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_evWFwJLwEeyax4bMuIxOyA" name="ResponsibilityType">
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_nJsxAJLyEeyax4bMuIxOyA" client="_evWFwJLwEeyax4bMuIxOyA" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_xB8BcJLyEeyax4bMuIxOyA" name="Project">
+            <generalization xmi:type="uml:Generalization" xmi:id="_zye2cJLyEeyax4bMuIxOyA" general="_drOdEJDREeyax4bMuIxOyA"/>
+          </packagedElement>
+        </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_EuJdEKDiEeuXwMLKVSwySg" name="Procurement"/>
     </packagedElement>
@@ -1246,7 +1455,22 @@
 </body>
         </ownedComment>
         <packagedElement xmi:type="uml:Package" xmi:id="_bIMCYG4QEeyXoOFUHXlY1w" name="Selling">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_qsexcG7mEeyk79Vd6xgsXA">
+            <body>&lt;p>The Selling sub-domain is concerned with the processes and data required to support the act of transacting with the retail customer for goods and services. As such, the domain essentially splits into a description of the various ways in which the transaction is handled (e.g. Point of Sale, online orders), and the actual products (good and services) which are subject of those transactions.&lt;/p>
+</body>
+          </ownedComment>
           <packagedElement xmi:type="uml:Package" xmi:id="_qruIEG4YEey7jY2uX29XZA" name="SalesTransaction">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_AZwZYG7rEeyk79Vd6xgsXA">
+              <body>&lt;p>In its most basic form, a Sales Transaction is an exchange of products (goods and/or&amp;nbsp;services) and monetary funds in the context of an applicable&amp;nbsp;legislatory framework that may impose charges or constraints on the transaction (e.g. sales tax). This view of a Sales Transaction is, however,&amp;nbsp;abstracted from the specifics of how the transaction is enacted. Consequently, this domain also includes sub-domains to describe the elements of the transacting process specific to the following contexts:&lt;/p>
+
+&lt;ul>
+	&lt;li>${link=PointOfSale} -&amp;nbsp;the purchasing of products in person&amp;nbsp;in a physical store&lt;/li>
+	&lt;li>${link=CustomerOrder} - the purchasing of products through an order placed for fulfilment (e.g. placed online, by telephone, or some other mechanism)&lt;/li>
+&lt;/ul>
+
+&lt;p>Note that a Sales Transaction typically involves the supply of products by the retailer&amp;nbsp;to the customer for an agreed fee, but this situation may reversed in the context of a return which may be thought of as a form of compensating transaction that reverses the effects of some or all of the original transaction.&lt;/p>
+</body>
+            </ownedComment>
             <packagedElement xmi:type="uml:Package" xmi:id="_s-DXEG4YEey7jY2uX29XZA" name="PointOfSale"/>
             <packagedElement xmi:type="uml:Package" xmi:id="_uuG_cG4YEey7jY2uX29XZA" name="CustomerOrder"/>
           </packagedElement>
@@ -1260,7 +1484,7 @@
 </body>
             </ownedComment>
             <ownedComment xmi:type="uml:Comment" xmi:id="_myNw0G4hEeyQLf-pXvFQRg">
-              <body>&lt;p>Central to the way products are organised for sale is the concept of a Catalogue, which is simply a mechanism for providing a layer of navigation over the complete list of products availble for sale in a given context. Note that this concept is as valid in-store as it is online, although the typical business terminology (ranges, assortments and planograms) is different.&lt;/p>
+              <body>&lt;p>Central to the way products are organised for sale is the concept of a Catalogue, which is simply a mechanism for providing a layer of navigation over the complete list of products availble for sale in a given context. Note that this concept is as valid in a physical store as it is online, although the typical business terminology (ranges, assortments and planograms) is different.&lt;/p>
 </body>
             </ownedComment>
           </packagedElement>
@@ -1275,15 +1499,15 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_mAwvwJ0dEeuosN6Nd1GBJQ" name="Tutorials"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_OBzRsJ0cEeuosN6Nd1GBJQ">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZMikEKG3EeuDk9H_gpfrgQ" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZMikEaG3EeuDk9H_gpfrgQ" key="Version" value="0.1.1"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZMikEqG3EeuDk9H_gpfrgQ" key="Comment" value="Added &lt;&lt;Conceptual>> to InterfaceRealization"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZMikE6G3EeuDk9H_gpfrgQ" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZMikFKG3EeuDk9H_gpfrgQ" key="Date" value="2021-04-20"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZMikFaG3EeuDk9H_gpfrgQ" key="Author" value="OliverGardiner"/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4JAXdjToEe2lE6RhA1xIxQ" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4JAXdzToEe2lE6RhA1xIxQ" key="Version" value="0.1.3"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4JAXeDToEe2lE6RhA1xIxQ" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4JAXeTToEe2lE6RhA1xIxQ" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4JAXejToEe2lE6RhA1xIxQ" key="Date" value="2022-09-15"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4JAXezToEe2lE6RhA1xIxQ" key="Author" value="White Cottage"/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OB0f0J0cEeuosN6Nd1GBJQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="ldml.profile.uml#_8lXIQKG2EeuBYPHHopVtiQ"/>
+        <references xmi:type="ecore:EPackage" href="ldml.profile.uml#_1hj0ETToEe2lE6RhA1xIxQ"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="ldml.profile.uml#_e7vP0J0HEeuosN6Nd1GBJQ"/>
     </profileApplication>
@@ -1381,10 +1605,6 @@
   <ldml:ReferenceData xmi:id="_5sT5MMLAEeujfLsUf8U-Bw" base_Class="_JgGXgMLAEeujfLsUf8U-Bw"/>
   <ldml:ReferenceData xmi:id="_5sUgQMLAEeujfLsUf8U-Bw" base_Class="_M2edcMLAEeujfLsUf8U-Bw"/>
   <ldml:ReferenceData xmi:id="_5sVHUMLAEeujfLsUf8U-Bw" base_Class="_PIKzQMLAEeujfLsUf8U-Bw"/>
-  <ldml:ReferenceData xmi:id="_x8LpwAvHEeyuhKbTMn6kag" base_Class="_FvnC4AvGEeyuhKbTMn6kag"/>
-  <ldml:ReferenceCode xmi:id="_d4uGAAvIEeyuhKbTMn6kag" base_Property="_FvnC4QvGEeyuhKbTMn6kag"/>
-  <ldml:ReferenceData xmi:id="_slsQwAvIEeyuhKbTMn6kag" base_Class="_FvqGMAvGEeyuhKbTMn6kag"/>
-  <ldml:ReferenceData xmi:id="_slte4AvIEeyuhKbTMn6kag" base_Class="_FvpfJwvGEeyuhKbTMn6kag"/>
   <ldml:ReferenceData xmi:id="_Q9LCcAzBEeyuhKbTMn6kag" base_Class="_MuSAIAzBEeyuhKbTMn6kag"/>
   <ldml:ReferenceData xmi:id="_MshLQCsuEeyvWLBv3yth3w" base_Class="_yw-2UCstEeyvWLBv3yth3w"/>
   <ldml:ReferenceData xmi:id="_MsxC4CsuEeyvWLBv3yth3w" base_Class="_w6iSECstEeyvWLBv3yth3w"/>
@@ -1397,4 +1617,52 @@
   <ldml:Documentation xmi:id="_cm3U8G4SEeygTIJIRhM36Q" base_Comment="_YVhtgG4QEeyXoOFUHXlY1w"/>
   <ldml:Documentation xmi:id="_v3W4wG4TEeyMwO_fjf6e7A" base_Comment="_vB-v8G4TEeyMwO_fjf6e7A"/>
   <ldml:Documentation xmi:id="_eNPb4G4dEey7jY2uX29XZA" base_Comment="_aAxbcG4dEey7jY2uX29XZA"/>
+  <ldml:Documentation xmi:id="_BssaMG7mEeyk79Vd6xgsXA" base_Comment="_myNw0G4hEeyQLf-pXvFQRg"/>
+  <ldml:Documentation xmi:id="_Ym7E0G7nEeyk79Vd6xgsXA" base_Comment="_qsexcG7mEeyk79Vd6xgsXA"/>
+  <ldml:Documentation xmi:id="_J2cWQG7rEeyk79Vd6xgsXA" base_Comment="_AZwZYG7rEeyk79Vd6xgsXA"/>
+  <ldml:ReferenceData xmi:id="_wXQDYG_MEey8yOs7T6D48g" base_Class="_r61icG_MEey8yOs7T6D48g"/>
+  <ldml:ReferenceData xmi:id="_kngCQG_NEey8yOs7T6D48g" base_Class="_e1mVEG_NEey8yOs7T6D48g"/>
+  <ldml:ReferenceData xmi:id="_oMvqoG_NEey8yOs7T6D48g" base_Class="_lqB2QG_NEey8yOs7T6D48g"/>
+  <ldml:ReferenceData xmi:id="_c-SYsG_OEey8yOs7T6D48g" base_Class="_a22yIG_OEey8yOs7T6D48g"/>
+  <ldml:ReferenceData xmi:id="_fqj3kJDREeyax4bMuIxOyA" base_Class="_drOdEJDREeyax4bMuIxOyA"/>
+  <ldml:ReferenceData xmi:id="_goTLcJLwEeyax4bMuIxOyA" base_Class="_evWFwJLwEeyax4bMuIxOyA"/>
+  <ldml:ReferenceData xmi:id="_hN39sJLwEeyax4bMuIxOyA" base_Class="_a5SFEJLuEeyax4bMuIxOyA"/>
+  <ldml:ReferenceData xmi:id="_h4ox8JLwEeyax4bMuIxOyA" base_Class="_ZhJC4JLtEeyax4bMuIxOyA"/>
+  <ldml:ReferenceData xmi:id="_jwY9wJLwEeyax4bMuIxOyA" base_Class="_eMGWIJLtEeyax4bMuIxOyA"/>
+  <ldml:ReferenceData xmi:id="_y44U8JLyEeyax4bMuIxOyA" base_Class="_xB8BcJLyEeyax4bMuIxOyA"/>
+  <ldml:Documentation xmi:id="_sVkoENA_EeyIL5G2wmXgzQ" base_Comment="_FvixcQvGEeyuhKbTMn6kag"/>
+  <ldml:Documentation xmi:id="_sVl2MNA_EeyIL5G2wmXgzQ" base_Comment="_ptNesNA_EeyIL5G2wmXgzQ"/>
+  <ldml:Documentation xmi:id="_dJxaANBEEeyIL5G2wmXgzQ" base_Comment="_kwUcANBBEeyIL5G2wmXgzQ"/>
+  <ldml:Documentation xmi:id="_dJyoINBEEeyIL5G2wmXgzQ" base_Comment="_o_HXsNBBEeyIL5G2wmXgzQ"/>
+  <ldml:Documentation xmi:id="_dJyoIdBEEeyIL5G2wmXgzQ" base_Comment="_RRhEgNBCEeyIL5G2wmXgzQ"/>
+  <ldml:Documentation xmi:id="_dJzPMNBEEeyIL5G2wmXgzQ" base_Comment="_XiWJYNBCEeyIL5G2wmXgzQ"/>
+  <ldml:ReferenceData xmi:id="_slBscNBXEeytCvXriojvrw" base_Class="_pBwaANBXEeytCvXriojvrw"/>
+  <ldml:ReferenceData xmi:id="_0uDzoNBYEeytCvXriojvrw" base_Class="_6EHu0NBXEeytCvXriojvrw"/>
+  <ldml:ReferenceData xmi:id="_0uFBwNBYEeytCvXriojvrw" base_Class="_2xqfkNBXEeytCvXriojvrw"/>
+  <ldml:ReferenceData xmi:id="_0uFBwdBYEeytCvXriojvrw" base_Class="_ZC234NBYEeytCvXriojvrw"/>
+  <ldml:ReferenceData xmi:id="_0uFo0NBYEeytCvXriojvrw" base_Class="_7O-YYNBXEeytCvXriojvrw"/>
+  <ldml:Derived xmi:id="_uVyXENBlEeytCvXriojvrw" base_Class="_FvoRBgvGEeyuhKbTMn6kag"/>
+  <ldml:Documentation xmi:id="_-T0HgNEJEey8Yoj-2WBBqw" base_Comment="_xO0HkNBCEeyIL5G2wmXgzQ"/>
+  <ldml:Documentation xmi:id="_-T6OINEJEey8Yoj-2WBBqw" base_Comment="_01zcYNBCEeyIL5G2wmXgzQ"/>
+  <ldml:Documentation xmi:id="_-T61MNEJEey8Yoj-2WBBqw" base_Comment="_J7m_MNBIEeyIL5G2wmXgzQ"/>
+  <ldml:Documentation xmi:id="_-T7cQNEJEey8Yoj-2WBBqw" base_Comment="_W_d3ENBIEeyIL5G2wmXgzQ"/>
+  <ldml:Documentation xmi:id="_-T8DUNEJEey8Yoj-2WBBqw" base_Comment="_hBRTMNBIEeyIL5G2wmXgzQ"/>
+  <ldml:Documentation xmi:id="_-T8qYNEJEey8Yoj-2WBBqw" base_Comment="_lpZU4NBIEeyIL5G2wmXgzQ"/>
+  <ldml:Documentation xmi:id="_-T8qYdEJEey8Yoj-2WBBqw" base_Comment="_pgosMNBIEeyIL5G2wmXgzQ"/>
+  <ldml:Documentation xmi:id="_-T9RcNEJEey8Yoj-2WBBqw" base_Comment="_s6eV0NBIEeyIL5G2wmXgzQ"/>
+  <ldml:Documentation xmi:id="_-T94gNEJEey8Yoj-2WBBqw" base_Comment="_Q4v7ANBJEeyIL5G2wmXgzQ"/>
+  <ldml:Documentation xmi:id="_-T-fkNEJEey8Yoj-2WBBqw" base_Comment="_Q4v7AdBJEeyIL5G2wmXgzQ"/>
+  <ldml:ReferenceData xmi:id="_fAPjENzfEeyORqA-BnZOvA" base_Class="_btsNMNzfEeyORqA-BnZOvA"/>
+  <ldml:ReferenceData xmi:id="_LW1BkNzhEeyORqA-BnZOvA" base_Class="_I1H50NzhEeyORqA-BnZOvA"/>
+  <ldml:ReferenceData xmi:id="_Ws33UNziEeyORqA-BnZOvA" base_Class="_UHESsNziEeyORqA-BnZOvA"/>
+  <ldml:ReferenceData xmi:id="_JU0wwNzlEeyORqA-BnZOvA" base_Class="_FyZL0NzlEeyORqA-BnZOvA"/>
+  <ldml:Derived xmi:id="_WEmcwNzqEeyORqA-BnZOvA" base_Property="_FvoRCAvGEeyuhKbTMn6kag"/>
+  <ldml:Documentation xmi:id="_zJd18NzxEeyORqA-BnZOvA" base_Comment="_x9nt4NzxEeyORqA-BnZOvA"/>
+  <ldml:Documentation xmi:id="_5A1R8NzxEeyORqA-BnZOvA" base_Comment="_3wHQ8NzxEeyORqA-BnZOvA"/>
+  <ldml:Documentation xmi:id="_78L94NzzEeyORqA-BnZOvA" base_Comment="_6Hm3UNzyEeyORqA-BnZOvA"/>
+  <ldml:Documentation xmi:id="_CCg9YOGeEey8IpheLQ_a1A" base_Comment="_-48kYOGdEey8IpheLQ_a1A"/>
+  <ldml:Documentation xmi:id="_J1EqAOG6EeybPvVpZUerTw" base_Comment="_J00LUOG6EeybPvVpZUerTw"/>
+  <ldml:Documentation xmi:id="_Z6U44O5IEeyVg4QP7lSj1A" base_Comment="_Z6ROgO5IEeyVg4QP7lSj1A"/>
+  <ldml:Documentation xmi:id="_ewxN8O5JEeyVg4QP7lSj1A" base_Comment="_ewwm4O5JEeyVg4QP7lSj1A"/>
+  <ldml:Documentation xmi:id="__NfQke5MEeyVg4QP7lSj1A" base_Comment="__NfQkO5MEeyVg4QP7lSj1A"/>
 </xmi:XMI>
