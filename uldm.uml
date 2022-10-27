@@ -922,8 +922,132 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_uXs2YG1vEeyGYpzd-2skXA" name="Manufacturing"/>
     <packagedElement xmi:type="uml:Package" xmi:id="_xRjHgJ0dEeuosN6Nd1GBJQ" name="SharedServices">
-      <packagedElement xmi:type="uml:Package" xmi:id="_-wAqsKDhEeuXwMLKVSwySg" name="HumanResources">
-        <packagedElement xmi:type="uml:Package" xmi:id="_amm-IKDiEeuXwMLKVSwySg" name="Employee"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_-wAqsKDhEeuXwMLKVSwySg" name="People">
+        <packagedElement xmi:type="uml:Package" xmi:id="_amm-IKDiEeuXwMLKVSwySg" name="Employee">
+          <packagedElement xmi:type="uml:Class" xmi:id="_CW3QcEoPEe2EspI0DeAKsA" name="MangedPosition">
+            <generalization xmi:type="uml:Generalization" xmi:id="_o8DVEEoxEe2MX-ARbAwz1Q" general="_EI7ykEoxEe2MX-ARbAwz1Q"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_CBcSsEoSEe2EspI0DeAKsA" name="Employee">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_TxfpUErVEe2JaYM2HfjWkA" name="employeeHistory" type="_fhn0AErLEe2JaYM2HfjWkA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YdPmwErVEe2JaYM2HfjWkA"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YdkW4ErVEe2JaYM2HfjWkA" value="*"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:AssociationClass" xmi:id="_ONn7sEoSEe2EspI0DeAKsA" name="Job" memberEnd="_ONqX8EoSEe2EspI0DeAKsA _ONq_AEoSEe2EspI0DeAKsA">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ONpw4EoSEe2EspI0DeAKsA" source="org.eclipse.papyrus">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ONpw4UoSEe2EspI0DeAKsA" key="nature" value="UML_Nature"/>
+            </eAnnotations>
+            <ownedComment xmi:type="uml:Comment" xmi:id="_5Hvn4EryEe2JaYM2HfjWkA">
+              <body>&lt;p>A Job is the association between an Employee and a Position and is always a current or &amp;quot;live&amp;quot;&amp;nbsp;statement of this assignment. The historical vie of Positions held by an Employee is maintained by the Employee&amp;#39;s employeeHistory since it is inevitable that the definition or existence of the corresponding Positions will vary over time.&lt;/p>
+
+&lt;p>The nature of this association is such that an Employee may not be fully allocated to a given Position (e.g. a job share arrangement where two or more Employees are partially allocated to the same Position) and an Employee may also split their effort across more than one Position.&lt;/p>
+
+&lt;p>Positions will typically sit within a CostCentre hierarchy that reflects the managerial responsibility for the performance of a part of the Organisation and this responsibilty is asserted by the corresponding Position. In a simple scenario, the&amp;nbsp;cost of&amp;nbsp;an Employee fulfilling a Position could be attributed to the correct CostCentre by simply following the Position hierarchy to the nearest manager with responsibility for a CostCentre. However, in more complex cases it is a) important to understand the allocation of an Employee to a given Position, and b) possible to fund the fulfilment of the Position through other CostObjects (e.g. a Project). Consequently it is the Job that explicitly&amp;nbsp;defines&amp;nbsp;the source of funds that is responsible for the cost of any Position.&amp;nbsp;&lt;/p>
+</body>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_BrJgUEoXEe2MX-ARbAwz1Q" name="from" type="_v0B5QJ0gEeuosN6Nd1GBJQ"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_R55m4EoXEe2MX-ARbAwz1Q" name="allocation" type="_W1-gQJ0gEeuosN6Nd1GBJQ">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_pLGeoErqEe2JaYM2HfjWkA">
+                <body>&lt;p>The commitment of the Employee&amp;#39;s effort to the identified Position. The total allocation for the Employee must reflect the allocation of the relevant Engagement and, similarly, total allocation for the Position should not exceed the required effort fo the Position (noting that a Position may be unfilled or partially filled but an Employee should always be fully allocated according to the terms of their current Engagement.&lt;/p>
+</body>
+              </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_WzsjIEriEe2JaYM2HfjWkA" name="funding" type="_0V_qwErfEe2JaYM2HfjWkA">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_ax1IcErpEe2JaYM2HfjWkA">
+                <body>&lt;p>The funding for a given Job is specified as a list of funding elements of type JobFunding. This simple structure identifies a CostObject as a funding source and the amount of the total funding that this CostObject will provide. Typically, a Job will be funded a single CostCentre that rolls up through the position hierarchy to the manager of the CostCentre, but other scenarios are possible (e.g. a Job that is funded by multiple Projects). In all cases, the sum of the fundingAmount for all sources of funding must be exactly 1.0&lt;/p>
+</body>
+              </ownedComment>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZYolEEriEe2JaYM2HfjWkA" value="*"/>
+            </ownedAttribute>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_ONqX8EoSEe2EspI0DeAKsA" name="employee" type="_CBcSsEoSEe2EspI0DeAKsA" association="_ONn7sEoSEe2EspI0DeAKsA"/>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_ONq_AEoSEe2EspI0DeAKsA" name="position" type="_EI7ykEoxEe2MX-ARbAwz1Q" association="_ONn7sEoSEe2EspI0DeAKsA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_64h9AEoWEe2MX-ARbAwz1Q" name="Grade">
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TJhOIEo3Ee2MX-ARbAwz1Q" client="_64h9AEoWEe2MX-ARbAwz1Q" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ZikBYEoXEe2MX-ARbAwz1Q" name="JobFamily">
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_T4f0AEo3Ee2MX-ARbAwz1Q" client="_ZikBYEoXEe2MX-ARbAwz1Q" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_EI7ykEoxEe2MX-ARbAwz1Q" name="Position" isAbstract="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_qbeSoErwEe2JaYM2HfjWkA">
+              <body>&lt;p>A Position is any role that exists within the Organisation, whether filled or not. While a simple hierarchy could have been used, the abstract Position is further specialised into ChiefExecutive (who has no direct manager but is accountable to the Board, Trustees or similar governance framework) and ManagedPosition which represents every other Position within the Organisation. This structure facilitates the attribute of a ChiefExecutive to an Organisation and also reinforces the fact that the top of any Position hierarchy must be responsible at an Organisation level.&lt;/p>
+</body>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_fYvZgEo2Ee2MX-ARbAwz1Q" name="managedCostCentre" type="_eMGWIJLtEeyax4bMuIxOyA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8DVBUErIEe2JaYM2HfjWkA"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_1C7OAEo2Ee2MX-ARbAwz1Q" name="grade" type="_64h9AEoWEe2MX-ARbAwz1Q"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_1C71EEo2Ee2MX-ARbAwz1Q" name="jobFamily" type="_ZikBYEoXEe2MX-ARbAwz1Q"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_1C71EUo2Ee2MX-ARbAwz1Q" name="title" type="_ac5joJ0gEeuosN6Nd1GBJQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_GEW9cEoxEe2MX-ARbAwz1Q" name="ChiefExecutive">
+            <generalization xmi:type="uml:Generalization" xmi:id="_nkgTUEoxEe2MX-ARbAwz1Q" general="_EI7ykEoxEe2MX-ARbAwz1Q"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_qvWQ4ErwEe2JaYM2HfjWkA" name="organisation" type="_ZhJC4JLtEeyax4bMuIxOyA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_rcNksEoxEe2MX-ARbAwz1Q" memberEnd="_rcOy0EoxEe2MX-ARbAwz1Q _rcOy0UoxEe2MX-ARbAwz1Q">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rcOLwEoxEe2MX-ARbAwz1Q" source="org.eclipse.papyrus">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rcOLwUoxEe2MX-ARbAwz1Q" key="nature" value="UML_Nature"/>
+            </eAnnotations>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_rcOy0EoxEe2MX-ARbAwz1Q" name="position" type="_EI7ykEoxEe2MX-ARbAwz1Q" association="_rcNksEoxEe2MX-ARbAwz1Q">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_s4BbYEoxEe2MX-ARbAwz1Q" value="1"/>
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="_s4CCcEoxEe2MX-ARbAwz1Q" value="1"/>
+            </ownedEnd>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_rcOy0UoxEe2MX-ARbAwz1Q" name="mangedposition" type="_CW3QcEoPEe2EspI0DeAKsA" association="_rcNksEoxEe2MX-ARbAwz1Q">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_s4CCcUoxEe2MX-ARbAwz1Q"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_s4CCckoxEe2MX-ARbAwz1Q" value="*"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Abstraction" xmi:id="_Fy7AcEo3Ee2MX-ARbAwz1Q" client="_EI7ykEoxEe2MX-ARbAwz1Q" supplier="_eMGWIJLtEeyax4bMuIxOyA"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_fhn0AErLEe2JaYM2HfjWkA" name="EmployeeEvent" isAbstract="true">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_l6Pi8ErLEe2JaYM2HfjWkA" name="effectiveDate" type="_v0B5QJ0gEeuosN6Nd1GBJQ"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_qvL4oErLEe2JaYM2HfjWkA" name="endDate" type="_v0B5QJ0gEeuosN6Nd1GBJQ">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_s_lN8ErLEe2JaYM2HfjWkA"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_yH1hMErLEe2JaYM2HfjWkA" name="JobAssignment">
+            <generalization xmi:type="uml:Generalization" xmi:id="_EYZugErMEe2JaYM2HfjWkA" general="_fhn0AErLEe2JaYM2HfjWkA"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_BUDXQErNEe2JaYM2HfjWkA" name="title" type="_ac5joJ0gEeuosN6Nd1GBJQ"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_3945IErMEe2JaYM2HfjWkA" name="grade" type="_oOSMsErMEe2JaYM2HfjWkA"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_DZq_8ErNEe2JaYM2HfjWkA" name="jobFamily" type="_oOSMsErMEe2JaYM2HfjWkA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_50GpUErLEe2JaYM2HfjWkA" name="CompensationAward" isAbstract="true">
+            <generalization xmi:type="uml:Generalization" xmi:id="_FJ6rAErMEe2JaYM2HfjWkA" general="_fhn0AErLEe2JaYM2HfjWkA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_8Ne7gErLEe2JaYM2HfjWkA" name="SalaryAward">
+            <generalization xmi:type="uml:Generalization" xmi:id="_F73sYErMEe2JaYM2HfjWkA" general="_50GpUErLEe2JaYM2HfjWkA"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_my9MQErOEe2JaYM2HfjWkA" name="salary" type="_pn7c0KHVEeuDk9H_gpfrgQ"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_3ODFsErOEe2JaYM2HfjWkA" name="salaryPeriod" type="_x8m-sKaJEeuFv72Lf76jxQ"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_N0KIMErVEe2JaYM2HfjWkA" name="paymentPeriod" type="_x8m-sKaJEeuFv72Lf76jxQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_-NwKIErLEe2JaYM2HfjWkA" name="SinglePaymentAward">
+            <generalization xmi:type="uml:Generalization" xmi:id="_Gzpo8ErMEe2JaYM2HfjWkA" general="_50GpUErLEe2JaYM2HfjWkA"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_ofzlEErNEe2JaYM2HfjWkA" name="value" type="_pn7c0KHVEeuDk9H_gpfrgQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="__TnrYEreEe2JaYM2HfjWkA" name="Engagement">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_saZS4ErvEe2JaYM2HfjWkA" name="effectiveDate" type="_v0B5QJ0gEeuosN6Nd1GBJQ"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_vTHzgErvEe2JaYM2HfjWkA" name="endDate" type="_v0B5QJ0gEeuosN6Nd1GBJQ">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1xhaUErvEe2JaYM2HfjWkA"/>
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="_1xhaUUrvEe2JaYM2HfjWkA" value="1"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_EdwN8ErfEe2JaYM2HfjWkA" memberEnd="_EdyDIErfEe2JaYM2HfjWkA _EdyqMErfEe2JaYM2HfjWkA">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Edw1AErfEe2JaYM2HfjWkA" source="org.eclipse.papyrus">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Edw1AUrfEe2JaYM2HfjWkA" key="nature" value="UML_Nature"/>
+            </eAnnotations>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_EdyDIErfEe2JaYM2HfjWkA" name="engagement" type="__TnrYEreEe2JaYM2HfjWkA" association="_EdwN8ErfEe2JaYM2HfjWkA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HSsawUrfEe2JaYM2HfjWkA" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HSsawkrfEe2JaYM2HfjWkA" value="*"/>
+            </ownedEnd>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_EdyqMErfEe2JaYM2HfjWkA" name="employee" type="_CBcSsEoSEe2EspI0DeAKsA" association="_EdwN8ErfEe2JaYM2HfjWkA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HSrzsErfEe2JaYM2HfjWkA" value="1"/>
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="_HSsawErfEe2JaYM2HfjWkA" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_0V_qwErfEe2JaYM2HfjWkA" name="JobFunding">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_4E2iIErfEe2JaYM2HfjWkA" name="costObject" type="_drOdEJDREeyax4bMuIxOyA"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_72PJEErfEe2JaYM2HfjWkA" name="fundingAmount" type="_W1-gQJ0gEeuosN6Nd1GBJQ"/>
+          </packagedElement>
+        </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="_b_CwsKDiEeuXwMLKVSwySg" name="Organisation"/>
         <packagedElement xmi:type="uml:Package" xmi:id="_dRQmgKDiEeuXwMLKVSwySg" name="Payroll"/>
         <packagedElement xmi:type="uml:Package" xmi:id="_gHpk0KDiEeuXwMLKVSwySg" name="ContingentWorker"/>
@@ -1201,11 +1325,20 @@
           <packagedElement xmi:type="uml:Class" xmi:id="_ZhJC4JLtEeyax4bMuIxOyA" name="Organisation">
             <generalization xmi:type="uml:Generalization" xmi:id="_Dvf0IJLwEeyax4bMuIxOyA" general="_a5SFEJLuEeyax4bMuIxOyA"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_eMGWIJLtEeyax4bMuIxOyA" name="OrganisationUnit">
+          <packagedElement xmi:type="uml:Class" xmi:id="_eMGWIJLtEeyax4bMuIxOyA" name="CostCentre">
             <generalization xmi:type="uml:Generalization" xmi:id="_EdgwsJLwEeyax4bMuIxOyA" general="_a5SFEJLuEeyax4bMuIxOyA"/>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_Neg3IJLwEeyax4bMuIxOyA" name="responsibilityType" type="_evWFwJLwEeyax4bMuIxOyA"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_Neg3IJLwEeyax4bMuIxOyA" name="responsibilityType" type="_evWFwJLwEeyax4bMuIxOyA">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_am3e0FXPEe2AS-AxgfYWgA">
+                <body>&lt;p>In general terms, it is assumed that the responsible manager of any business unit within an organisation must always be responsible for its costs and so, when creating an organisational hierarchy for measuring the performance of business units, everything is always a CostCentre. However, CostCentres may have other responsibilities against which their performance needs to be measured, the most common additional responsibility being Revenue and this is sometimes then described as a Revenue Centre. Noting that a centre of revenue is also necessarily a centre of cost, a centre of revenue is also&amp;nbsp;often described as a Profit Centre. The other form of responsibility that an organisation may choose to use is Investment as this enables managers to understand the performance of specific investments that transform business capability.&lt;/p>
+</body>
+              </ownedComment>
+              <ownedComment xmi:type="uml:Comment" xmi:id="_and7wFXPEe2AS-AxgfYWgA">
+                <body>&lt;p>Given that there is generally a well defined list of responsibility types that are commonly used, this concept could potentially be represented as an Enumeration.&lt;/p>
+</body>
+              </ownedComment>
+            </ownedAttribute>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_a5SFEJLuEeyax4bMuIxOyA" name="BusinessUnit" isAbstract="true">
+          <packagedElement xmi:type="uml:Class" xmi:id="_a5SFEJLuEeyax4bMuIxOyA" name="OrganisationUnit" isAbstract="true">
             <generalization xmi:type="uml:Generalization" xmi:id="_FFxDgJLwEeyax4bMuIxOyA" general="_drOdEJDREeyax4bMuIxOyA"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Association" xmi:id="_H2Nx4JLwEeyax4bMuIxOyA" memberEnd="_H2Nx45LwEeyax4bMuIxOyA _H2OY8JLwEeyax4bMuIxOyA">
@@ -1261,6 +1394,10 @@
           <packagedElement xmi:type="uml:Interface" xmi:id="_BnjlQJ0hEeuosN6Nd1GBJQ" name="IControlledVocabulary">
             <generalization xmi:type="uml:Generalization" xmi:id="_Oh570J0hEeuosN6Nd1GBJQ" general="_j2_KYJ0eEeuosN6Nd1GBJQ"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_K9hPEJ0hEeuosN6Nd1GBJQ" name="code" type="_q9tDgJ0gEeuosN6Nd1GBJQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_oOSMsErMEe2JaYM2HfjWkA" name="ReferenceValue">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_qeEeAErMEe2JaYM2HfjWkA" name="code" type="_q9tDgJ0gEeuosN6Nd1GBJQ"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_uKoPUErMEe2JaYM2HfjWkA" name="name" type="_ac5joJ0gEeuosN6Nd1GBJQ"/>
           </packagedElement>
         </packagedElement>
       </packagedElement>
@@ -1665,4 +1802,13 @@
   <ldml:Documentation xmi:id="_Z6U44O5IEeyVg4QP7lSj1A" base_Comment="_Z6ROgO5IEeyVg4QP7lSj1A"/>
   <ldml:Documentation xmi:id="_ewxN8O5JEeyVg4QP7lSj1A" base_Comment="_ewwm4O5JEeyVg4QP7lSj1A"/>
   <ldml:Documentation xmi:id="__NfQke5MEeyVg4QP7lSj1A" base_Comment="__NfQkO5MEeyVg4QP7lSj1A"/>
+  <ldml:ReferenceData xmi:id="_9-7tQEoWEe2MX-ARbAwz1Q" base_Class="_64h9AEoWEe2MX-ARbAwz1Q"/>
+  <ldml:ReferenceData xmi:id="_cidhAEoXEe2MX-ARbAwz1Q" base_Class="_ZikBYEoXEe2MX-ARbAwz1Q"/>
+  <ldml:Documentation xmi:id="_ax2WkErpEe2JaYM2HfjWkA" base_Comment="_ax1IcErpEe2JaYM2HfjWkA"/>
+  <ldml:Documentation xmi:id="_pLGeoUrqEe2JaYM2HfjWkA" base_Comment="_pLGeoErqEe2JaYM2HfjWkA"/>
+  <ldml:Documentation xmi:id="_qbe5sErwEe2JaYM2HfjWkA" base_Comment="_qbeSoErwEe2JaYM2HfjWkA"/>
+  <ldml:Documentation xmi:id="_5HwO8EryEe2JaYM2HfjWkA" base_Comment="_5Hvn4EryEe2JaYM2HfjWkA"/>
+  <ldml:ReferenceCode xmi:id="_YOWaMFXNEe2AS-AxgfYWgA" base_Property="_8r080KHbEeunjrVPm6TZ0Q"/>
+  <ldml:Documentation xmi:id="_andUsFXPEe2AS-AxgfYWgA" base_Comment="_am3e0FXPEe2AS-AxgfYWgA"/>
+  <ldml:Documentation xmi:id="_anei0FXPEe2AS-AxgfYWgA" base_Comment="_and7wFXPEe2AS-AxgfYWgA"/>
 </xmi:XMI>
