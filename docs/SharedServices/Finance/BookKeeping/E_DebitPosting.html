@@ -1,0 +1,115 @@
+<div class="justify-content-start align-items-left pt-2 pb-2 mb-2 border-bottom">
+	<h5>Entity SharedServices::Finance::BookKeeping::DebitPosting</h5>
+	
+	<h6 class="mt-4">Inheritance</h6>
+	<ul class="inheritance">
+		<li>
+			<ul class="inheritance">
+				<li>Entity</li>
+				<li>
+					<ul class="inheritance">
+						<li>SharedServices::Finance::BookKeeping::Posting</li>
+						<li>
+					<ul class="inheritance">
+						<li>SharedServices::Finance::BookKeeping::DebitPosting</li>
+						<li>
+						</li>
+					</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+<div class="justify-content-start align-items-left pt-2 pb-2 mb-2">
+	<h6 class="pb-2">
+		<pre><span class="strong">DebitPosting</span> extends Posting</pre>
+	</h6>
+
+	<p style="white-space: pre-line"><p>The DebitPosting entity is a concrete sub class of the abstract Posting entity such that a JournalEntry (i.e. an Accounting Transaction) can be declared to have at least one Debit element in accordance with the requirements of double entry bookkeeping.</p>
+</p>
+	</div>
+</div>
+
+<div class="justify-content-start align-items-left px-2 py-3 mb-2">
+	<div class="my-1 mx-2 p-1 bg-light border">
+		
+		<h6 class="p-2">Attributes inherited from SharedServices::Finance::BookKeeping::Posting</h6>
+
+		<table class="table table-sm table-striped border ml-3 mr-5">
+			<col style="width: 20%">
+			<col style="width: 15%">
+			<col style="width: *">
+			<thead class="table-dark">
+				<tr>
+					<th scope="col">Type and Multiplicity</th>
+					<th scope="col">Name</th>
+					<th scope="col">Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>Account[1]</code></td>
+					<td>account</td>
+					<td><p style="white-space: pre-line"><p>The identity of the account to be credited or debited.</p>
+</p></td>
+				</tr>
+				<tr>
+					<td><code>CurrencyAmount[1]</code></td>
+					<td>value</td>
+					<td><p style="white-space: pre-line"><p>The value of the posting to the specified account.</p>
+</p></td>
+				</tr>
+				<tr>
+					<td><code>Date[1]</code></td>
+					<td>postingDate</td>
+					<td><p style="white-space: pre-line"><p>The date on which the posting was applied to the Ledger - this will be the same as the postingDate in the corresponding Journal Entry <u>if</u> the transaction was recorded in a Journal.</p>
+</p></td>
+				</tr>
+				<tr>
+					<td><code>AccountingPeriod[1]</code></td>
+					<td>accountingPeriod</td>
+					<td><p style="white-space: pre-line"><p>The Accounting Period in which the posting was recorded.</p>
+</p></td>
+				</tr>
+			</tbody>
+		</table>
+
+
+	</div>
+</div>
+
+<div class="justify-content-start align-items-left px-2 py-3 mb-2">
+	<div class="my-1 mx-2 p-1 bg-light border">
+		<h6 class="p-2">Associations</h6>
+		
+		<table class="table table-sm table-striped border ml-3 mr-5">
+			<col style="width: 35%">
+			<col style="width: *">
+			<thead class="table-dark">
+				<tr>
+					<th scope="col">Type and Cardinality</th>
+					<th scope="col">Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>JournalEntry 1..* to 0..1</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	
+	
+		
+	</div>
+</div>
+
+<div class="justify-content-start align-items-left px-2 py-3 mb-2">
+	<div class="my-1 mx-2 p-1 bg-light border">
+
+	
+	</div>
+</div>

@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+	<!-- Font Awesome -->
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"> -->
+	<link rel="stylesheet" href="fontawesome/css/all.min.css">
+	<!-- Material Design Bootstrap -->
+	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="mdb.min.css">
+	<!-- Local CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Logical Data Model Browser</title>
+  </head>
+  <body>
+	<nav class="fixed-navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+		<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#"><h4>Logical Data Model</h4></a>
+		<!--<input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+		<ul class="navbar-nav px-3">
+			<li class="nav-item text-nowrap">
+				<a class="nav-link" href="#">Sign out</a>
+			</li>
+		</ul>-->
+	</nav>
+  	<div class="container-fluid">
+	  	<div class="row">
+		    <nav class="col-3 d-none d-block bg-light sidebar">
+		    	<div class="sidebar-sticky overflow-auto">
+				
+			 <div class="treeview border">
+				<h5 id="model" class="pt-3 pl-3">Documentation</h5>
+									<ul class="mb-1 pl-3 pb-2">
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Documentation"><i class="far fa-folder-open ic-w mx-1"></i>Documentation</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Documentation/Retail"><i class="far fa-folder-open ic-w mx-1"></i>Retail</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Documentation/Retail/Selling"><i class="far fa-folder-open ic-w mx-1"></i>Selling</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Documentation/Retail/Selling/SalesTransaction"><i class="far fa-folder-open ic-w mx-1"></i>Sales Transaction</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Documentation/Retail/Selling/SalesTransaction/PointOfSale"><i class="far fa-folder-open ic-w mx-1"></i>Point Of Sale</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Documentation/Retail/Selling/SalesTransaction/CustomerOrder"><i class="far fa-folder-open ic-w mx-1"></i>Customer Order</span>
+	</li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Documentation/Retail/Selling/Product"><i class="far fa-folder-open ic-w mx-1"></i>Product</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Documentation/Retail/Selling/Catalogue"><i class="far fa-folder-open ic-w mx-1"></i>Catalogue</span>
+	</li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Documentation/Retail/LogicalSupplyChain"><i class="far fa-folder-open ic-w mx-1"></i>Logical Supply Chain</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Documentation/Retail/PhysicalSupplyChain"><i class="far fa-folder-open ic-w mx-1"></i>Physical Supply Chain</span>
+	</li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Documentation/FinancialServices"><i class="far fa-folder-open ic-w mx-1"></i>Financial Services</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Documentation/SharedServices"><i class="far fa-folder-open ic-w mx-1"></i>Shared Services</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Documentation/Common"><i class="far fa-folder-open ic-w mx-1"></i>Common</span>
+	</li>
+		</ul>
+	</li>
+					</ul>
+			</div>
+					<div class="treeview border">
+						<h5 id="model" class="package-select pointer pt-3 pl-3" data-path=".">Data Catalogue</h5>
+											
+	<ul class="mb-1 pl-3 pb-2">
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Retail"><i class="far fa-folder-open ic-w mx-1"></i>Retail</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Retail/CustomerEngagement"><i class="far fa-folder-open ic-w mx-1"></i>CustomerEngagement</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Retail/Selling"><i class="far fa-folder-open ic-w mx-1"></i>Selling</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Retail/Selling/SalesTransaction"><i class="far fa-folder-open ic-w mx-1"></i>SalesTransaction</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Retail/Selling/SalesTransaction/PointOfSale"><i class="far fa-folder-open ic-w mx-1"></i>PointOfSale</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Retail/Selling/SalesTransaction/CustomerOrder"><i class="far fa-folder-open ic-w mx-1"></i>CustomerOrder</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Retail/Selling/SalesTransaction/Charge"><i class="far fa-folder-open ic-w mx-1"></i>Charge</span>
+		<ul class="nested">
+			<li><span class="data-type-select pointer" data-path="Retail/Selling/SalesTransaction/Charge" data-name="AppliedCharge"><i class="fas fa-circle ic-w mr-1"></i>AppliedCharge</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/SalesTransaction/Charge" data-name="Charge"><i class="far fa-dot-circle ic-w mr-1"></i>Charge</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/SalesTransaction/Charge" data-name="ChargeType"><i class="far fa-dot-circle ic-w mr-1"></i>ChargeType</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/SalesTransaction/Charge" data-name="RateType"><i class="far fa-dot-circle ic-w mr-1"></i>RateType</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/SalesTransaction/Charge" data-name="FixedCharge"><i class="far fa-dot-circle ic-w mr-1"></i>FixedCharge</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/SalesTransaction/Charge" data-name="PercentageCharge"><i class="far fa-dot-circle ic-w mr-1"></i>PercentageCharge</span></li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Retail/Selling/SalesTransaction/Restriction"><i class="far fa-folder-open ic-w mx-1"></i>Restriction</span>
+		<ul class="nested">
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/SalesTransaction/Restriction" data-name="SellingRestriction"><i class="far fa-dot-circle ic-w mr-1"></i>SellingRestriction</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/SalesTransaction/Restriction" data-name="AgeRestriction"><i class="far fa-dot-circle ic-w mr-1"></i>AgeRestriction</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/SalesTransaction/Restriction" data-name="TimeOfDayRestriction"><i class="far fa-dot-circle ic-w mr-1"></i>TimeOfDayRestriction</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/SalesTransaction/Restriction" data-name="QuantityRestriction"><i class="far fa-dot-circle ic-w mr-1"></i>QuantityRestriction</span></li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Retail/Selling/SalesTransaction/PriceAdjustment"><i class="far fa-folder-open ic-w mx-1"></i>PriceAdjustment</span>
+		<ul class="nested">
+			<li><span class="data-type-select pointer" data-path="Retail/Selling/SalesTransaction/PriceAdjustment" data-name="PriceAdjustment"><i class="fas fa-circle ic-w mr-1"></i>PriceAdjustment</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/SalesTransaction/PriceAdjustment" data-name="AdjustmentType"><i class="far fa-dot-circle ic-w mr-1"></i>AdjustmentType</span></li>
+		</ul>
+	</li>
+				<li><span class="entity-select pointer" data-path="Retail/Selling/SalesTransaction" data-name="SalesTransaction"><i class="fas fa-asterisk ic-w mr-1"></i>SalesTransaction</span></li>
+				<li><span class="entity-select pointer" data-path="Retail/Selling/SalesTransaction" data-name="TransactionLine"><i class="fas fa-asterisk ic-w mr-1"></i>TransactionLine</span></li>
+				<li><span class="entity-select pointer" data-path="Retail/Selling/SalesTransaction" data-name="FundsExchange"><i class="fas fa-asterisk ic-w mr-1"></i>FundsExchange</span></li>
+				<li><span class="entity-select pointer" data-path="Retail/Selling/SalesTransaction" data-name="ProductExchange"><i class="fas fa-asterisk ic-w mr-1"></i>ProductExchange</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/SalesTransaction" data-name="FundsExchangeType"><i class="far fa-dot-circle ic-w mr-1"></i>FundsExchangeType</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/SalesTransaction" data-name="ProductExchangeType"><i class="far fa-dot-circle ic-w mr-1"></i>ProductExchangeType</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/SalesTransaction" data-name="TransactionOrigin"><i class="far fa-dot-circle ic-w mr-1"></i>TransactionOrigin</span></li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Retail/Selling/Product"><i class="far fa-folder-open ic-w mx-1"></i>Product</span>
+		<ul class="nested">
+				<li><span class="entity-select pointer" data-path="Retail/Selling/Product" data-name="Product"><i class="fas fa-asterisk ic-w mr-1"></i>Product</span></li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Retail/Selling/Catalogue"><i class="far fa-folder-open ic-w mx-1"></i>Catalogue</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Retail/Selling/Catalogue/Brand"><i class="far fa-folder-open ic-w mx-1"></i>Brand</span>
+		<ul class="nested">
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/Catalogue/Brand" data-name="BrandHierarchyNode"><i class="far fa-dot-circle ic-w mr-1"></i>BrandHierarchyNode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/Catalogue/Brand" data-name="MasterBrand"><i class="far fa-dot-circle ic-w mr-1"></i>MasterBrand</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/Catalogue/Brand" data-name="Brand"><i class="far fa-dot-circle ic-w mr-1"></i>Brand</span></li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Retail/Selling/Catalogue/Merchandising"><i class="far fa-folder-open ic-w mx-1"></i>Merchandising</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Retail/Selling/Catalogue/Merchandising/SellingPrice"><i class="far fa-folder-open ic-w mx-1"></i>SellingPrice</span>
+		<ul class="nested">
+			<li><span class="data-type-select pointer" data-path="Retail/Selling/Catalogue/Merchandising/SellingPrice" data-name="Price"><i class="fas fa-circle ic-w mr-1"></i>Price</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/Catalogue/Merchandising/SellingPrice" data-name="PriceType"><i class="far fa-dot-circle ic-w mr-1"></i>PriceType</span></li>
+		</ul>
+	</li>
+			<li><span class="interface-select pointer" data-path="Retail/Selling/Catalogue/Merchandising" data-name="IChildNode"><i class="far fa-circle ic-w mr-1"></i>IChildNode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/Catalogue/Merchandising" data-name="MerchandisingHierarchyNode"><i class="far fa-dot-circle ic-w mr-1"></i>MerchandisingHierarchyNode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/Catalogue/Merchandising" data-name="MerchandisingParentNode"><i class="far fa-dot-circle ic-w mr-1"></i>MerchandisingParentNode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/Catalogue/Merchandising" data-name="MerchandisingRootNode"><i class="far fa-dot-circle ic-w mr-1"></i>MerchandisingRootNode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/Catalogue/Merchandising" data-name="MerchandisingIntermediateNode"><i class="far fa-dot-circle ic-w mr-1"></i>MerchandisingIntermediateNode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Selling/Catalogue/Merchandising" data-name="MerchandisingLeafNode"><i class="far fa-dot-circle ic-w mr-1"></i>MerchandisingLeafNode</span></li>
+		</ul>
+	</li>
+		</ul>
+	</li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Retail/Trading"><i class="far fa-folder-open ic-w mx-1"></i>Trading</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Retail/Trading/Line"><i class="far fa-folder-open ic-w mx-1"></i>Line</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Retail/Trading/Line/Description"><i class="far fa-folder-open ic-w mx-1"></i>Description</span>
+		<ul class="nested">
+			<li><span class="data-type-select pointer" data-path="Retail/Trading/Line/Description" data-name="Name"><i class="fas fa-circle ic-w mr-1"></i>Name</span></li>
+			<li><span class="data-type-select pointer" data-path="Retail/Trading/Line/Description" data-name="Description"><i class="fas fa-circle ic-w mr-1"></i>Description</span></li>
+			<li><span class="data-type-select pointer" data-path="Retail/Trading/Line/Description" data-name="Exclusivity"><i class="fas fa-circle ic-w mr-1"></i>Exclusivity</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/Description" data-name="NameType"><i class="far fa-dot-circle ic-w mr-1"></i>NameType</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/Description" data-name="DescriptionType"><i class="far fa-dot-circle ic-w mr-1"></i>DescriptionType</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/Description" data-name="GeographicMarket"><i class="far fa-dot-circle ic-w mr-1"></i>GeographicMarket</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/Description" data-name="ExclusivityType"><i class="far fa-dot-circle ic-w mr-1"></i>ExclusivityType</span></li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Retail/Trading/Line/Variant"><i class="far fa-folder-open ic-w mx-1"></i>Variant</span>
+		<ul class="nested">
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/Variant" data-name="VariantFamily"><i class="far fa-dot-circle ic-w mr-1"></i>VariantFamily</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/Variant" data-name="VariantDimension"><i class="far fa-dot-circle ic-w mr-1"></i>VariantDimension</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/Variant" data-name="VariantValue"><i class="far fa-dot-circle ic-w mr-1"></i>VariantValue</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/Variant" data-name="VariantStringValue"><i class="far fa-dot-circle ic-w mr-1"></i>VariantStringValue</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/Variant" data-name="VariantQuantityValue"><i class="far fa-dot-circle ic-w mr-1"></i>VariantQuantityValue</span></li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Retail/Trading/Line/DynamicAttribute"><i class="far fa-folder-open ic-w mx-1"></i>DynamicAttribute</span>
+		<ul class="nested">
+			<li><span class="interface-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="IChildNode"><i class="far fa-circle ic-w mr-1"></i>IChildNode</span></li>
+			<li><span class="data-type-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="AttributeValue"><i class="fas fa-circle ic-w mr-1"></i>AttributeValue</span></li>
+			<li><span class="data-type-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="ComplexValue"><i class="fas fa-circle ic-w mr-1"></i>ComplexValue</span></li>
+			<li><span class="data-type-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="PrimitiveValue"><i class="fas fa-circle ic-w mr-1"></i>PrimitiveValue</span></li>
+			<li><span class="data-type-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="IntegerValue"><i class="fas fa-circle ic-w mr-1"></i>IntegerValue</span></li>
+			<li><span class="data-type-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="RealValue"><i class="fas fa-circle ic-w mr-1"></i>RealValue</span></li>
+			<li><span class="data-type-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="BooleanValue"><i class="fas fa-circle ic-w mr-1"></i>BooleanValue</span></li>
+			<li><span class="data-type-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="StringValue"><i class="fas fa-circle ic-w mr-1"></i>StringValue</span></li>
+			<li><span class="data-type-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="ListValue"><i class="fas fa-circle ic-w mr-1"></i>ListValue</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="TaxonomyNode"><i class="far fa-dot-circle ic-w mr-1"></i>TaxonomyNode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="Taxonomy"><i class="far fa-dot-circle ic-w mr-1"></i>Taxonomy</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="TaxonomyParentNode"><i class="far fa-dot-circle ic-w mr-1"></i>TaxonomyParentNode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="TaxonomyRootNode"><i class="far fa-dot-circle ic-w mr-1"></i>TaxonomyRootNode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="TaxonomyIntermediateNode"><i class="far fa-dot-circle ic-w mr-1"></i>TaxonomyIntermediateNode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="TaxonomyTerm"><i class="far fa-dot-circle ic-w mr-1"></i>TaxonomyTerm</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="DynamicAttributeType"><i class="far fa-dot-circle ic-w mr-1"></i>DynamicAttributeType</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="ArrayAttribute"><i class="far fa-dot-circle ic-w mr-1"></i>ArrayAttribute</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="PrimitiveAttribute"><i class="far fa-dot-circle ic-w mr-1"></i>PrimitiveAttribute</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="IntegerAttribute"><i class="far fa-dot-circle ic-w mr-1"></i>IntegerAttribute</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="RealAttribute"><i class="far fa-dot-circle ic-w mr-1"></i>RealAttribute</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="StringAttribute"><i class="far fa-dot-circle ic-w mr-1"></i>StringAttribute</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="BooleanAttribute"><i class="far fa-dot-circle ic-w mr-1"></i>BooleanAttribute</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="ListAttribute"><i class="far fa-dot-circle ic-w mr-1"></i>ListAttribute</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="ListValue"><i class="far fa-dot-circle ic-w mr-1"></i>ListValue</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="MapAttribute"><i class="far fa-dot-circle ic-w mr-1"></i>MapAttribute</span></li>
+			<li><span class="enumeration-select pointer" data-path="Retail/Trading/Line/DynamicAttribute" data-name="Optionality"><i class="fas fa-dot-circle ic-w mr-1"></i>Optionality</span></li>
+		</ul>
+	</li>
+				<li><span class="entity-select pointer" data-path="Retail/Trading/Line" data-name="Line"><i class="fas fa-asterisk ic-w mr-1"></i>Line</span></li>
+				<li><span class="entity-select pointer" data-path="Retail/Trading/Line" data-name="Variant"><i class="fas fa-asterisk ic-w mr-1"></i>Variant</span></li>
+				<li><span class="entity-select pointer" data-path="Retail/Trading/Line" data-name="VariantLine"><i class="fas fa-asterisk ic-w mr-1"></i>VariantLine</span></li>
+				<li><span class="entity-select pointer" data-path="Retail/Trading/Line" data-name="InvariantLine"><i class="fas fa-asterisk ic-w mr-1"></i>InvariantLine</span></li>
+				<li><span class="entity-select pointer" data-path="Retail/Trading/Line" data-name="CoreLine"><i class="fas fa-asterisk ic-w mr-1"></i>CoreLine</span></li>
+				<li><span class="entity-select pointer" data-path="Retail/Trading/Line" data-name="RecipeLine"><i class="fas fa-asterisk ic-w mr-1"></i>RecipeLine</span></li>
+				<li><span class="entity-select pointer" data-path="Retail/Trading/Line" data-name="ComponentLine"><i class="fas fa-asterisk ic-w mr-1"></i>ComponentLine</span></li>
+				<li><span class="entity-select pointer" data-path="Retail/Trading/Line" data-name="DeconstructableLine"><i class="fas fa-asterisk ic-w mr-1"></i>DeconstructableLine</span></li>
+				<li><span class="entity-select pointer" data-path="Retail/Trading/Line" data-name="Ingredient"><i class="fas fa-asterisk ic-w mr-1"></i>Ingredient</span></li>
+				<li><span class="entity-select pointer" data-path="Retail/Trading/Line" data-name="BasicLine"><i class="fas fa-asterisk ic-w mr-1"></i>BasicLine</span></li>
+			<li><span class="interface-select pointer" data-path="Retail/Trading/Line" data-name="ISellableLine"><i class="far fa-circle ic-w mr-1"></i>ISellableLine</span></li>
+			<li><span class="interface-select pointer" data-path="Retail/Trading/Line" data-name="ISuppliableLine"><i class="far fa-circle ic-w mr-1"></i>ISuppliableLine</span></li>
+			<li><span class="interface-select pointer" data-path="Retail/Trading/Line" data-name="IBulkLine"><i class="far fa-circle ic-w mr-1"></i>IBulkLine</span></li>
+			<li><span class="interface-select pointer" data-path="Retail/Trading/Line" data-name="IVariableQuantityLine"><i class="far fa-circle ic-w mr-1"></i>IVariableQuantityLine</span></li>
+			<li><span class="enumeration-select pointer" data-path="Retail/Trading/Line" data-name="IngredientType"><i class="fas fa-dot-circle ic-w mr-1"></i>IngredientType</span></li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Retail/Trading/Item"><i class="far fa-folder-open ic-w mx-1"></i>Item</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Retail/Trading/Item/Case"><i class="far fa-folder-open ic-w mx-1"></i>Case</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Retail/Trading/Item/ItemSupply"><i class="far fa-folder-open ic-w mx-1"></i>ItemSupply</span>
+	</li>
+				<li><span class="entity-select pointer" data-path="Retail/Trading/Item" data-name="Item"><i class="fas fa-asterisk ic-w mr-1"></i>Item</span></li>
+			<li><span class="data-type-select pointer" data-path="Retail/Trading/Item" data-name="RegionRecord"><i class="fas fa-circle ic-w mr-1"></i>RegionRecord</span></li>
+			<li><span class="data-type-select pointer" data-path="Retail/Trading/Item" data-name="Life"><i class="fas fa-circle ic-w mr-1"></i>Life</span></li>
+			<li><span class="data-type-select pointer" data-path="Retail/Trading/Item" data-name="PurposedDimensionSet"><i class="fas fa-circle ic-w mr-1"></i>PurposedDimensionSet</span></li>
+			<li><span class="data-type-select pointer" data-path="Retail/Trading/Item" data-name="Name"><i class="fas fa-circle ic-w mr-1"></i>Name</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Item" data-name="LifeType"><i class="far fa-dot-circle ic-w mr-1"></i>LifeType</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Item" data-name="RegionPurpose"><i class="far fa-dot-circle ic-w mr-1"></i>RegionPurpose</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Item" data-name="StorageType"><i class="far fa-dot-circle ic-w mr-1"></i>StorageType</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Item" data-name="RecipeBuildType"><i class="far fa-dot-circle ic-w mr-1"></i>RecipeBuildType</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Item" data-name="DimensionPurpose"><i class="far fa-dot-circle ic-w mr-1"></i>DimensionPurpose</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Trading/Item" data-name="NameType"><i class="far fa-dot-circle ic-w mr-1"></i>NameType</span></li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Retail/Trading/Replenishment"><i class="far fa-folder-open ic-w mx-1"></i>Replenishment</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Retail/Trading/Inventory"><i class="far fa-folder-open ic-w mx-1"></i>Inventory</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Retail/Trading/StockLedger"><i class="far fa-folder-open ic-w mx-1"></i>StockLedger</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Retail/Trading/Supplier"><i class="far fa-folder-open ic-w mx-1"></i>Supplier</span>
+	</li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Retail/SupplyChain"><i class="far fa-folder-open ic-w mx-1"></i>SupplyChain</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Retail/SupplyChain/TransportManagement"><i class="far fa-folder-open ic-w mx-1"></i>TransportManagement</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Retail/SupplyChain/WarehouseManagement"><i class="far fa-folder-open ic-w mx-1"></i>WarehouseManagement</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Retail/SupplyChain/YardManagement"><i class="far fa-folder-open ic-w mx-1"></i>YardManagement</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Retail/SupplyChain/FleetManagement"><i class="far fa-folder-open ic-w mx-1"></i>FleetManagement</span>
+	</li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Retail/Common"><i class="far fa-folder-open ic-w mx-1"></i>Common</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Retail/Common/ScanCode"><i class="far fa-folder-open ic-w mx-1"></i>ScanCode</span>
+		<ul class="nested">
+			<li><span class="data-type-select pointer" data-path="Retail/Common/ScanCode" data-name="ScanCode"><i class="fas fa-circle ic-w mr-1"></i>ScanCode</span></li>
+			<li><span class="data-type-select pointer" data-path="Retail/Common/ScanCode" data-name="ConsumerUnitCode"><i class="fas fa-circle ic-w mr-1"></i>ConsumerUnitCode</span></li>
+			<li><span class="data-type-select pointer" data-path="Retail/Common/ScanCode" data-name="TradedUnitCode"><i class="fas fa-circle ic-w mr-1"></i>TradedUnitCode</span></li>
+			<li><span class="data-type-select pointer" data-path="Retail/Common/ScanCode" data-name="GTIN"><i class="fas fa-circle ic-w mr-1"></i>GTIN</span></li>
+			<li><span class="data-type-select pointer" data-path="Retail/Common/ScanCode" data-name="PriceLookupCode"><i class="fas fa-circle ic-w mr-1"></i>PriceLookupCode</span></li>
+			<li><span class="data-type-select pointer" data-path="Retail/Common/ScanCode" data-name="VelocityCode"><i class="fas fa-circle ic-w mr-1"></i>VelocityCode</span></li>
+			<li><span class="data-type-select pointer" data-path="Retail/Common/ScanCode" data-name="GTINConsumerCode"><i class="fas fa-circle ic-w mr-1"></i>GTINConsumerCode</span></li>
+			<li><span class="data-type-select pointer" data-path="Retail/Common/ScanCode" data-name="GTINTradedCode"><i class="fas fa-circle ic-w mr-1"></i>GTINTradedCode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Common/ScanCode" data-name="GTINType"><i class="far fa-dot-circle ic-w mr-1"></i>GTINType</span></li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Retail/Common/Region"><i class="far fa-folder-open ic-w mx-1"></i>Region</span>
+		<ul class="nested">
+			<li><span class="reference-entity-select pointer" data-path="Retail/Common/Region" data-name="RegionType"><i class="far fa-dot-circle ic-w mr-1"></i>RegionType</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Common/Region" data-name="Region"><i class="far fa-dot-circle ic-w mr-1"></i>Region</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Common/Region" data-name="GenericRegion"><i class="far fa-dot-circle ic-w mr-1"></i>GenericRegion</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Common/Region" data-name="Country"><i class="far fa-dot-circle ic-w mr-1"></i>Country</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Common/Region" data-name="CountrySubdivision"><i class="far fa-dot-circle ic-w mr-1"></i>CountrySubdivision</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Retail/Common/Region" data-name="Jurisdiction"><i class="far fa-dot-circle ic-w mr-1"></i>Jurisdiction</span></li>
+		</ul>
+	</li>
+		</ul>
+	</li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="FinancialServices"><i class="far fa-folder-open ic-w mx-1"></i>FinancialServices</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="FinancialServices/Insurance"><i class="far fa-folder-open ic-w mx-1"></i>Insurance</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="FinancialServices/Insurance/Motor"><i class="far fa-folder-open ic-w mx-1"></i>Motor</span>
+		<ul class="nested">
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance/Motor" data-name="MainDriver"><i class="fas fa-asterisk ic-w mr-1"></i>MainDriver</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance/Motor" data-name="MotorInsurancePolicy"><i class="fas fa-asterisk ic-w mr-1"></i>MotorInsurancePolicy</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance/Motor" data-name="AdditionalDriver"><i class="fas fa-asterisk ic-w mr-1"></i>AdditionalDriver</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance/Motor" data-name="ThirdPartyCover"><i class="fas fa-asterisk ic-w mr-1"></i>ThirdPartyCover</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance/Motor" data-name="MotorLiabilityCover"><i class="fas fa-asterisk ic-w mr-1"></i>MotorLiabilityCover</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance/Motor" data-name="MotorLegalProtection"><i class="fas fa-asterisk ic-w mr-1"></i>MotorLegalProtection</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance/Motor" data-name="PersonalInjuryCover"><i class="fas fa-asterisk ic-w mr-1"></i>PersonalInjuryCover</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance/Motor" data-name="InsuredVehicle"><i class="fas fa-asterisk ic-w mr-1"></i>InsuredVehicle</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance/Motor" data-name="MotorPropertyCover"><i class="fas fa-asterisk ic-w mr-1"></i>MotorPropertyCover</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance/Motor" data-name="CollisionCover"><i class="fas fa-asterisk ic-w mr-1"></i>CollisionCover</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance/Motor" data-name="ComprehensiveCover"><i class="fas fa-asterisk ic-w mr-1"></i>ComprehensiveCover</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance/Motor" data-name="MedicalExpensesCover"><i class="fas fa-asterisk ic-w mr-1"></i>MedicalExpensesCover</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance/Motor" data-name="GapCover"><i class="fas fa-asterisk ic-w mr-1"></i>GapCover</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance/Motor" data-name="UninsuredMotoristCover"><i class="fas fa-asterisk ic-w mr-1"></i>UninsuredMotoristCover</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance/Motor" data-name="UnderInsuredMotorist"><i class="fas fa-asterisk ic-w mr-1"></i>UnderInsuredMotorist</span></li>
+			<li><span class="interface-select pointer" data-path="FinancialServices/Insurance/Motor" data-name="IDriver"><i class="far fa-circle ic-w mr-1"></i>IDriver</span></li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="FinancialServices/Insurance/Home"><i class="far fa-folder-open ic-w mx-1"></i>Home</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="FinancialServices/Insurance/Event"><i class="far fa-folder-open ic-w mx-1"></i>Event</span>
+	</li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance" data-name="PolicyHolder"><i class="fas fa-asterisk ic-w mr-1"></i>PolicyHolder</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance" data-name="Policy"><i class="fas fa-asterisk ic-w mr-1"></i>Policy</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance" data-name="InsuranceCover"><i class="fas fa-asterisk ic-w mr-1"></i>InsuranceCover</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance" data-name="PropertyCover"><i class="fas fa-asterisk ic-w mr-1"></i>PropertyCover</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance" data-name="LiabilityCover"><i class="fas fa-asterisk ic-w mr-1"></i>LiabilityCover</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance" data-name="AdditionalInsured"><i class="fas fa-asterisk ic-w mr-1"></i>AdditionalInsured</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance" data-name="LifeCover"><i class="fas fa-asterisk ic-w mr-1"></i>LifeCover</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance" data-name="InsuredProperty"><i class="fas fa-asterisk ic-w mr-1"></i>InsuredProperty</span></li>
+				<li><span class="entity-select pointer" data-path="FinancialServices/Insurance" data-name="EventCover"><i class="fas fa-asterisk ic-w mr-1"></i>EventCover</span></li>
+			<li><span class="interface-select pointer" data-path="FinancialServices/Insurance" data-name="IInsuredParty"><i class="far fa-circle ic-w mr-1"></i>IInsuredParty</span></li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="FinancialServices/Banking"><i class="far fa-folder-open ic-w mx-1"></i>Banking</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="FinancialServices/Banking/Account"><i class="far fa-folder-open ic-w mx-1"></i>Account</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="FinancialServices/Banking/Credit"><i class="far fa-folder-open ic-w mx-1"></i>Credit</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="FinancialServices/Banking/Loan"><i class="far fa-folder-open ic-w mx-1"></i>Loan</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="FinancialServices/Banking/ForeignExchange"><i class="far fa-folder-open ic-w mx-1"></i>ForeignExchange</span>
+	</li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="FinancialServices/Investment"><i class="far fa-folder-open ic-w mx-1"></i>Investment</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="FinancialServices/Investment/Pension"><i class="far fa-folder-open ic-w mx-1"></i>Pension</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="FinancialServices/Investment/StocksShares"><i class="far fa-folder-open ic-w mx-1"></i>StocksShares</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="FinancialServices/Investment/UnitTrust"><i class="far fa-folder-open ic-w mx-1"></i>UnitTrust</span>
+	</li>
+		</ul>
+	</li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Manufacturing"><i class="far fa-folder-open ic-w mx-1"></i>Manufacturing</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="SharedServices"><i class="far fa-folder-open ic-w mx-1"></i>SharedServices</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="SharedServices/People"><i class="far fa-folder-open ic-w mx-1"></i>People</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="SharedServices/People/Employee"><i class="far fa-folder-open ic-w mx-1"></i>Employee</span>
+		<ul class="nested">
+				<li><span class="entity-select pointer" data-path="SharedServices/People/Employee" data-name="MangedPosition"><i class="fas fa-asterisk ic-w mr-1"></i>MangedPosition</span></li>
+				<li><span class="entity-select pointer" data-path="SharedServices/People/Employee" data-name="Employee"><i class="fas fa-asterisk ic-w mr-1"></i>Employee</span></li>
+				<li><span class="entity-select pointer" data-path="SharedServices/People/Employee" data-name="Position"><i class="fas fa-asterisk ic-w mr-1"></i>Position</span></li>
+				<li><span class="entity-select pointer" data-path="SharedServices/People/Employee" data-name="ChiefExecutive"><i class="fas fa-asterisk ic-w mr-1"></i>ChiefExecutive</span></li>
+				<li><span class="entity-select pointer" data-path="SharedServices/People/Employee" data-name="Engagement"><i class="fas fa-asterisk ic-w mr-1"></i>Engagement</span></li>
+			<li><span class="data-type-select pointer" data-path="SharedServices/People/Employee" data-name="EmployeeEvent"><i class="fas fa-circle ic-w mr-1"></i>EmployeeEvent</span></li>
+			<li><span class="data-type-select pointer" data-path="SharedServices/People/Employee" data-name="JobAssignment"><i class="fas fa-circle ic-w mr-1"></i>JobAssignment</span></li>
+			<li><span class="data-type-select pointer" data-path="SharedServices/People/Employee" data-name="CompensationAward"><i class="fas fa-circle ic-w mr-1"></i>CompensationAward</span></li>
+			<li><span class="data-type-select pointer" data-path="SharedServices/People/Employee" data-name="SalaryAward"><i class="fas fa-circle ic-w mr-1"></i>SalaryAward</span></li>
+			<li><span class="data-type-select pointer" data-path="SharedServices/People/Employee" data-name="SinglePaymentAward"><i class="fas fa-circle ic-w mr-1"></i>SinglePaymentAward</span></li>
+			<li><span class="data-type-select pointer" data-path="SharedServices/People/Employee" data-name="JobFunding"><i class="fas fa-circle ic-w mr-1"></i>JobFunding</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/People/Employee" data-name="Grade"><i class="far fa-dot-circle ic-w mr-1"></i>Grade</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/People/Employee" data-name="JobFamily"><i class="far fa-dot-circle ic-w mr-1"></i>JobFamily</span></li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="SharedServices/People/Organisation"><i class="far fa-folder-open ic-w mx-1"></i>Organisation</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="SharedServices/People/Payroll"><i class="far fa-folder-open ic-w mx-1"></i>Payroll</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="SharedServices/People/ContingentWorker"><i class="far fa-folder-open ic-w mx-1"></i>ContingentWorker</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="SharedServices/People/Recruitement"><i class="far fa-folder-open ic-w mx-1"></i>Recruitement</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="SharedServices/People/Performance"><i class="far fa-folder-open ic-w mx-1"></i>Performance</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="SharedServices/People/Learning"><i class="far fa-folder-open ic-w mx-1"></i>Learning</span>
+	</li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="SharedServices/Finance"><i class="far fa-folder-open ic-w mx-1"></i>Finance</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="SharedServices/Finance/BookKeeping"><i class="far fa-folder-open ic-w mx-1"></i>BookKeeping</span>
+		<ul class="nested">
+				<li><span class="entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="Posting"><i class="fas fa-asterisk ic-w mr-1"></i>Posting</span></li>
+				<li><span class="entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="DebitPosting"><i class="fas fa-asterisk ic-w mr-1"></i>DebitPosting</span></li>
+				<li><span class="entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="CreditPosting"><i class="fas fa-asterisk ic-w mr-1"></i>CreditPosting</span></li>
+				<li><span class="entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="JournalEntry"><i class="fas fa-asterisk ic-w mr-1"></i>JournalEntry</span></li>
+			<li><span class="interface-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="IChildHierarchyNode"><i class="far fa-circle ic-w mr-1"></i>IChildHierarchyNode</span></li>
+			<li><span class="data-type-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="OriginatingTransation"><i class="fas fa-circle ic-w mr-1"></i>OriginatingTransation</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="Ledger"><i class="far fa-dot-circle ic-w mr-1"></i>Ledger</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="Journal"><i class="far fa-dot-circle ic-w mr-1"></i>Journal</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="AccountingPeriod"><i class="far fa-dot-circle ic-w mr-1"></i>AccountingPeriod</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="FiscalYear"><i class="far fa-dot-circle ic-w mr-1"></i>FiscalYear</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="SegmentHierarchyNode"><i class="far fa-dot-circle ic-w mr-1"></i>SegmentHierarchyNode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="SegmentHierarchy"><i class="far fa-dot-circle ic-w mr-1"></i>SegmentHierarchy</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="ParentHierarchyNode"><i class="far fa-dot-circle ic-w mr-1"></i>ParentHierarchyNode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="Segment"><i class="far fa-dot-circle ic-w mr-1"></i>Segment</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="IntermediateHierarchyNode"><i class="far fa-dot-circle ic-w mr-1"></i>IntermediateHierarchyNode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="SegmentClass"><i class="far fa-dot-circle ic-w mr-1"></i>SegmentClass</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="Account"><i class="far fa-dot-circle ic-w mr-1"></i>Account</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="ControlAccount"><i class="far fa-dot-circle ic-w mr-1"></i>ControlAccount</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="SubsidiaryLedger"><i class="far fa-dot-circle ic-w mr-1"></i>SubsidiaryLedger</span></li>
+			<li><span class="enumeration-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="AccountType"><i class="fas fa-dot-circle ic-w mr-1"></i>AccountType</span></li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="SharedServices/Finance/AccountsPayable"><i class="far fa-folder-open ic-w mx-1"></i>AccountsPayable</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="SharedServices/Finance/AccountsReceivable"><i class="far fa-folder-open ic-w mx-1"></i>AccountsReceivable</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="SharedServices/Finance/ManagementAccounting"><i class="far fa-folder-open ic-w mx-1"></i>ManagementAccounting</span>
+		<ul class="nested">
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/ManagementAccounting" data-name="CostObject"><i class="far fa-dot-circle ic-w mr-1"></i>CostObject</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/ManagementAccounting" data-name="Organisation"><i class="far fa-dot-circle ic-w mr-1"></i>Organisation</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/ManagementAccounting" data-name="CostCentre"><i class="far fa-dot-circle ic-w mr-1"></i>CostCentre</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/ManagementAccounting" data-name="OrganisationUnit"><i class="far fa-dot-circle ic-w mr-1"></i>OrganisationUnit</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/ManagementAccounting" data-name="ResponsibilityType"><i class="far fa-dot-circle ic-w mr-1"></i>ResponsibilityType</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/ManagementAccounting" data-name="Project"><i class="far fa-dot-circle ic-w mr-1"></i>Project</span></li>
+		</ul>
+	</li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="SharedServices/Procurement"><i class="far fa-folder-open ic-w mx-1"></i>Procurement</span>
+	</li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Common"><i class="far fa-folder-open ic-w mx-1"></i>Common</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Common/Base"><i class="far fa-folder-open ic-w mx-1"></i>Base</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Common/Base/Primitive"><i class="far fa-folder-open ic-w mx-1"></i>Primitive</span>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Common/Base/ReferenceData"><i class="far fa-folder-open ic-w mx-1"></i>ReferenceData</span>
+		<ul class="nested">
+			<li><span class="interface-select pointer" data-path="Common/Base/ReferenceData" data-name="IReferenceEntity"><i class="far fa-circle ic-w mr-1"></i>IReferenceEntity</span></li>
+			<li><span class="interface-select pointer" data-path="Common/Base/ReferenceData" data-name="IControlledVocabulary"><i class="far fa-circle ic-w mr-1"></i>IControlledVocabulary</span></li>
+			<li><span class="data-type-select pointer" data-path="Common/Base/ReferenceData" data-name="ReferenceValue"><i class="fas fa-circle ic-w mr-1"></i>ReferenceValue</span></li>
+		</ul>
+	</li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Common/Geography"><i class="far fa-folder-open ic-w mx-1"></i>Geography</span>
+		<ul class="nested">
+			<li><span class="data-type-select pointer" data-path="Common/Geography" data-name="InternationalString"><i class="fas fa-circle ic-w mr-1"></i>InternationalString</span></li>
+			<li><span class="data-type-select pointer" data-path="Common/Geography" data-name="CurrencyAmount"><i class="fas fa-circle ic-w mr-1"></i>CurrencyAmount</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Common/Geography" data-name="Country"><i class="far fa-dot-circle ic-w mr-1"></i>Country</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Common/Geography" data-name="CountrySubdivision"><i class="far fa-dot-circle ic-w mr-1"></i>CountrySubdivision</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Common/Geography" data-name="Language"><i class="far fa-dot-circle ic-w mr-1"></i>Language</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Common/Geography" data-name="Currency"><i class="far fa-dot-circle ic-w mr-1"></i>Currency</span></li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Common/Party"><i class="far fa-folder-open ic-w mx-1"></i>Party</span>
+		<ul class="nested">
+			<li><span class="interface-select pointer" data-path="Common/Party" data-name="IParty"><i class="far fa-circle ic-w mr-1"></i>IParty</span></li>
+			<li><span class="interface-select pointer" data-path="Common/Party" data-name="IPerson"><i class="far fa-circle ic-w mr-1"></i>IPerson</span></li>
+			<li><span class="interface-select pointer" data-path="Common/Party" data-name="IOrganisation"><i class="far fa-circle ic-w mr-1"></i>IOrganisation</span></li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Common/ContactPoint"><i class="far fa-folder-open ic-w mx-1"></i>ContactPoint</span>
+		<ul class="nested">
+			<li><span class="data-type-select pointer" data-path="Common/ContactPoint" data-name="ContactPoint"><i class="fas fa-circle ic-w mr-1"></i>ContactPoint</span></li>
+			<li><span class="data-type-select pointer" data-path="Common/ContactPoint" data-name="Address"><i class="fas fa-circle ic-w mr-1"></i>Address</span></li>
+			<li><span class="data-type-select pointer" data-path="Common/ContactPoint" data-name="TelephoneNumber"><i class="fas fa-circle ic-w mr-1"></i>TelephoneNumber</span></li>
+			<li><span class="data-type-select pointer" data-path="Common/ContactPoint" data-name="EmailAddress"><i class="fas fa-circle ic-w mr-1"></i>EmailAddress</span></li>
+			<li><span class="data-type-select pointer" data-path="Common/ContactPoint" data-name="SocialNetworkHandle"><i class="fas fa-circle ic-w mr-1"></i>SocialNetworkHandle</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Common/ContactPoint" data-name="ITUCountryCode"><i class="far fa-dot-circle ic-w mr-1"></i>ITUCountryCode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Common/ContactPoint" data-name="TelephoneNumberType"><i class="far fa-dot-circle ic-w mr-1"></i>TelephoneNumberType</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Common/ContactPoint" data-name="SocialNetwork"><i class="far fa-dot-circle ic-w mr-1"></i>SocialNetwork</span></li>
+		</ul>
+	</li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Common/UnitOfMeasure"><i class="far fa-folder-open ic-w mx-1"></i>UnitOfMeasure</span>
+		<ul class="nested">
+			<li><span class="data-type-select pointer" data-path="Common/UnitOfMeasure" data-name="Quantity"><i class="fas fa-circle ic-w mr-1"></i>Quantity</span></li>
+			<li><span class="data-type-select pointer" data-path="Common/UnitOfMeasure" data-name="DiscreteQuantity"><i class="fas fa-circle ic-w mr-1"></i>DiscreteQuantity</span></li>
+			<li><span class="data-type-select pointer" data-path="Common/UnitOfMeasure" data-name="MeasuredQuantity"><i class="fas fa-circle ic-w mr-1"></i>MeasuredQuantity</span></li>
+			<li><span class="data-type-select pointer" data-path="Common/UnitOfMeasure" data-name="MeasuredWeight"><i class="fas fa-circle ic-w mr-1"></i>MeasuredWeight</span></li>
+			<li><span class="data-type-select pointer" data-path="Common/UnitOfMeasure" data-name="MeasuredDistance"><i class="fas fa-circle ic-w mr-1"></i>MeasuredDistance</span></li>
+			<li><span class="data-type-select pointer" data-path="Common/UnitOfMeasure" data-name="MeasuredTime"><i class="fas fa-circle ic-w mr-1"></i>MeasuredTime</span></li>
+			<li><span class="data-type-select pointer" data-path="Common/UnitOfMeasure" data-name="MeasuredTemperature"><i class="fas fa-circle ic-w mr-1"></i>MeasuredTemperature</span></li>
+			<li><span class="data-type-select pointer" data-path="Common/UnitOfMeasure" data-name="DimensionSet"><i class="fas fa-circle ic-w mr-1"></i>DimensionSet</span></li>
+			<li><span class="data-type-select pointer" data-path="Common/UnitOfMeasure" data-name="RectangularDimensionSet"><i class="fas fa-circle ic-w mr-1"></i>RectangularDimensionSet</span></li>
+			<li><span class="data-type-select pointer" data-path="Common/UnitOfMeasure" data-name="CuboidDimensionSet"><i class="fas fa-circle ic-w mr-1"></i>CuboidDimensionSet</span></li>
+			<li><span class="data-type-select pointer" data-path="Common/UnitOfMeasure" data-name="CylindricalDimensionSet"><i class="fas fa-circle ic-w mr-1"></i>CylindricalDimensionSet</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Common/UnitOfMeasure" data-name="UnitOfMeasure"><i class="far fa-dot-circle ic-w mr-1"></i>UnitOfMeasure</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Common/UnitOfMeasure" data-name="WeightUnit"><i class="far fa-dot-circle ic-w mr-1"></i>WeightUnit</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Common/UnitOfMeasure" data-name="DistanceUnit"><i class="far fa-dot-circle ic-w mr-1"></i>DistanceUnit</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Common/UnitOfMeasure" data-name="TimeUnit"><i class="far fa-dot-circle ic-w mr-1"></i>TimeUnit</span></li>
+			<li><span class="reference-entity-select pointer" data-path="Common/UnitOfMeasure" data-name="TemperatureUnit"><i class="far fa-dot-circle ic-w mr-1"></i>TemperatureUnit</span></li>
+		</ul>
+	</li>
+		</ul>
+	</li>
+	</ul>
+					</div>
+
+					<div class="treeview border">
+						<h5 id="model" class="pt-3 pl-3">Tutorials</h5>
+	<ul class="mb-1 pl-3 pb-2">
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Tutorials"><i class="far fa-folder-open ic-w mx-1"></i>Tutorials</span>
+	</li>
+	</ul>
+					</div>
+		    	</div>
+		    </nav>
+			<main role="main" class="col-9 ml-sm-auto px-4">
+				<div id="main">
+				</div>
+			</main>
+	    </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.0/js/mdb.min.js"></script> -->
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+	<script src="mdb.min.js"></script>
+	<script src="svg-pan-zoom.js"></script>
+	<script src="pldm.js"></script>
+  </body>
+</html>

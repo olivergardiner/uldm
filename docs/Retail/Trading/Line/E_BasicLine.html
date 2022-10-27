@@ -1,0 +1,203 @@
+<div class="justify-content-start align-items-left pt-2 pb-2 mb-2 border-bottom">
+	<h5>Entity Retail::Trading::Line::BasicLine</h5>
+	
+	<h6 class="mt-4">Inheritance</h6>
+	<ul class="inheritance">
+		<li>
+			<ul class="inheritance">
+				<li>Entity</li>
+				<li>
+					<ul class="inheritance">
+						<li>Retail::Trading::Line::Line</li>
+						<li>
+					<ul class="inheritance">
+						<li>Retail::Trading::Line::CoreLine</li>
+						<li>
+					<ul class="inheritance">
+						<li>Retail::Trading::Line::InvariantLine</li>
+						<li>
+					<ul class="inheritance">
+						<li>Retail::Trading::Line::BasicLine</li>
+						<li>
+						</li>
+					</ul>
+						</li>
+					</ul>
+						</li>
+					</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+<div class="justify-content-start align-items-left pt-2 pb-2 mb-2">
+	<h6 class="pb-2">
+		<pre><span class="strong">BasicLine</span> extends InvariantLine</pre>
+		<pre> implements Retail::Trading::Line::ISuppliableLineRetail::Trading::Line::ISellableLine</pre>
+	</h6>
+
+	
+	</div>
+</div>
+
+<div class="justify-content-start align-items-left px-2 py-3 mb-2">
+	<div class="my-1 mx-2 p-1 bg-light border">
+		
+		<h6 class="p-2">Attributes inherited from Retail::Trading::Line::Line</h6>
+
+		<table class="table table-sm table-striped border ml-3 mr-5">
+			<col style="width: 20%">
+			<col style="width: 15%">
+			<col style="width: *">
+			<thead class="table-dark">
+				<tr>
+					<th scope="col">Type and Multiplicity</th>
+					<th scope="col">Name</th>
+					<th scope="col">Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>Identifier[1]</code></td>
+					<td>lineId</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>Name[1..*]</code></td>
+					<td>name</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>Description[0..*]</code></td>
+					<td>description</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>Date[1]</code></td>
+					<td>launchDate</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>Date[0..1]</code></td>
+					<td>deletionDate</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>Exclusivity[0..1]</code></td>
+					<td>exclusivity</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+		<h6 class="p-2">Attributes inherited from Retail::Trading::Line::CoreLine</h6>
+
+		<table class="table table-sm table-striped border ml-3 mr-5">
+			<col style="width: 20%">
+			<col style="width: 15%">
+			<col style="width: *">
+			<thead class="table-dark">
+				<tr>
+					<th scope="col">Type and Multiplicity</th>
+					<th scope="col">Name</th>
+					<th scope="col">Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>GeographicMarket[0..*]</code></td>
+					<td>geographicMarket</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>TaxonomyTerm[0..*]</code></td>
+					<td>classification</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>AttributeValue[0..*]</code></td>
+					<td>dynamicAttribute</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>SellingRestriction[0..*]</code></td>
+					<td>sellingRestriction</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>AppliedCharge[0..*]</code></td>
+					<td>appliedSellingCharge</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>BrandHierarchyNode[1]</code></td>
+					<td>brand</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><code>MerchandisingLeafNode[1]</code></td>
+					<td>merchandisingHierarchyClassification</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h6 class="p-2">Attributes directly implemented from Retail::Trading::Line::ISellableLine (does not include implied sub-interfaces)</h6>
+
+		<table class="table table-sm table-striped border ml-3 mr-5">
+			<col style="width: 20%">
+			<col style="width: 15%">
+			<col style="width: *">
+			<thead class="table-dark">
+				<tr>
+					<th scope="col">Type and Multiplicity</th>
+					<th scope="col">Name</th>
+					<th scope="col">Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>Price[1]</code></td>
+					<td>baseSellingPrice</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+</div>
+
+<div class="justify-content-start align-items-left px-2 py-3 mb-2">
+	<div class="my-1 mx-2 p-1 bg-light border">
+	
+	
+		<h6 class="p-2">Associations inherited from Retail::Trading::Line::ISuppliableLine</h6>
+		
+		<table class="table table-sm table-striped border ml-3 mr-5">
+			<col style="width: 35%">
+			<col style="width: *">
+			<thead class="table-dark">
+				<tr>
+					<th scope="col">Type and Cardinality</th>
+					<th scope="col">Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Item 1 to 1..*</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</div>
+</div>
+
+<div class="justify-content-start align-items-left px-2 py-3 mb-2">
+	<div class="my-1 mx-2 p-1 bg-light border">
+
+	
+	</div>
+</div>

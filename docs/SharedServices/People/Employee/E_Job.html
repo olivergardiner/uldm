@@ -1,0 +1,78 @@
+<div class="justify-content-start align-items-left pt-2 pb-2 mb-2 border-bottom">
+	<h5>Entity SharedServices::People::Employee::Job</h5>
+	
+	<h6 class="mt-4">Inheritance</h6>
+	<ul class="inheritance">
+		<li>
+			<ul class="inheritance">
+				<li>Entity</li>
+				<li>
+					<ul class="inheritance">
+						<li>SharedServices::People::Employee::Job</li>
+						<li>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+<div class="justify-content-start align-items-left pt-2 pb-2 mb-2">
+	<h6 class="pb-2">
+		<pre><span class="strong">Job</span></pre>
+	</h6>
+
+	<p style="white-space: pre-line"><p>A Job is the association between an Employee and a Position and is always a current or &quot;live&quot;&nbsp;statement of this assignment. The historical vie of Positions held by an Employee is maintained by the Employee&#39;s employeeHistory since it is inevitable that the definition or existence of the corresponding Positions will vary over time.</p>
+
+<p>The nature of this association is such that an Employee may not be fully allocated to a given Position (e.g. a job share arrangement where two or more Employees are partially allocated to the same Position) and an Employee may also split their effort across more than one Position.</p>
+
+<p>Positions will typically sit within a CostCentre hierarchy that reflects the managerial responsibility for the performance of a part of the Organisation and this responsibilty is asserted by the corresponding Position. In a simple scenario, the&nbsp;cost of&nbsp;an Employee fulfilling a Position could be attributed to the correct CostCentre by simply following the Position hierarchy to the nearest manager with responsibility for a CostCentre. However, in more complex cases it is a) important to understand the allocation of an Employee to a given Position, and b) possible to fund the fulfilment of the Position through other CostObjects (e.g. a Project). Consequently it is the Job that explicitly&nbsp;defines&nbsp;the source of funds that is responsible for the cost of any Position.&nbsp;</p>
+</p>
+	</div>
+</div>
+
+<div class="justify-content-start align-items-left px-2 py-3 mb-2">
+	<div class="my-1 mx-2 p-1 bg-light border">
+		<h6 class="p-2">Attributes</h6>
+		
+		<table class="table table-sm table-striped border ml-3 mr-3">
+			<colgroup>
+				<col style="width: 20%">
+				<col style="width: 15%">
+				<col style="width: 65%">
+			</colgroup>
+			<thead class="table-dark">
+				<tr class="mr-3">
+					<th scope="col">Type and Multiplicity</th>
+					<th scope="col">Name</th>
+					<th scope="col">Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr id="attr_from">
+					<td><code>Date[1]</code></td>
+					<td>from</td>
+					<td></td>
+				</tr>
+				<tr id="attr_allocation">
+					<td><code>Real[1]</code></td>
+					<td>allocation</td>
+					<td><p>The commitment of the Employee&#39;s effort to the identified Position. The total allocation for the Employee must reflect the allocation of the relevant Engagement and, similarly, total allocation for the Position should not exceed the required effort fo the Position (noting that a Position may be unfilled or partially filled but an Employee should always be fully allocated according to the terms of their current Engagement.</p>
+</td>
+				</tr>
+				<tr id="attr_funding">
+					<td><code>JobFunding[1..*]</code></td>
+					<td>funding</td>
+					<td><p>The funding for a given Job is specified as a list of funding elements of type JobFunding. This simple structure identifies a CostObject as a funding source and the amount of the total funding that this CostObject will provide. Typically, a Job will be funded a single CostCentre that rolls up through the position hierarchy to the manager of the CostCentre, but other scenarios are possible (e.g. a Job that is funded by multiple Projects). In all cases, the sum of the fundingAmount for all sources of funding must be exactly 1.0</p>
+</td>
+				</tr>
+			</tbody>
+		</table>
+		
+
+
+	</div>
+</div>
+
+
