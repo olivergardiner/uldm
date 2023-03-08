@@ -1057,7 +1057,84 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_AKGqIKDiEeuXwMLKVSwySg" name="Finance">
         <packagedElement xmi:type="uml:Package" xmi:id="_EIU8AAvGEeyuhKbTMn6kag" name="BookKeeping">
-          <packagedElement xmi:type="uml:Class" xmi:id="_FvixcAvGEeyuhKbTMn6kag" name="Posting" isAbstract="true">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_ACScIL2GEe2w7bz5iZ360g">
+            <body>&lt;p>The BookKeeping Package defines the core concepts that are required to support both Financial Accounting and Management Accounting on the basis of Double Entry book keeping and Integrated Accounts&lt;/p>
+</body>
+          </ownedComment>
+          <packagedElement xmi:type="uml:Package" xmi:id="_oFL0wLy_Ee2mDui0BEo5wg" name="ChartOfAccounts">
+            <packagedElement xmi:type="uml:Class" xmi:id="_pBwaANBXEeytCvXriojvrw" name="SegmentHierarchyNode" isAbstract="true">
+              <ownedComment xmi:type="uml:Comment" xmi:id="__NfQkO5MEeyVg4QP7lSj1A">
+                <body>&lt;p>A SegmentHierarchyNode is an abstract entity that defines the identity space of all nodes&amp;nbsp;across all Sement Hierarchies. The concrete entities derived from this abstract entity are SegmentHierarchy (a root node), a Segment (a leaf node), and IntermediateHierarchyNode (any other node, which must have both a parent and child nodes).&lt;/p>
+</body>
+              </ownedComment>
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_IvO7kNBcEeytCvXriojvrw" client="_pBwaANBXEeytCvXriojvrw" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_2xqfkNBXEeytCvXriojvrw" name="SegmentHierarchy">
+              <generalization xmi:type="uml:Generalization" xmi:id="_YDz1sNBYEeytCvXriojvrw" general="_6EHu0NBXEeytCvXriojvrw"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_6EHu0NBXEeytCvXriojvrw" name="ParentSegmentNode" isAbstract="true">
+              <generalization xmi:type="uml:Generalization" xmi:id="_8wpmgNBXEeytCvXriojvrw" general="_pBwaANBXEeytCvXriojvrw"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_7O-YYNBXEeytCvXriojvrw" name="Segment">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_ewwm4O5JEeyVg4QP7lSj1A">
+                <body>&lt;p>A Segment is a leaf node within a Segment Hierarchy and so its identity represents a value that can be used to classify an accounting&amp;nbsp;transaction such that costs may be tracked within the accounting system. In many cases, the identity of the Segment may be overloaded as the identity of a corresponding Account but it is more accurate to separate their identities (noting that not all Segment Hierarchy nodes are Segments) and so each Segment references the identity of the Account that is used to accrue its costs.&lt;/p>
+</body>
+              </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="_9iiWcNBXEeytCvXriojvrw" general="_pBwaANBXEeytCvXriojvrw"/>
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_vKPlwNBYEeytCvXriojvrw" client="_7O-YYNBXEeytCvXriojvrw" supplier="_HLemoNBYEeytCvXriojvrw" contract="_HLemoNBYEeytCvXriojvrw"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_HLemoNBYEeytCvXriojvrw" name="IChildSegmentNode"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_ZC234NBYEeytCvXriojvrw" name="IntermediateSegmentNode">
+              <generalization xmi:type="uml:Generalization" xmi:id="_v7n_YNBYEeytCvXriojvrw" general="_6EHu0NBXEeytCvXriojvrw"/>
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_uOtKkNBYEeytCvXriojvrw" client="_ZC234NBYEeytCvXriojvrw" supplier="_HLemoNBYEeytCvXriojvrw" contract="_HLemoNBYEeytCvXriojvrw"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_-fQ_sLzAEe2w7bz5iZ360g" name="GLAccountHierarchyNode" isAbstract="true">
+              <generalization xmi:type="uml:Generalization" xmi:id="_5LVLcLzBEe2w7bz5iZ360g" general="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_LXM7cLzBEe2w7bz5iZ360g" name="ParentGLAccountNode" isAbstract="true">
+              <generalization xmi:type="uml:Generalization" xmi:id="_wXxrILzBEe2w7bz5iZ360g" general="_-fQ_sLzAEe2w7bz5iZ360g"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_Q7DlkLzBEe2w7bz5iZ360g" name="GLAccountHierarchy">
+              <generalization xmi:type="uml:Generalization" xmi:id="_utq5wLzBEe2w7bz5iZ360g" general="_LXM7cLzBEe2w7bz5iZ360g"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_EB-IYLzDEe2w7bz5iZ360g" name="glAccountSet" type="_AHnysLzDEe2w7bz5iZ360g"/>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_9_vVoLzBEe2w7bz5iZ360g" name="accountType" type="_FvoRAAvGEeyuhKbTMn6kag"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_b3O_QLzBEe2w7bz5iZ360g" name="GLAccount">
+              <generalization xmi:type="uml:Generalization" xmi:id="_xQxvsLzBEe2w7bz5iZ360g" general="_-fQ_sLzAEe2w7bz5iZ360g"/>
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_0aDNwLzBEe2w7bz5iZ360g" client="_b3O_QLzBEe2w7bz5iZ360g" supplier="_pOKkILzBEe2w7bz5iZ360g" contract="_pOKkILzBEe2w7bz5iZ360g"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_hjU_YLzBEe2w7bz5iZ360g" name="IntermediateGLAccountNode">
+              <generalization xmi:type="uml:Generalization" xmi:id="_vWDvcLzBEe2w7bz5iZ360g" general="_LXM7cLzBEe2w7bz5iZ360g"/>
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_zM4QALzBEe2w7bz5iZ360g" client="_hjU_YLzBEe2w7bz5iZ360g" supplier="_pOKkILzBEe2w7bz5iZ360g" contract="_pOKkILzBEe2w7bz5iZ360g"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_pOKkILzBEe2w7bz5iZ360g" name="IChildGLAccountNode"/>
+            <packagedElement xmi:type="uml:Association" xmi:id="_2xYRgLzBEe2w7bz5iZ360g" memberEnd="_2xfmQrzBEe2w7bz5iZ360g _2xfmQ7zBEe2w7bz5iZ360g">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2xfmQLzBEe2w7bz5iZ360g" source="org.eclipse.papyrus">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2xfmQbzBEe2w7bz5iZ360g" key="nature" value="UML_Nature"/>
+              </eAnnotations>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_2xfmQrzBEe2w7bz5iZ360g" name="ichildglaccountnode" type="_pOKkILzBEe2w7bz5iZ360g" association="_2xYRgLzBEe2w7bz5iZ360g">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4B2a4rzBEe2w7bz5iZ360g"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4B2a47zBEe2w7bz5iZ360g" value="*"/>
+              </ownedEnd>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_2xfmQ7zBEe2w7bz5iZ360g" name="parentglaccountnode" type="_LXM7cLzBEe2w7bz5iZ360g" association="_2xYRgLzBEe2w7bz5iZ360g">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4B2a4LzBEe2w7bz5iZ360g" value="1"/>
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="_4B2a4bzBEe2w7bz5iZ360g" value="1"/>
+              </ownedEnd>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Enumeration" xmi:id="_FvoRAAvGEeyuhKbTMn6kag" name="AccountType">
+              <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FvoRAQvGEeyuhKbTMn6kag" name="Assets"/>
+              <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FvoRAgvGEeyuhKbTMn6kag" name="Liabilities"/>
+              <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FvoRAwvGEeyuhKbTMn6kag" name="Equity"/>
+              <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FvoRBAvGEeyuhKbTMn6kag" name="Revenue"/>
+              <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FvoRBQvGEeyuhKbTMn6kag" name="Expenses"/>
+              <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_hBaeoCtsEeyvWLBv3yth3w" name="Purchases"/>
+              <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_iU6t4CtsEeyvWLBv3yth3w" name="Sales"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_AHnysLzDEe2w7bz5iZ360g" name="GLAccountSet">
+              <generalization xmi:type="uml:Generalization" xmi:id="_OGYMkLzDEe2w7bz5iZ360g" general="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_FvixcAvGEeyuhKbTMn6kag" name="LedgerEntry" isAbstract="true">
             <ownedComment xmi:type="uml:Comment" xmi:id="_FvixcQvGEeyuhKbTMn6kag" annotatedElement="_FvixcAvGEeyuhKbTMn6kag">
               <body>&lt;p>The generic entity of Posting captures the concept of crediting or debiting an amount to an Account. It is declared as abstract with two concrete sub-entities simply to enforce the basic double entry principle that every posted transaction must involve at least one CreditPosting and at least one DebitPosting. In another context, one might use a type attribute on the Posting entity but the accounting significance of this relationship implies the need for a more robust expression in the model.&lt;/p>
 </body>
@@ -1106,21 +1183,29 @@
             <generalization xmi:type="uml:Generalization" xmi:id="_Fvj_kQvGEeyuhKbTMn6kag" general="_FvixcAvGEeyuhKbTMn6kag"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_FvkmoAvGEeyuhKbTMn6kag" name="JournalEntry">
+            <ownedComment xmi:type="uml:Comment" xmi:id="__D1AILzSEe2w7bz5iZ360g">
+              <body>&lt;p>The JournalEntry is perhaps the most pivotal concept for accounting as it represents the entry of an Accounting Transaction into a Journal (the &amp;quot;book of first entry&amp;quot;). In the days of paper-based accouting, one a transaction was recorded in a Journal, the effect of individual components of the transaction were then applied to the respective Ledgers (the&amp;nbsp;&amp;quot;books of second entry&amp;quot;). The use of the double entry system made it easier to spot when mistakes were made in the ledgers but JournalEntries could always be used to go back to the original transactions to correct any errors.&lt;/p>
+
+&lt;p>With the advent of computer-based accounting, the need to separately record transactions in both Journals and Ledgers is obviated as the Ledger view of postings can be created as view of the transaction details recorded in the JournalEntry.&lt;/p>
+
+&lt;p>In keeping with the principles of double entry bookkeeping, Journal Entries must consist&amp;nbsp;of at least one CreditPosting and at least one DebitPosting.&lt;/p>
+</body>
+            </ownedComment>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_FvkmoQvGEeyuhKbTMn6kag" name="transactionId" type="_q9tDgJ0gEeuosN6Nd1GBJQ">
               <ownedComment xmi:type="uml:Comment" xmi:id="_J7m_MNBIEeyIL5G2wmXgzQ">
-                <body>&lt;p>The identity of the recorded transaction within the Accouting System.&lt;/p>
+                <body>&lt;p>The identity of the recorded accouting transaction within the Accouting System. Because accounting transactions are first recorded in a Journal, the terms &amp;quot;accounting transaction&amp;quot; and &amp;quot;journal entry&amp;quot; are synonymous and, hence, this identifier may also be referred to as a &amp;quot;Journal Header Id&amp;quot;.&lt;/p>
 </body>
               </ownedComment>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_FvkmogvGEeyuhKbTMn6kag" name="transactionDate" type="_v0B5QJ0gEeuosN6Nd1GBJQ">
               <ownedComment xmi:type="uml:Comment" xmi:id="_W_d3ENBIEeyIL5G2wmXgzQ">
-                <body>&lt;p>The date on which the transaction the accounting transaction occurred.&lt;/p>
+                <body>&lt;p>The date on which the accounting transaction occurred.&lt;/p>
 </body>
               </ownedComment>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_FvkmowvGEeyuhKbTMn6kag" name="postingDate" type="_v0B5QJ0gEeuosN6Nd1GBJQ">
               <ownedComment xmi:type="uml:Comment" xmi:id="_hBRTMNBIEeyIL5G2wmXgzQ">
-                <body>&lt;p>The date on which the accounting transaction was recorded in the Journal and, thus, also posted to the relevant Account Ledgers.&lt;/p>
+                <body>&lt;p>The date on which the accounting transaction was recorded in the Journal and, thus, also posted to the relevant Account Ledgers. Note that this may be different from the actual date of the transaction.&lt;/p>
 </body>
               </ownedComment>
             </ownedAttribute>
@@ -1161,22 +1246,22 @@
           </packagedElement>
           <packagedElement xmi:type="uml:Association" xmi:id="_FvkmpwvGEeyuhKbTMn6kag" memberEnd="_FvkmqAvGEeyuhKbTMn6kag _FvkmqwvGEeyuhKbTMn6kag">
             <ownedEnd xmi:type="uml:Property" xmi:id="_FvkmqAvGEeyuhKbTMn6kag" name="transaction" type="_FvkmoAvGEeyuhKbTMn6kag" association="_FvkmpwvGEeyuhKbTMn6kag">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Dm5SINBDEeyIL5G2wmXgzQ"/>
-              <upperValue xmi:type="uml:LiteralInteger" xmi:id="_Dm55MNBDEeyIL5G2wmXgzQ" value="1"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zDjxoLwhEe2mDui0BEo5wg" value="1"/>
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="_zDkYsLwhEe2mDui0BEo5wg" value="1"/>
             </ownedEnd>
             <ownedEnd xmi:type="uml:Property" xmi:id="_FvkmqwvGEeyuhKbTMn6kag" name="debitPosting" type="_FvjYgAvGEeyuhKbTMn6kag" association="_FvkmpwvGEeyuhKbTMn6kag">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Dm55MdBDEeyIL5G2wmXgzQ" value="1"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Dm55MtBDEeyIL5G2wmXgzQ" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zDkYsbwhEe2mDui0BEo5wg" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zDkYsrwhEe2mDui0BEo5wg" value="*"/>
             </ownedEnd>
           </packagedElement>
           <packagedElement xmi:type="uml:Association" xmi:id="_FvlNsAvGEeyuhKbTMn6kag" memberEnd="_FvlNsQvGEeyuhKbTMn6kag _FvlNtAvGEeyuhKbTMn6kag">
             <ownedEnd xmi:type="uml:Property" xmi:id="_FvlNsQvGEeyuhKbTMn6kag" name="transaction" type="_FvkmoAvGEeyuhKbTMn6kag" association="_FvlNsAvGEeyuhKbTMn6kag">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EkjNMNBDEeyIL5G2wmXgzQ"/>
-              <upperValue xmi:type="uml:LiteralInteger" xmi:id="_EkjNMdBDEeyIL5G2wmXgzQ" value="1"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w200ULwhEe2mDui0BEo5wg" value="1"/>
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="_w23QkLwhEe2mDui0BEo5wg" value="1"/>
             </ownedEnd>
             <ownedEnd xmi:type="uml:Property" xmi:id="_FvlNtAvGEeyuhKbTMn6kag" name="creditPosting" type="_Fvj_kAvGEeyuhKbTMn6kag" association="_FvlNsAvGEeyuhKbTMn6kag">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EkjNMtBDEeyIL5G2wmXgzQ" value="1"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EkjNM9BDEeyIL5G2wmXgzQ" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w233oLwhEe2mDui0BEo5wg" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w233obwhEe2mDui0BEo5wg" value="*"/>
             </ownedEnd>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_FvoRBgvGEeyuhKbTMn6kag" name="AccountBalance">
@@ -1222,43 +1307,6 @@
             <ownedAttribute xmi:type="uml:Property" xmi:id="_5ycqoNBEEeyIL5G2wmXgzQ" name="transactionOrigin" type="_q9tDgJ0gEeuosN6Nd1GBJQ"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_7ve_ENBEEeyIL5G2wmXgzQ" name="transactionId" type="_q9tDgJ0gEeuosN6Nd1GBJQ"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Enumeration" xmi:id="_FvoRAAvGEeyuhKbTMn6kag" name="AccountType">
-            <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FvoRAQvGEeyuhKbTMn6kag" name="Assets"/>
-            <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FvoRAgvGEeyuhKbTMn6kag" name="Liabilities"/>
-            <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FvoRAwvGEeyuhKbTMn6kag" name="Equity"/>
-            <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FvoRBAvGEeyuhKbTMn6kag" name="Revenue"/>
-            <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FvoRBQvGEeyuhKbTMn6kag" name="Expenses"/>
-            <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_hBaeoCtsEeyvWLBv3yth3w" name="Purchases"/>
-            <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_iU6t4CtsEeyvWLBv3yth3w" name="Sales"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_pBwaANBXEeytCvXriojvrw" name="SegmentHierarchyNode" isAbstract="true">
-            <ownedComment xmi:type="uml:Comment" xmi:id="__NfQkO5MEeyVg4QP7lSj1A">
-              <body>&lt;p>A SegmentHierarchyNode is an abstract entity that defines the identity space of all nodes&amp;nbsp;across all Sement Hierarchies. The concrete entities derived from this abstract entity are SegmentHierarchy (a root node), a Segment (a leaf node), and IntermediateHierarchyNode (any other node, which must have both a parent and child nodes).&lt;/p>
-</body>
-            </ownedComment>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_IvO7kNBcEeytCvXriojvrw" client="_pBwaANBXEeytCvXriojvrw" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_2xqfkNBXEeytCvXriojvrw" name="SegmentHierarchy">
-            <generalization xmi:type="uml:Generalization" xmi:id="_YDz1sNBYEeytCvXriojvrw" general="_6EHu0NBXEeytCvXriojvrw"/>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_pyqAkNBZEeytCvXriojvrw" name="segmentClass" type="_btsNMNzfEeyORqA-BnZOvA"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_6EHu0NBXEeytCvXriojvrw" name="ParentHierarchyNode" isAbstract="true">
-            <generalization xmi:type="uml:Generalization" xmi:id="_8wpmgNBXEeytCvXriojvrw" general="_pBwaANBXEeytCvXriojvrw"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_7O-YYNBXEeytCvXriojvrw" name="Segment">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_ewwm4O5JEeyVg4QP7lSj1A">
-              <body>&lt;p>A Segment is a leaf node within a Segment Hierarchy and so its identity represents a value that can be used to classify an accounting&amp;nbsp;transaction such that costs may be tracked within the accounting system. In many cases, the identity of the Segment may be overloaded as the identity of a corresponding Account but it is more accurate to separate their identities (noting that not all Segment Hierarchy nodes are Segments) and so each Segment references the identity of the Account that is used to accrue its costs.&lt;/p>
-</body>
-            </ownedComment>
-            <generalization xmi:type="uml:Generalization" xmi:id="_9iiWcNBXEeytCvXriojvrw" general="_pBwaANBXEeytCvXriojvrw"/>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_FvDAENzpEeyORqA-BnZOvA" name="account" type="_I1H50NzhEeyORqA-BnZOvA"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_vKPlwNBYEeytCvXriojvrw" client="_7O-YYNBXEeytCvXriojvrw" supplier="_HLemoNBYEeytCvXriojvrw" contract="_HLemoNBYEeytCvXriojvrw"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Interface" xmi:id="_HLemoNBYEeytCvXriojvrw" name="IChildHierarchyNode"/>
-          <packagedElement xmi:type="uml:Class" xmi:id="_ZC234NBYEeytCvXriojvrw" name="IntermediateHierarchyNode">
-            <generalization xmi:type="uml:Generalization" xmi:id="_v7n_YNBYEeytCvXriojvrw" general="_6EHu0NBXEeytCvXriojvrw"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_uOtKkNBYEeytCvXriojvrw" client="_ZC234NBYEeytCvXriojvrw" supplier="_HLemoNBYEeytCvXriojvrw" contract="_HLemoNBYEeytCvXriojvrw"/>
-          </packagedElement>
           <packagedElement xmi:type="uml:Association" xmi:id="_lC7XgNBYEeytCvXriojvrw" memberEnd="_lHPPwNBYEeytCvXriojvrw _lHP20NBYEeytCvXriojvrw">
             <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lHOosNBYEeytCvXriojvrw" source="org.eclipse.papyrus">
               <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_lHOosdBYEeytCvXriojvrw" key="nature" value="UML_Nature"/>
@@ -1272,33 +1320,23 @@
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rsDnotBYEeytCvXriojvrw" value="*"/>
             </ownedEnd>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_btsNMNzfEeyORqA-BnZOvA" name="SegmentClass">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_Z6ROgO5IEeyVg4QP7lSj1A">
-              <body>&lt;p>In order to support both Finance Accounting and Cost Accounting, it is expected that AccountingTransactions will be classified using a nunmber of SegmentClass values. Typically, SegmentClasses will include Cost Centres, Business Units and Locations but can be considered arbitrary according to the Cost Accounting needs of the organisation. Within each SegmentClass, the actual values that can be used for classification will be&amp;nbsp;determined by the set of leaf nodes within a set of Segment Hierarchies, where the different hierarchies represent different ways of analysing costs within the SegmentClass.&lt;/p>
-
-&lt;p>Because each SegmentClass may have multiple hierarchies they must be declared separately from the hierarchies themselves and so the root node of each Segment Hierarchy identifies the SegmentClass to which it belongs.&lt;/p>
-</body>
-            </ownedComment>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_edQKwNzfEeyORqA-BnZOvA" client="_btsNMNzfEeyORqA-BnZOvA" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_I1H50NzhEeyORqA-BnZOvA" name="Account">
             <ownedComment xmi:type="uml:Comment" xmi:id="_x9nt4NzxEeyORqA-BnZOvA">
               <body>&lt;p>An Account is the basic unit against which a record of the impact&amp;nbsp;financial transactions can be maintained. The individual postings to an Account arising from a transaction are conceptually recorded in a Ledger and it is the Accounts that are maintained within the General Ledger that are used to prepare the financial statements of an organisation.&lt;/p>
+
+&lt;p>In an &amp;quot;integrated accounting system&amp;quot;, Management Accounts and Financial Accounts are managed together and so requires that actual Accounts to be at a level of granularity that meets the union of those needs. As a consequence, while each Account typically has an independent unique identfier, the Account is actually defined as the intersection of a number of distinct hierarchies. The hierarchy that is always present in the GL account hierarchy as this is required to prepare the financial statements but the Account also allows an arbitrary number of additional Segments to be included as part of the Account definition.&lt;/p>
+
+&lt;p>While it would, in theory, be possible to use all desired hierarchies to create a composite identifier for an account, this is not realistic as it would require a number of accounts equal to the size of the cartesian product of all hierarchies. In practice, only a subset of all possible hierarchy combinations are valid and so a separate identifier is needed. The use of a DataType to represent the AccountCombination is both efficient (because it is a structure that will have re-use) and improves model accuracy as it facilitates the application of a &amp;lt;&amp;lt;Unique&amp;gt;&amp;gt; constraint to the AccountCombination as a whole with the definition of an Account.&lt;/p>
 </body>
             </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_LbxLALzEEe2w7bz5iZ360g" name="accountCombination" type="_gxuAoLzfEe2w7bz5iZ360g"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_3aypANA_EeyIL5G2wmXgzQ" name="ledger" type="_FvqtQAvGEeyuhKbTMn6kag">
               <ownedComment xmi:type="uml:Comment" xmi:id="_3wHQ8NzxEeyORqA-BnZOvA">
                 <body>&lt;p>The Ledger in which postings to this Account are recorded.&lt;/p>
 </body>
               </ownedComment>
             </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_FvnC5QvGEeyuhKbTMn6kag" name="accountType" type="_FvoRAAvGEeyuhKbTMn6kag">
-              <ownedComment xmi:type="uml:Comment" xmi:id="_6Hm3UNzyEeyORqA-BnZOvA">
-                <body>&lt;p>The type of the Account determines how a posting affects the balance of the Account. Asset and Expense Accounts are increased by a Debit Posting while Liability, Revenue&amp;nbsp;and&amp;nbsp;Equity Accounts&amp;nbsp;are increased by a Credit Posting.&lt;/p>
-</body>
-              </ownedComment>
-            </ownedAttribute>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_S_1aUNzhEeyORqA-BnZOvA" client="_I1H50NzhEeyORqA-BnZOvA" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_ny5EsLzcEe2w7bz5iZ360g" client="_I1H50NzhEeyORqA-BnZOvA" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_UHESsNziEeyORqA-BnZOvA" name="ControlAccount">
             <ownedComment xmi:type="uml:Comment" xmi:id="_-48kYOGdEey8IpheLQ_a1A">
@@ -1313,6 +1351,15 @@
             <ownedAttribute xmi:type="uml:Property" xmi:id="_GbUssNzoEeyORqA-BnZOvA" name="ledgerAdjustmentAccount" type="_I1H50NzhEeyORqA-BnZOvA">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wrv6gNzqEeyORqA-BnZOvA"/>
               <upperValue xmi:type="uml:LiteralInteger" xmi:id="_wrv6gdzqEeyORqA-BnZOvA" value="1"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Abstraction" xmi:id="_f0Q1wLwiEe2mDui0BEo5wg" client="_GnZ-YLxnEe2mDui0BEo5wg" supplier="_FvkmoAvGEeyuhKbTMn6kag"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_GnZ-YLxnEe2mDui0BEo5wg" name="IBusinessTransaction"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_gxuAoLzfEe2w7bz5iZ360g" name="AccountCombination">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_7QqrALznEe2w7bz5iZ360g" name="glAccount" type="_b3O_QLzBEe2w7bz5iZ360g"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_-CbA8LznEe2w7bz5iZ360g" name="segment" type="_7O-YYNBXEeytCvXriojvrw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HvGhoLzoEe2w7bz5iZ360g" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HvHIsLzoEe2w7bz5iZ360g" value="*"/>
             </ownedAttribute>
           </packagedElement>
         </packagedElement>
@@ -1386,18 +1433,70 @@
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="_cAcr8J0eEeuosN6Nd1GBJQ" name="ReferenceData">
           <packagedElement xmi:type="uml:Interface" xmi:id="_j2_KYJ0eEeuosN6Nd1GBJQ" name="IReferenceEntity">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_K-8dUJ0fEeuosN6Nd1GBJQ" name="name" type="_ac5joJ0gEeuosN6Nd1GBJQ"/>
+            <ownedComment xmi:type="uml:Comment" xmi:id="_4s44YFXpEe2AS-AxgfYWgA">
+              <body>&lt;p>The IReferenceData Interface is a utility Interface that makes it easy to declare Reference Data.&amp;nbsp;Unlike a Class,&amp;nbsp;an Interface does not imply a form of&amp;nbsp;identity - a sub-Class of a super-Class has an identity that is sub set of its super-Class because of the implied &amp;quot;is a&amp;quot; relationship, but a Class implementing an Interface is not&amp;nbsp;intrinsically related to any other Class implementing the same Interface. The Interface only describes common characteristics (Properties). In LDML, Reference Data has two key requirements: a Property to act as the &amp;lt;&amp;lt;ReferenceLabel&amp;gt;&amp;gt; and a Property to act as the &amp;lt;&amp;lt;ReferenceCode&amp;gt;&amp;gt;. Implementing this Interface causes the implmenting Class to automatically declare a &amp;lt;&amp;lt;ReferenceLabel&amp;gt;&amp;gt; Property (name) along with an optional description string. This Interface is, therefore, designed to be used when declaring Reference Data where it is desirable for the corresponding &amp;lt;&amp;lt;ReferenceCode&amp;gt;&amp;gt; Property to by given a specific name or Type.&lt;/p>
+</body>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_K-8dUJ0fEeuosN6Nd1GBJQ" name="name" type="_ac5joJ0gEeuosN6Nd1GBJQ">
+              <ownedComment xmi:type="uml:Comment" xmi:id="__VE34FXqEe2AS-AxgfYWgA">
+                <body>&lt;p>The name to be used as a displayed label, and which essentially defines the meaning of the associated code.&lt;/p>
+</body>
+              </ownedComment>
+            </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_5NMBAJ0gEeuosN6Nd1GBJQ" name="description" type="_ac5joJ0gEeuosN6Nd1GBJQ">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_E29zIFXrEe2AS-AxgfYWgA">
+                <body>&lt;p>An optional description that can be used to further clarify the intention of the defined code.&lt;/p>
+</body>
+              </ownedComment>
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__vU4UJ0gEeuosN6Nd1GBJQ"/>
             </ownedAttribute>
           </packagedElement>
           <packagedElement xmi:type="uml:Interface" xmi:id="_BnjlQJ0hEeuosN6Nd1GBJQ" name="IControlledVocabulary">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_yTyy4FXqEe2AS-AxgfYWgA">
+              <body>&lt;p>The IControlledVocabulary Interface is an extension of the IReferenceEntity Interface and simply forces the declaration of a standard &amp;lt;&amp;lt;ReferenceCode&amp;gt;&amp;gt; Property (code), alongside the name and description declared in the super-Interface. As such, it is designed to be used in the very common case where these generic Property declarations are perfectly suitable.&lt;/p>
+</body>
+            </ownedComment>
+            <ownedComment xmi:type="uml:Comment" xmi:id="_yT0oEFXqEe2AS-AxgfYWgA">
+              <body>&lt;p>Without further attribution or structure applied to the implementing Class, this Interface creates a simple list of name/code pairs, hence it is considered to represent a simple controlled vocabulary. This is probably sufficient for the vast majority of Reference Data but implementing Classes can also add further structure, as desired (e.g. a hierarchy).&amp;nbsp;&lt;/p>
+</body>
+            </ownedComment>
+            <ownedComment xmi:type="uml:Comment" xmi:id="_TjsQ0FXsEe2AS-AxgfYWgA">
+              <body>&lt;p>Note that &amp;lt;&amp;lt;ReferenceEntities&amp;gt;&amp;gt; are expected to be used as the declared Type for Properties. In LDML, this implies that the value of such a property is actually the declared &amp;lt;&amp;lt;ReferenceCode&amp;gt;&amp;gt; (i.e. unlike a DataType, the structure of the Property is not directly instantiated). This concept can be taken to mean that declared Property is instantiated by reference rather than by value.&lt;/p>
+</body>
+            </ownedComment>
             <generalization xmi:type="uml:Generalization" xmi:id="_Oh570J0hEeuosN6Nd1GBJQ" general="_j2_KYJ0eEeuosN6Nd1GBJQ"/>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_K9hPEJ0hEeuosN6Nd1GBJQ" name="code" type="_q9tDgJ0gEeuosN6Nd1GBJQ"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_K9hPEJ0hEeuosN6Nd1GBJQ" name="code" type="_q9tDgJ0gEeuosN6Nd1GBJQ">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_leTRsFXrEe2AS-AxgfYWgA">
+                <body>&lt;p>The code that is used to reference the specific business concept in the set of defined values, and which defines the identity of a given Reference Class that is the implied type of any Property for which the Reference Class is the declared Type.&lt;/p>
+</body>
+              </ownedComment>
+            </ownedAttribute>
           </packagedElement>
           <packagedElement xmi:type="uml:DataType" xmi:id="_oOSMsErMEe2JaYM2HfjWkA" name="ReferenceValue">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_qeEeAErMEe2JaYM2HfjWkA" name="code" type="_q9tDgJ0gEeuosN6Nd1GBJQ"/>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_uKoPUErMEe2JaYM2HfjWkA" name="name" type="_ac5joJ0gEeuosN6Nd1GBJQ"/>
+            <ownedComment xmi:type="uml:Comment" xmi:id="_dlAIQFXtEe2AS-AxgfYWgA">
+              <body>&lt;p>This DataType is specifically provided as a generic mechanism to record a point in time view of an instance of Reference Data, given that reference data may change over time and permitted values may be removed such that the &amp;lt;&amp;lt;ReferenceCode&amp;gt;&amp;gt; can no longer be used as a reference to the&amp;nbsp;associated value (business definition). This is not a common requirement but is required when an historical view of data is explicitly required within the logical data model (e.g. HR where there is an obligation to maintain an employee history).&lt;/p>
+</body>
+            </ownedComment>
+            <ownedComment xmi:type="uml:Comment" xmi:id="_txgMEFXtEe2AS-AxgfYWgA">
+              <body>&lt;p>Note that the specific set of Reference Data to which the historic value belongs is defined by the instantiating Property.&lt;/p>
+</body>
+            </ownedComment>
+            <ownedComment xmi:type="uml:Comment" xmi:id="_RTRFEFaWEe2AS-AxgfYWgA">
+              <body>&lt;p>Note also that, while this DataType is directly usable for values from a simple controlled vocabulary, it can be sub-Classed&amp;nbsp;locally, as required.&lt;/p>
+</body>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_qeEeAErMEe2JaYM2HfjWkA" name="code" type="_q9tDgJ0gEeuosN6Nd1GBJQ">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_1AEEgFXtEe2AS-AxgfYWgA">
+                <body>&lt;p>A point in time value of a &amp;lt;&amp;lt;ReferenceCode&amp;gt;&amp;gt;.&lt;/p>
+</body>
+              </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_uKoPUErMEe2JaYM2HfjWkA" name="name" type="_ac5joJ0gEeuosN6Nd1GBJQ">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_46vKUFXtEe2AS-AxgfYWgA">
+                <body>&lt;p>The point in time value of a &amp;lt;&amp;lt;ReferenceLabel&amp;gt;&amp;gt;.&lt;/p>
+</body>
+              </ownedComment>
+            </ownedAttribute>
           </packagedElement>
         </packagedElement>
       </packagedElement>
@@ -1631,7 +1730,48 @@
         <packagedElement xmi:type="uml:Package" xmi:id="_eKqU4G4QEeyXoOFUHXlY1w" name="PhysicalSupplyChain"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_32yHUG1sEeyGYpzd-2skXA" name="FinancialServices"/>
-      <packagedElement xmi:type="uml:Package" xmi:id="_6ZcRUG1sEeyGYpzd-2skXA" name="SharedServices"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_6ZcRUG1sEeyGYpzd-2skXA" name="SharedServices">
+        <packagedElement xmi:type="uml:Package" xmi:id="_W9jjYL2ZEe2hVri8Wh2pVA" name="Finance">
+          <packagedElement xmi:type="uml:Package" xmi:id="_ZJ6tQL2ZEe2hVri8Wh2pVA" name="BookKeeping">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_d1iu4L2ZEe2hVri8Wh2pVA">
+              <body>&lt;p>The Bookkeeping Package is the core of supporting both Financial Accounting and Management Accounting as it deals with the ways BusinessTransactions are recorded in Journals and Ledgers that track the balances of the Accounts. These are, in turn, used to prepare both Financial Statements and Management Reports.&lt;/p>
+
+&lt;p>Typically, there are at least two philosophical approaches that one can consider within this domain:&lt;/p>
+
+&lt;ul>
+	&lt;li>Integrated or separate accounts&lt;/li>
+	&lt;li>Double entry or single entry bookkeeping&lt;/li>
+&lt;/ul>
+
+&lt;p>The model presented here represents the prevailing approach, i.e. integrated double entry. The adoption of the double entry framework arguably creates a level of redundancy that is unnecessary in a computer-based accounting system but it has the advantage of conforming to an accounting approach that has been well understood for hundreds of years. Integrating the Financial Accounts and Management Accounts simply requires the granularity at which Accounts are managed to be determined by a number of intersecting hierarchies rather than just a single Account hierarchy.&lt;/p>
+</body>
+            </ownedComment>
+            <ownedComment xmi:type="uml:Comment" xmi:id="_d1jV8L2ZEe2hVri8Wh2pVA">
+              <body>&lt;p>Despite the fact that Accounting is a broad and complex subject, the structure of the core underlying data is relatively simple:&lt;/p>
+
+&lt;p>${diagram=/SharedServices/Finance/BookKeeping/Book Keeping}&lt;/p>
+</body>
+            </ownedComment>
+            <ownedComment xmi:type="uml:Comment" xmi:id="_d1lLIL2ZEe2hVri8Wh2pVA">
+              <body>&lt;p>As Len Silverston discusses in the first volume of his Data Model Resource Book, an immediate consideration is the difference between a Business Transaction and an Accounting Transaction. Silverston wisely opts to separate these concepts as there are many different types of Business Transaction (Invoices, Purchase Orders, Stock Transfers, etc.) each of which needs to be fully described in the context of their own domain. Silverston&amp;#39;s ERD&amp;#39;s, however, lack the modelling richness of LDML and so he has no option but to use an optional one-to-one relationship to show this link. Heree, the Abstraction link of LDML is ideal for representing the fact that they are related but distinct concepts. The use of&amp;nbsp;the Interface ${link=/SharedServices/Finance/BookKeeping/IBusinessTransaction} to hold this Abstraction further simplifies the representation of the model by allowing us to show a single Business Transaction within the Bookkeeping Domain rather than shown either an exhaustive or simply representative set of Abstractions between specific Business Transactions and the ${link=/SharedServices/Finance/BookKeeping/JournalEntry}.&lt;/p>
+
+&lt;p>At this point, it is worth noting that there are at least two ways to think about the concept of an Accounting Transaction:&lt;/p>
+
+&lt;ul>
+	&lt;li>As a Transaction concept that is subsequently recorded in a Journal&lt;/li>
+	&lt;li>As an entry in a Journal arising from the need to record a Business Transaction&lt;/li>
+&lt;/ul>
+
+&lt;p>Silverston adopts the former approach and there is nothing wrong with that. Here we adopt the latter approach, however, because Accounting Transactions are first recorded in a ${link=/SharedServices/Finance/BookKeeping/Journal} (Journals are books of first or prime entry), hence a ${link=/SharedServices/Finance/BookKeeping/JournalEntry} is the (notional) first recording of the Accounting Transaction.&lt;/p>
+</body>
+            </ownedComment>
+            <ownedComment xmi:type="uml:Comment" xmi:id="_d1lLIb2ZEe2hVri8Wh2pVA">
+              <body>&lt;p>If we consider the structure of a ${link=/SharedServices/Finance/BookKeeping/JournalEntry} it should be apparent from basic bookkeeping theory that each ${link=/SharedServices/Finance/BookKeeping/JournalEntry} must have at least one ${link=/SharedServices/Finance/BookKeeping/CreditPosting} and at least one ${link=/SharedServices/Finance/BookKeeping/DebitPosting} - this is required in order to satisfy the need for the double entry records to be balanced. In a paper-based Accounting System, the Accounting Transaction would be fully recorded in a Journal and then the postings would be &lt;u>copied&lt;/u> into the Ledgers where the balances of the Accounts could be determined. In a computer-based Accounting System, this duplicate recording of the Postings is clearly unnecessary. Accordingly, the model presented here (as per the Silverston model, albeit with different entity names)&amp;nbsp;treats the Postings recorded against the ${link=/SharedServices/Finance/BookKeeping/JournalEntry} directly as Ledger Entries. The use of the distinct sub-Classes of ${link=/SharedServices/Finance/BookKeeping/DebitPosting} and ${link=/SharedServices/Finance/BookKeeping/CreditPosting} confer no additional structure but further allow us to enforce the requirements of balanced double entry Accounting Transactions.&lt;/p>
+</body>
+            </ownedComment>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_8e464G1sEeyGYpzd-2skXA" name="Common"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_mAwvwJ0dEeuosN6Nd1GBJQ" name="Tutorials"/>
@@ -1789,17 +1929,13 @@
   <ldml:Documentation xmi:id="_-T9RcNEJEey8Yoj-2WBBqw" base_Comment="_s6eV0NBIEeyIL5G2wmXgzQ"/>
   <ldml:Documentation xmi:id="_-T94gNEJEey8Yoj-2WBBqw" base_Comment="_Q4v7ANBJEeyIL5G2wmXgzQ"/>
   <ldml:Documentation xmi:id="_-T-fkNEJEey8Yoj-2WBBqw" base_Comment="_Q4v7AdBJEeyIL5G2wmXgzQ"/>
-  <ldml:ReferenceData xmi:id="_fAPjENzfEeyORqA-BnZOvA" base_Class="_btsNMNzfEeyORqA-BnZOvA"/>
   <ldml:ReferenceData xmi:id="_LW1BkNzhEeyORqA-BnZOvA" base_Class="_I1H50NzhEeyORqA-BnZOvA"/>
   <ldml:ReferenceData xmi:id="_Ws33UNziEeyORqA-BnZOvA" base_Class="_UHESsNziEeyORqA-BnZOvA"/>
   <ldml:ReferenceData xmi:id="_JU0wwNzlEeyORqA-BnZOvA" base_Class="_FyZL0NzlEeyORqA-BnZOvA"/>
-  <ldml:Derived xmi:id="_WEmcwNzqEeyORqA-BnZOvA" base_Property="_FvoRCAvGEeyuhKbTMn6kag"/>
   <ldml:Documentation xmi:id="_zJd18NzxEeyORqA-BnZOvA" base_Comment="_x9nt4NzxEeyORqA-BnZOvA"/>
   <ldml:Documentation xmi:id="_5A1R8NzxEeyORqA-BnZOvA" base_Comment="_3wHQ8NzxEeyORqA-BnZOvA"/>
-  <ldml:Documentation xmi:id="_78L94NzzEeyORqA-BnZOvA" base_Comment="_6Hm3UNzyEeyORqA-BnZOvA"/>
   <ldml:Documentation xmi:id="_CCg9YOGeEey8IpheLQ_a1A" base_Comment="_-48kYOGdEey8IpheLQ_a1A"/>
   <ldml:Documentation xmi:id="_J1EqAOG6EeybPvVpZUerTw" base_Comment="_J00LUOG6EeybPvVpZUerTw"/>
-  <ldml:Documentation xmi:id="_Z6U44O5IEeyVg4QP7lSj1A" base_Comment="_Z6ROgO5IEeyVg4QP7lSj1A"/>
   <ldml:Documentation xmi:id="_ewxN8O5JEeyVg4QP7lSj1A" base_Comment="_ewwm4O5JEeyVg4QP7lSj1A"/>
   <ldml:Documentation xmi:id="__NfQke5MEeyVg4QP7lSj1A" base_Comment="__NfQkO5MEeyVg4QP7lSj1A"/>
   <ldml:ReferenceData xmi:id="_9-7tQEoWEe2MX-ARbAwz1Q" base_Class="_64h9AEoWEe2MX-ARbAwz1Q"/>
@@ -1811,4 +1947,29 @@
   <ldml:ReferenceCode xmi:id="_YOWaMFXNEe2AS-AxgfYWgA" base_Property="_8r080KHbEeunjrVPm6TZ0Q"/>
   <ldml:Documentation xmi:id="_andUsFXPEe2AS-AxgfYWgA" base_Comment="_am3e0FXPEe2AS-AxgfYWgA"/>
   <ldml:Documentation xmi:id="_anei0FXPEe2AS-AxgfYWgA" base_Comment="_and7wFXPEe2AS-AxgfYWgA"/>
+  <ldml:Documentation xmi:id="_4s6GgFXpEe2AS-AxgfYWgA" base_Comment="_4s44YFXpEe2AS-AxgfYWgA"/>
+  <ldml:Documentation xmi:id="_yT0BAFXqEe2AS-AxgfYWgA" base_Comment="_yTyy4FXqEe2AS-AxgfYWgA"/>
+  <ldml:Documentation xmi:id="_yT1PIFXqEe2AS-AxgfYWgA" base_Comment="_yT0oEFXqEe2AS-AxgfYWgA"/>
+  <ldml:Documentation xmi:id="__VFe8FXqEe2AS-AxgfYWgA" base_Comment="__VE34FXqEe2AS-AxgfYWgA"/>
+  <ldml:Documentation xmi:id="_E2-aMFXrEe2AS-AxgfYWgA" base_Comment="_E29zIFXrEe2AS-AxgfYWgA"/>
+  <ldml:Documentation xmi:id="_leTRsVXrEe2AS-AxgfYWgA" base_Comment="_leTRsFXrEe2AS-AxgfYWgA"/>
+  <ldml:Documentation xmi:id="_TjsQ0VXsEe2AS-AxgfYWgA" base_Comment="_TjsQ0FXsEe2AS-AxgfYWgA"/>
+  <ldml:Documentation xmi:id="_dlAvUFXtEe2AS-AxgfYWgA" base_Comment="_dlAIQFXtEe2AS-AxgfYWgA"/>
+  <ldml:Documentation xmi:id="_txgMEVXtEe2AS-AxgfYWgA" base_Comment="_txgMEFXtEe2AS-AxgfYWgA"/>
+  <ldml:Documentation xmi:id="_1AErkFXtEe2AS-AxgfYWgA" base_Comment="_1AEEgFXtEe2AS-AxgfYWgA"/>
+  <ldml:Documentation xmi:id="_46vKUVXtEe2AS-AxgfYWgA" base_Comment="_46vKUFXtEe2AS-AxgfYWgA"/>
+  <ldml:Documentation xmi:id="_RTSTMFaWEe2AS-AxgfYWgA" base_Comment="_RTRFEFaWEe2AS-AxgfYWgA"/>
+  <ldml:ReferenceData xmi:id="_KNb3ALzBEe2w7bz5iZ360g" base_Class="_-fQ_sLzAEe2w7bz5iZ360g"/>
+  <ldml:ReferenceData xmi:id="_PPwhYLzBEe2w7bz5iZ360g" base_Class="_LXM7cLzBEe2w7bz5iZ360g"/>
+  <ldml:ReferenceData xmi:id="_Z7LiQLzBEe2w7bz5iZ360g" base_Class="_Q7DlkLzBEe2w7bz5iZ360g"/>
+  <ldml:ReferenceData xmi:id="_drqKQLzBEe2w7bz5iZ360g" base_Class="_b3O_QLzBEe2w7bz5iZ360g"/>
+  <ldml:ReferenceData xmi:id="_k_AcELzBEe2w7bz5iZ360g" base_Class="_hjU_YLzBEe2w7bz5iZ360g"/>
+  <ldml:ReferenceData xmi:id="_Deyi0LzDEe2w7bz5iZ360g" base_Class="_AHnysLzDEe2w7bz5iZ360g"/>
+  <ldml:Documentation xmi:id="__D1nMLzSEe2w7bz5iZ360g" base_Comment="__D1AILzSEe2w7bz5iZ360g"/>
+  <ldml:Unique xmi:id="_pWfvALzoEe2w7bz5iZ360g" base_Property="_LbxLALzEEe2w7bz5iZ360g"/>
+  <ldml:Documentation xmi:id="_ACURUL2GEe2w7bz5iZ360g" base_Comment="_ACScIL2GEe2w7bz5iZ360g"/>
+  <ldml:Documentation xmi:id="_d1lyML2ZEe2hVri8Wh2pVA" base_Comment="_d1iu4L2ZEe2hVri8Wh2pVA"/>
+  <ldml:Documentation xmi:id="_d1ymgL2ZEe2hVri8Wh2pVA" base_Comment="_d1jV8L2ZEe2hVri8Wh2pVA"/>
+  <ldml:Documentation xmi:id="_d1zNkL2ZEe2hVri8Wh2pVA" base_Comment="_d1lLIL2ZEe2hVri8Wh2pVA"/>
+  <ldml:Documentation xmi:id="_d1z0oL2ZEe2hVri8Wh2pVA" base_Comment="_d1lLIb2ZEe2hVri8Wh2pVA"/>
 </xmi:XMI>

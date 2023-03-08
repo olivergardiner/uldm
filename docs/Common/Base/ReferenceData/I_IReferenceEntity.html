@@ -23,7 +23,8 @@
 		<pre><span class="strong">IReferenceEntity</span></pre>
 	</h6>
 
-	
+	<p style="white-space: pre-line"><p>The IReferenceData Interface is a utility Interface that makes it easy to declare Reference Data.&nbsp;Unlike a Class,&nbsp;an Interface does not imply a form of&nbsp;identity - a sub-Class of a super-Class has an identity that is sub set of its super-Class because of the implied &quot;is a&quot; relationship, but a Class implementing an Interface is not&nbsp;intrinsically related to any other Class implementing the same Interface. The Interface only describes common characteristics (Properties). In LDML, Reference Data has two key requirements: a Property to act as the &lt;&lt;ReferenceLabel&gt;&gt; and a Property to act as the &lt;&lt;ReferenceCode&gt;&gt;. Implementing this Interface causes the implmenting Class to automatically declare a &lt;&lt;ReferenceLabel&gt;&gt; Property (name) along with an optional description string. This Interface is, therefore, designed to be used when declaring Reference Data where it is desirable for the corresponding &lt;&lt;ReferenceCode&gt;&gt; Property to by given a specific name or Type.</p>
+</p>
 	</div>
 </div>
 
@@ -48,12 +49,14 @@
 				<tr id="attr_name">
 					<td><code>String[1]</code></td>
 					<td>name</td>
-					<td></td>
+					<td><p>The name to be used as a displayed label, and which essentially defines the meaning of the associated code.</p>
+</td>
 				</tr>
 				<tr id="attr_description">
 					<td><code>String[0..1]</code></td>
 					<td>description</td>
-					<td></td>
+					<td><p>An optional description that can be used to further clarify the intention of the defined code.</p>
+</td>
 				</tr>
 			</tbody>
 		</table>

@@ -25,6 +25,10 @@
 	</h6>
 
 	<p style="white-space: pre-line"><p>An Account is the basic unit against which a record of the impact&nbsp;financial transactions can be maintained. The individual postings to an Account arising from a transaction are conceptually recorded in a Ledger and it is the Accounts that are maintained within the General Ledger that are used to prepare the financial statements of an organisation.</p>
+
+<p>In an &quot;integrated accounting system&quot;, Management Accounts and Financial Accounts are managed together and so requires that actual Accounts to be at a level of granularity that meets the union of those needs. As a consequence, while each Account typically has an independent unique identfier, the Account is actually defined as the intersection of a number of distinct hierarchies. The hierarchy that is always present in the GL account hierarchy as this is required to prepare the financial statements but the Account also allows an arbitrary number of additional Segments to be included as part of the Account definition.</p>
+
+<p>While it would, in theory, be possible to use all desired hierarchies to create a composite identifier for an account, this is not realistic as it would require a number of accounts equal to the size of the cartesian product of all hierarchies. In practice, only a subset of all possible hierarchy combinations are valid and so a separate identifier is needed. The use of a DataType to represent the AccountCombination is both efficient (because it is a structure that will have re-use) and improves model accuracy as it facilitates the application of a &lt;&lt;Unique&gt;&gt; constraint to the AccountCombination as a whole with the definition of an Account.</p>
 </p>
 	</div>
 </div>
@@ -47,16 +51,15 @@
 				</tr>
 			</thead>
 			<tbody>
+				<tr id="attr_accountCombination">
+					<td><code>AccountCombination[1]</code></td>
+					<td>accountCombination</td>
+					<td></td>
+				</tr>
 				<tr id="attr_ledger">
 					<td><code>Ledger[1]</code></td>
 					<td>ledger</td>
 					<td><p>The Ledger in which postings to this Account are recorded.</p>
-</td>
-				</tr>
-				<tr id="attr_accountType">
-					<td><code>AccountType[1]</code></td>
-					<td>accountType</td>
-					<td><p>The type of the Account determines how a posting affects the balance of the Account. Asset and Expense Accounts are increased by a Debit Posting while Liability, Revenue&nbsp;and&nbsp;Equity Accounts&nbsp;are increased by a Credit Posting.</p>
 </td>
 				</tr>
 			</tbody>
@@ -80,12 +83,14 @@
 				<tr>
 					<td><code>String[1]</code></td>
 					<td>name</td>
-					<td></td>
+					<td><p style="white-space: pre-line"><p>The name to be used as a displayed label, and which essentially defines the meaning of the associated code.</p>
+</p></td>
 				</tr>
 				<tr>
 					<td><code>String[0..1]</code></td>
 					<td>description</td>
-					<td></td>
+					<td><p style="white-space: pre-line"><p>An optional description that can be used to further clarify the intention of the defined code.</p>
+</p></td>
 				</tr>
 			</tbody>
 		</table>
@@ -106,7 +111,8 @@
 				<tr>
 					<td><code>Identifier[1]</code></td>
 					<td>code</td>
-					<td></td>
+					<td><p style="white-space: pre-line"><p>The code that is used to reference the specific business concept in the set of defined values, and which defines the identity of a given Reference Class that is the implied type of any Property for which the Reference Class is the declared Type.</p>
+</p></td>
 				</tr>
 			</tbody>
 		</table>

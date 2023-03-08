@@ -1,5 +1,5 @@
 <div class="justify-content-start align-items-left pt-2 pb-2 mb-2 border-bottom">
-	<h5>ReferenceEntity SharedServices::Finance::BookKeeping::Segment</h5>
+	<h5>ReferenceEntity SharedServices::Finance::BookKeeping::ChartOfAccounts::Segment</h5>
 	
 	<h6 class="mt-4">Inheritance</h6>
 	<ul class="inheritance">
@@ -8,10 +8,10 @@
 				<li>ReferenceEntity</li>
 				<li>
 					<ul class="inheritance">
-						<li>SharedServices::Finance::BookKeeping::SegmentHierarchyNode</li>
+						<li>SharedServices::Finance::BookKeeping::ChartOfAccounts::SegmentHierarchyNode</li>
 						<li>
 					<ul class="inheritance">
-						<li>SharedServices::Finance::BookKeeping::Segment</li>
+						<li>SharedServices::Finance::BookKeeping::ChartOfAccounts::Segment</li>
 						<li>
 						</li>
 					</ul>
@@ -26,7 +26,7 @@
 <div class="justify-content-start align-items-left pt-2 pb-2 mb-2">
 	<h6 class="pb-2">
 		<pre><span class="strong">Segment</span> extends SegmentHierarchyNode</pre>
-		<pre> implements SharedServices::Finance::BookKeeping::IChildHierarchyNodeCommon::Base::ReferenceData::IControlledVocabulary</pre>
+		<pre> implements SharedServices::Finance::BookKeeping::ChartOfAccounts::IChildSegmentNodeCommon::Base::ReferenceData::IControlledVocabulary</pre>
 	</h6>
 
 	<p style="white-space: pre-line"><p>A Segment is a leaf node within a Segment Hierarchy and so its identity represents a value that can be used to classify an accounting&nbsp;transaction such that costs may be tracked within the accounting system. In many cases, the identity of the Segment may be overloaded as the identity of a corresponding Account but it is more accurate to separate their identities (noting that not all Segment Hierarchy nodes are Segments) and so each Segment references the identity of the Account that is used to accrue its costs.</p>
@@ -36,29 +36,6 @@
 
 <div class="justify-content-start align-items-left px-2 py-3 mb-2">
 	<div class="my-1 mx-2 p-1 bg-light border">
-		<h6 class="p-2">Attributes</h6>
-		
-		<table class="table table-sm table-striped border ml-3 mr-3">
-			<colgroup>
-				<col style="width: 20%">
-				<col style="width: 15%">
-				<col style="width: 65%">
-			</colgroup>
-			<thead class="table-dark">
-				<tr class="mr-3">
-					<th scope="col">Type and Multiplicity</th>
-					<th scope="col">Name</th>
-					<th scope="col">Description</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr id="attr_account">
-					<td><code>Account[1]</code></td>
-					<td>account</td>
-					<td></td>
-				</tr>
-			</tbody>
-		</table>
 		
 
 		<h6 class="p-2">Attributes directly implemented from Common::Base::ReferenceData::IReferenceEntity (does not include implied sub-interfaces)</h6>
@@ -78,12 +55,14 @@
 				<tr>
 					<td><code>String[1]</code></td>
 					<td>name</td>
-					<td></td>
+					<td><p style="white-space: pre-line"><p>The name to be used as a displayed label, and which essentially defines the meaning of the associated code.</p>
+</p></td>
 				</tr>
 				<tr>
 					<td><code>String[0..1]</code></td>
 					<td>description</td>
-					<td></td>
+					<td><p style="white-space: pre-line"><p>An optional description that can be used to further clarify the intention of the defined code.</p>
+</p></td>
 				</tr>
 			</tbody>
 		</table>
@@ -104,7 +83,8 @@
 				<tr>
 					<td><code>Identifier[1]</code></td>
 					<td>code</td>
-					<td></td>
+					<td><p style="white-space: pre-line"><p>The code that is used to reference the specific business concept in the set of defined values, and which defines the identity of a given Reference Class that is the implied type of any Property for which the Reference Class is the declared Type.</p>
+</p></td>
 				</tr>
 			</tbody>
 		</table>
@@ -116,7 +96,7 @@
 	<div class="my-1 mx-2 p-1 bg-light border">
 	
 	
-		<h6 class="p-2">Associations inherited from SharedServices::Finance::BookKeeping::IChildHierarchyNode</h6>
+		<h6 class="p-2">Associations inherited from SharedServices::Finance::BookKeeping::ChartOfAccounts::IChildSegmentNode</h6>
 		
 		<table class="table table-sm table-striped border ml-3 mr-5">
 			<col style="width: 35%">
@@ -129,7 +109,7 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>ParentHierarchyNode 1..* to 1</td>
+					<td>ParentSegmentNode 1..* to 1</td>
 					<td></td>
 				</tr>
 			</tbody>

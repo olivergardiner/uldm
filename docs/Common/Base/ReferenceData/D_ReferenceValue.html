@@ -23,7 +23,10 @@
 		<pre><span class="strong">ReferenceValue</span></pre>
 	</h6>
 
-	
+	<p style="white-space: pre-line"><p>This DataType is specifically provided as a generic mechanism to record a point in time view of an instance of Reference Data, given that reference data may change over time and permitted values may be removed such that the &lt;&lt;ReferenceCode&gt;&gt; can no longer be used as a reference to the&nbsp;associated value (business definition). This is not a common requirement but is required when an historical view of data is explicitly required within the logical data model (e.g. HR where there is an obligation to maintain an employee history).</p>
+</p><p style="white-space: pre-line"><p>Note that the specific set of Reference Data to which the historic value belongs is defined by the instantiating Property.</p>
+</p><p style="white-space: pre-line"><p>Note also that, while this DataType is directly usable for values from a simple controlled vocabulary, it can be sub-Classed&nbsp;locally, as required.</p>
+</p>
 	</div>
 </div>
 
@@ -48,12 +51,14 @@
 				<tr id="attr_code">
 					<td><code>Identifier[1]</code></td>
 					<td>code</td>
-					<td></td>
+					<td><p>A point in time value of a &lt;&lt;ReferenceCode&gt;&gt;.</p>
+</td>
 				</tr>
 				<tr id="attr_name">
 					<td><code>String[1]</code></td>
 					<td>name</td>
-					<td></td>
+					<td><p>The point in time value of a &lt;&lt;ReferenceLabel&gt;&gt;.</p>
+</td>
 				</tr>
 			</tbody>
 		</table>

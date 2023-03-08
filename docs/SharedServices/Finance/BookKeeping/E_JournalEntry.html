@@ -23,7 +23,12 @@
 		<pre><span class="strong">JournalEntry</span></pre>
 	</h6>
 
-	
+	<p style="white-space: pre-line"><p>The JournalEntry is perhaps the most pivotal concept for accounting as it represents the entry of an Accounting Transaction into a Journal (the &quot;book of first entry&quot;). In the days of paper-based accouting, one a transaction was recorded in a Journal, the effect of individual components of the transaction were then applied to the respective Ledgers (the&nbsp;&quot;books of second entry&quot;). The use of the double entry system made it easier to spot when mistakes were made in the ledgers but JournalEntries could always be used to go back to the original transactions to correct any errors.</p>
+
+<p>With the advent of computer-based accounting, the need to separately record transactions in both Journals and Ledgers is obviated as the Ledger view of postings can be created as view of the transaction details recorded in the JournalEntry.</p>
+
+<p>In keeping with the principles of double entry bookkeeping, Journal Entries must consist&nbsp;of at least one CreditPosting and at least one DebitPosting.</p>
+</p>
 	</div>
 </div>
 
@@ -48,19 +53,19 @@
 				<tr id="attr_transactionId">
 					<td><code>Identifier[1]</code></td>
 					<td>transactionId</td>
-					<td><p>The identity of the recorded transaction within the Accouting System.</p>
+					<td><p>The identity of the recorded accouting transaction within the Accouting System. Because accounting transactions are first recorded in a Journal, the terms &quot;accounting transaction&quot; and &quot;journal entry&quot; are synonymous and, hence, this identifier may also be referred to as a &quot;Journal Header Id&quot;.</p>
 </td>
 				</tr>
 				<tr id="attr_transactionDate">
 					<td><code>Date[1]</code></td>
 					<td>transactionDate</td>
-					<td><p>The date on which the transaction the accounting transaction occurred.</p>
+					<td><p>The date on which the accounting transaction occurred.</p>
 </td>
 				</tr>
 				<tr id="attr_postingDate">
 					<td><code>Date[1]</code></td>
 					<td>postingDate</td>
-					<td><p>The date on which the accounting transaction was recorded in the Journal and, thus, also posted to the relevant Account Ledgers.</p>
+					<td><p>The date on which the accounting transaction was recorded in the Journal and, thus, also posted to the relevant Account Ledgers. Note that this may be different from the actual date of the transaction.</p>
 </td>
 				</tr>
 				<tr id="attr_accountingPeriod">
@@ -111,11 +116,11 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>DebitPosting 0..1 to 1..*</td>
+					<td>DebitPosting 1 to 1..*</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>CreditPosting 0..1 to 1..*</td>
+					<td>CreditPosting 1 to 1..*</td>
 					<td></td>
 				</tr>
 			</tbody>

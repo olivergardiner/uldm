@@ -1,0 +1,34 @@
+<div>
+	<h2>Book Keeping</h2>
+</div>
+<div>
+	<div>
+		<div>
+			<p style="white-space: pre-line"><p>The Bookkeeping Package is the core of supporting both Financial Accounting and Management Accounting as it deals with the ways BusinessTransactions are recorded in Journals and Ledgers that track the balances of the Accounts. These are, in turn, used to prepare both Financial Statements and Management Reports.</p>
+
+<p>Typically, there are at least two philosophical approaches that one can consider within this domain:</p>
+
+<ul>
+	<li>Integrated or separate accounts</li>
+	<li>Double entry or single entry bookkeeping</li>
+</ul>
+
+<p>The model presented here represents the prevailing approach, i.e. integrated double entry. The adoption of the double entry framework arguably creates a level of redundancy that is unnecessary in a computer-based accounting system but it has the advantage of conforming to an accounting approach that has been well understood for hundreds of years. Integrating the Financial Accounts and Management Accounts simply requires the granularity at which Accounts are managed to be determined by a number of intersecting hierarchies rather than just a single Account hierarchy.</p>
+</p><p style="white-space: pre-line"><p>Despite the fact that Accounting is a broad and complex subject, the structure of the core underlying data is relatively simple:</p>
+
+<p><br/><div style="margin: auto; width: 100%;" class="diagram-div"><embed id="-SharedServices-Finance-BookKeeping-Book-Keeping-svg" type="image/svg+xml" class="diagram col-12" src="./SharedServices/Finance/BookKeeping/Book-Keeping.svg" onload="spz('#-SharedServices-Finance-BookKeeping-Book-Keeping-svg')"/></div><br/></p>
+</p><p style="white-space: pre-line"><p>As Len Silverston discusses in the first volume of his Data Model Resource Book, an immediate consideration is the difference between a Business Transaction and an Accounting Transaction. Silverston wisely opts to separate these concepts as there are many different types of Business Transaction (Invoices, Purchase Orders, Stock Transfers, etc.) each of which needs to be fully described in the context of their own domain. Silverston&#39;s ERD&#39;s, however, lack the modelling richness of LDML and so he has no option but to use an optional one-to-one relationship to show this link. Heree, the Abstraction link of LDML is ideal for representing the fact that they are related but distinct concepts. The use of&nbsp;the Interface <span class="pointer" onclick="$('#main').load('SharedServices/Finance/BookKeeping/I_IBusinessTransaction.html');window.scrollTo(0,0);">IBusinessTransaction</span> to hold this Abstraction further simplifies the representation of the model by allowing us to show a single Business Transaction within the Bookkeeping Domain rather than shown either an exhaustive or simply representative set of Abstractions between specific Business Transactions and the <span class="pointer" onclick="$('#main').load('SharedServices/Finance/BookKeeping/E_JournalEntry.html');window.scrollTo(0,0);">JournalEntry</span>.</p>
+
+<p>At this point, it is worth noting that there are at least two ways to think about the concept of an Accounting Transaction:</p>
+
+<ul>
+	<li>As a Transaction concept that is subsequently recorded in a Journal</li>
+	<li>As an entry in a Journal arising from the need to record a Business Transaction</li>
+</ul>
+
+<p>Silverston adopts the former approach and there is nothing wrong with that. Here we adopt the latter approach, however, because Accounting Transactions are first recorded in a <span class="pointer" onclick="$('#main').load('SharedServices/Finance/BookKeeping/R_Journal.html');window.scrollTo(0,0);">Journal</span> (Journals are books of first or prime entry), hence a <span class="pointer" onclick="$('#main').load('SharedServices/Finance/BookKeeping/E_JournalEntry.html');window.scrollTo(0,0);">JournalEntry</span> is the (notional) first recording of the Accounting Transaction.</p>
+</p><p style="white-space: pre-line"><p>If we consider the structure of a <span class="pointer" onclick="$('#main').load('SharedServices/Finance/BookKeeping/E_JournalEntry.html');window.scrollTo(0,0);">JournalEntry</span> it should be apparent from basic bookkeeping theory that each <span class="pointer" onclick="$('#main').load('SharedServices/Finance/BookKeeping/E_JournalEntry.html');window.scrollTo(0,0);">JournalEntry</span> must have at least one <span class="pointer" onclick="$('#main').load('SharedServices/Finance/BookKeeping/E_CreditPosting.html');window.scrollTo(0,0);">CreditPosting</span> and at least one <span class="pointer" onclick="$('#main').load('SharedServices/Finance/BookKeeping/E_DebitPosting.html');window.scrollTo(0,0);">DebitPosting</span> - this is required in order to satisfy the need for the double entry records to be balanced. In a paper-based Accounting System, the Accounting Transaction would be fully recorded in a Journal and then the postings would be <u>copied</u> into the Ledgers where the balances of the Accounts could be determined. In a computer-based Accounting System, this duplicate recording of the Postings is clearly unnecessary. Accordingly, the model presented here (as per the Silverston model, albeit with different entity names)&nbsp;treats the Postings recorded against the <span class="pointer" onclick="$('#main').load('SharedServices/Finance/BookKeeping/E_JournalEntry.html');window.scrollTo(0,0);">JournalEntry</span> directly as Ledger Entries. The use of the distinct sub-Classes of <span class="pointer" onclick="$('#main').load('SharedServices/Finance/BookKeeping/E_DebitPosting.html');window.scrollTo(0,0);">DebitPosting</span> and <span class="pointer" onclick="$('#main').load('SharedServices/Finance/BookKeeping/E_CreditPosting.html');window.scrollTo(0,0);">CreditPosting</span> confer no additional structure but further allow us to enforce the requirements of balanced double entry Accounting Transactions.</p>
+</p>
+		</div>
+	</div>
+</div>

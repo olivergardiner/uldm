@@ -28,7 +28,10 @@
 		<pre><span class="strong">IControlledVocabulary</span> extends IReferenceEntity</pre>
 	</h6>
 
-	
+	<p style="white-space: pre-line"><p>The IControlledVocabulary Interface is an extension of the IReferenceEntity Interface and simply forces the declaration of a standard &lt;&lt;ReferenceCode&gt;&gt; Property (code), alongside the name and description declared in the super-Interface. As such, it is designed to be used in the very common case where these generic Property declarations are perfectly suitable.</p>
+</p><p style="white-space: pre-line"><p>Without further attribution or structure applied to the implementing Class, this Interface creates a simple list of name/code pairs, hence it is considered to represent a simple controlled vocabulary. This is probably sufficient for the vast majority of Reference Data but implementing Classes can also add further structure, as desired (e.g. a hierarchy).&nbsp;</p>
+</p><p style="white-space: pre-line"><p>Note that &lt;&lt;ReferenceEntities&gt;&gt; are expected to be used as the declared Type for Properties. In LDML, this implies that the value of such a property is actually the declared &lt;&lt;ReferenceCode&gt;&gt; (i.e. unlike a DataType, the structure of the Property is not directly instantiated). This concept can be taken to mean that declared Property is instantiated by reference rather than by value.</p>
+</p>
 	</div>
 </div>
 
@@ -53,7 +56,8 @@
 				<tr id="attr_code">
 					<td><code>Identifier[1]</code></td>
 					<td>code</td>
-					<td></td>
+					<td><p>The code that is used to reference the specific business concept in the set of defined values, and which defines the identity of a given Reference Class that is the implied type of any Property for which the Reference Class is the declared Type.</p>
+</td>
 				</tr>
 			</tbody>
 		</table>
@@ -75,12 +79,14 @@
 				<tr>
 					<td><code>String[1]</code></td>
 					<td>name</td>
-					<td></td>
+					<td><p style="white-space: pre-line"><p>The name to be used as a displayed label, and which essentially defines the meaning of the associated code.</p>
+</p></td>
 				</tr>
 				<tr>
 					<td><code>String[0..1]</code></td>
 					<td>description</td>
-					<td></td>
+					<td><p style="white-space: pre-line"><p>An optional description that can be used to further clarify the intention of the defined code.</p>
+</p></td>
 				</tr>
 			</tbody>
 		</table>

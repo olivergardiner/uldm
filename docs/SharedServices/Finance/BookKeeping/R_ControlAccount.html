@@ -75,15 +75,14 @@
 			</thead>
 			<tbody>
 				<tr>
+					<td><code>AccountCombination[1]</code></td>
+					<td>accountCombination</td>
+					<td></td>
+				</tr>
+				<tr>
 					<td><code>Ledger[1]</code></td>
 					<td>ledger</td>
 					<td><p style="white-space: pre-line"><p>The Ledger in which postings to this Account are recorded.</p>
-</p></td>
-				</tr>
-				<tr>
-					<td><code>AccountType[1]</code></td>
-					<td>accountType</td>
-					<td><p style="white-space: pre-line"><p>The type of the Account determines how a posting affects the balance of the Account. Asset and Expense Accounts are increased by a Debit Posting while Liability, Revenue&nbsp;and&nbsp;Equity Accounts&nbsp;are increased by a Credit Posting.</p>
 </p></td>
 				</tr>
 			</tbody>
@@ -106,12 +105,14 @@
 				<tr>
 					<td><code>String[1]</code></td>
 					<td>name</td>
-					<td></td>
+					<td><p style="white-space: pre-line"><p>The name to be used as a displayed label, and which essentially defines the meaning of the associated code.</p>
+</p></td>
 				</tr>
 				<tr>
 					<td><code>String[0..1]</code></td>
 					<td>description</td>
-					<td></td>
+					<td><p style="white-space: pre-line"><p>An optional description that can be used to further clarify the intention of the defined code.</p>
+</p></td>
 				</tr>
 			</tbody>
 		</table>
@@ -132,7 +133,8 @@
 				<tr>
 					<td><code>Identifier[1]</code></td>
 					<td>code</td>
-					<td></td>
+					<td><p style="white-space: pre-line"><p>The code that is used to reference the specific business concept in the set of defined values, and which defines the identity of a given Reference Class that is the implied type of any Property for which the Reference Class is the declared Type.</p>
+</p></td>
 				</tr>
 			</tbody>
 		</table>

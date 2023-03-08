@@ -233,8 +233,8 @@
             <text x="196" xml:space="preserve" y="437" clip-path="url(#clipPath46)" stroke="none">  country: Country [1]</text>
             <line y2="406" fill="none" x1="190" clip-path="url(#clipPath47)" x2="431" y1="406"/>
             <rect x="190" y="370" clip-path="url(#clipPath48)" fill="none" width="240" rx="0" ry="0" height="112"/>
-            <line clip-path="url(#clipPath49)" fill="none" text-rendering="optimizeLegibility" x1="190" x2="130" y1="230" y2="230" stroke-dasharray="5,5,5,5,5,5,5,5,5,5"/>
-            <line clip-path="url(#clipPath49)" fill="none" text-rendering="optimizeLegibility" x1="130" x2="130" y1="230" y2="123" stroke-dasharray="5,5,5,5,5,5,5,5,5,5"/>
+            <line clip-path="url(#clipPath49)" fill="none" text-rendering="optimizeLegibility" x1="190" x2="130" y1="235" y2="235" stroke-dasharray="5,5,5,5,5,5,5,5,5,5"/>
+            <line clip-path="url(#clipPath49)" fill="none" text-rendering="optimizeLegibility" x1="130" x2="130" y1="235" y2="123" stroke-dasharray="5,5,5,5,5,5,5,5,5,5"/>
         </g>
         <g stroke-linecap="butt" fill="white" text-rendering="optimizeLegibility" font-family="'Segoe UI'" stroke-dasharray="5,5,5,5,5,5,5,5,5,5" stroke="white" stroke-width="1.1">
             <polygon points=" 130 123 135 138 125 138" stroke="none" clip-path="url(#clipPath50)"/>
@@ -247,8 +247,8 @@
             <line clip-path="url(#clipPath49)" fill="none" x1="130" x2="130" y1="770" y2="123" stroke="black"/>
             <polygon points=" 130 123 135 138 125 138" clip-path="url(#clipPath50)" stroke="none"/>
             <polygon fill="none" stroke-dasharray="none" clip-path="url(#clipPath50)" points=" 130 123 135 138 125 138" stroke="black"/>
-            <line clip-path="url(#clipPath49)" fill="none" x1="190" x2="130" y1="410" y2="410" stroke="black"/>
-            <line clip-path="url(#clipPath49)" fill="none" x1="130" x2="130" y1="410" y2="123" stroke="black"/>
+            <line clip-path="url(#clipPath49)" fill="none" x1="190" x2="130" y1="415" y2="415" stroke="black"/>
+            <line clip-path="url(#clipPath49)" fill="none" x1="130" x2="130" y1="415" y2="123" stroke="black"/>
             <polygon points=" 130 123 135 138 125 138" clip-path="url(#clipPath50)" stroke="none"/>
             <polygon fill="none" stroke-dasharray="none" clip-path="url(#clipPath50)" points=" 130 123 135 138 125 138" stroke="black"/>
         </g>

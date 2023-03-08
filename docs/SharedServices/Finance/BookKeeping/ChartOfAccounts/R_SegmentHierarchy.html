@@ -1,5 +1,5 @@
 <div class="justify-content-start align-items-left pt-2 pb-2 mb-2 border-bottom">
-	<h5>ReferenceEntity SharedServices::Finance::BookKeeping::SegmentClass</h5>
+	<h5>ReferenceEntity SharedServices::Finance::BookKeeping::ChartOfAccounts::SegmentHierarchy</h5>
 	
 	<h6 class="mt-4">Inheritance</h6>
 	<ul class="inheritance">
@@ -8,8 +8,18 @@
 				<li>ReferenceEntity</li>
 				<li>
 					<ul class="inheritance">
-						<li>SharedServices::Finance::BookKeeping::SegmentClass</li>
+						<li>SharedServices::Finance::BookKeeping::ChartOfAccounts::SegmentHierarchyNode</li>
 						<li>
+					<ul class="inheritance">
+						<li>SharedServices::Finance::BookKeeping::ChartOfAccounts::ParentSegmentNode</li>
+						<li>
+					<ul class="inheritance">
+						<li>SharedServices::Finance::BookKeeping::ChartOfAccounts::SegmentHierarchy</li>
+						<li>
+						</li>
+					</ul>
+						</li>
+					</ul>
 						</li>
 					</ul>
 				</li>
@@ -20,14 +30,11 @@
 
 <div class="justify-content-start align-items-left pt-2 pb-2 mb-2">
 	<h6 class="pb-2">
-		<pre><span class="strong">SegmentClass</span></pre>
+		<pre><span class="strong">SegmentHierarchy</span> extends ParentSegmentNode</pre>
 		<pre> implements Common::Base::ReferenceData::IControlledVocabulary</pre>
 	</h6>
 
-	<p style="white-space: pre-line"><p>In order to support both Finance Accounting and Cost Accounting, it is expected that AccountingTransactions will be classified using a nunmber of SegmentClass values. Typically, SegmentClasses will include Cost Centres, Business Units and Locations but can be considered arbitrary according to the Cost Accounting needs of the organisation. Within each SegmentClass, the actual values that can be used for classification will be&nbsp;determined by the set of leaf nodes within a set of Segment Hierarchies, where the different hierarchies represent different ways of analysing costs within the SegmentClass.</p>
-
-<p>Because each SegmentClass may have multiple hierarchies they must be declared separately from the hierarchies themselves and so the root node of each Segment Hierarchy identifies the SegmentClass to which it belongs.</p>
-</p>
+	
 	</div>
 </div>
 
@@ -52,12 +59,14 @@
 				<tr>
 					<td><code>String[1]</code></td>
 					<td>name</td>
-					<td></td>
+					<td><p style="white-space: pre-line"><p>The name to be used as a displayed label, and which essentially defines the meaning of the associated code.</p>
+</p></td>
 				</tr>
 				<tr>
 					<td><code>String[0..1]</code></td>
 					<td>description</td>
-					<td></td>
+					<td><p style="white-space: pre-line"><p>An optional description that can be used to further clarify the intention of the defined code.</p>
+</p></td>
 				</tr>
 			</tbody>
 		</table>
@@ -78,7 +87,8 @@
 				<tr>
 					<td><code>Identifier[1]</code></td>
 					<td>code</td>
-					<td></td>
+					<td><p style="white-space: pre-line"><p>The code that is used to reference the specific business concept in the set of defined values, and which defines the identity of a given Reference Class that is the implied type of any Property for which the Reference Class is the declared Type.</p>
+</p></td>
 				</tr>
 			</tbody>
 		</table>
@@ -89,8 +99,32 @@
 <div class="justify-content-start align-items-left px-2 py-3 mb-2">
 	<div class="my-1 mx-2 p-1 bg-light border">
 	
+		<h6 class="p-2">Associations inherited from SharedServices::Finance::BookKeeping::ChartOfAccounts::ParentSegmentNode</h6>
+		
+		<table class="table table-sm table-striped border ml-3 mr-5">
+			<col style="width: 35%">
+			<col style="width: *">
+			<thead class="table-dark">
+				<tr>
+					<th scope="col">Type and Cardinality</th>
+					<th scope="col">Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>IChildSegmentNode 1 to 1..*</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
 	
 		
 	</div>
 </div>
 
+<div class="justify-content-start align-items-left px-2 py-3 mb-2">
+	<div class="my-1 mx-2 p-1 bg-light border">
+
+	
+	</div>
+</div>

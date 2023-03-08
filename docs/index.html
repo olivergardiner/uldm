@@ -88,8 +88,20 @@
 		<span class="package-select pointer" data-path="Documentation/FinancialServices"><i class="far fa-folder-open ic-w mx-1"></i>Financial Services</span>
 	</li>
 	<li>
-		<i class="fas fa-angle-right invisible"></i>
+		<i class="fas fa-angle-right rotate"></i>
 		<span class="package-select pointer" data-path="Documentation/SharedServices"><i class="far fa-folder-open ic-w mx-1"></i>Shared Services</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="Documentation/SharedServices/Finance"><i class="far fa-folder-open ic-w mx-1"></i>Finance</span>
+		<ul class="nested">
+	<li>
+		<i class="fas fa-angle-right invisible"></i>
+		<span class="package-select pointer" data-path="Documentation/SharedServices/Finance/BookKeeping"><i class="far fa-folder-open ic-w mx-1"></i>Book Keeping</span>
+	</li>
+		</ul>
+	</li>
+		</ul>
 	</li>
 	<li>
 		<i class="fas fa-angle-right invisible"></i>
@@ -548,26 +560,40 @@
 		<i class="fas fa-angle-right rotate"></i>
 		<span class="package-select pointer" data-path="SharedServices/Finance/BookKeeping"><i class="far fa-folder-open ic-w mx-1"></i>BookKeeping</span>
 		<ul class="nested">
-				<li><span class="entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="Posting"><i class="fas fa-asterisk ic-w mr-1"></i>Posting</span></li>
+	<li>
+		<i class="fas fa-angle-right rotate"></i>
+		<span class="package-select pointer" data-path="SharedServices/Finance/BookKeeping/ChartOfAccounts"><i class="far fa-folder-open ic-w mx-1"></i>ChartOfAccounts</span>
+		<ul class="nested">
+			<li><span class="interface-select pointer" data-path="SharedServices/Finance/BookKeeping/ChartOfAccounts" data-name="IChildSegmentNode"><i class="far fa-circle ic-w mr-1"></i>IChildSegmentNode</span></li>
+			<li><span class="interface-select pointer" data-path="SharedServices/Finance/BookKeeping/ChartOfAccounts" data-name="IChildGLAccountNode"><i class="far fa-circle ic-w mr-1"></i>IChildGLAccountNode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping/ChartOfAccounts" data-name="SegmentHierarchyNode"><i class="far fa-dot-circle ic-w mr-1"></i>SegmentHierarchyNode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping/ChartOfAccounts" data-name="SegmentHierarchy"><i class="far fa-dot-circle ic-w mr-1"></i>SegmentHierarchy</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping/ChartOfAccounts" data-name="ParentSegmentNode"><i class="far fa-dot-circle ic-w mr-1"></i>ParentSegmentNode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping/ChartOfAccounts" data-name="Segment"><i class="far fa-dot-circle ic-w mr-1"></i>Segment</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping/ChartOfAccounts" data-name="IntermediateSegmentNode"><i class="far fa-dot-circle ic-w mr-1"></i>IntermediateSegmentNode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping/ChartOfAccounts" data-name="GLAccountHierarchyNode"><i class="far fa-dot-circle ic-w mr-1"></i>GLAccountHierarchyNode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping/ChartOfAccounts" data-name="ParentGLAccountNode"><i class="far fa-dot-circle ic-w mr-1"></i>ParentGLAccountNode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping/ChartOfAccounts" data-name="GLAccountHierarchy"><i class="far fa-dot-circle ic-w mr-1"></i>GLAccountHierarchy</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping/ChartOfAccounts" data-name="GLAccount"><i class="far fa-dot-circle ic-w mr-1"></i>GLAccount</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping/ChartOfAccounts" data-name="IntermediateGLAccountNode"><i class="far fa-dot-circle ic-w mr-1"></i>IntermediateGLAccountNode</span></li>
+			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping/ChartOfAccounts" data-name="GLAccountSet"><i class="far fa-dot-circle ic-w mr-1"></i>GLAccountSet</span></li>
+			<li><span class="enumeration-select pointer" data-path="SharedServices/Finance/BookKeeping/ChartOfAccounts" data-name="AccountType"><i class="fas fa-dot-circle ic-w mr-1"></i>AccountType</span></li>
+		</ul>
+	</li>
+				<li><span class="entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="LedgerEntry"><i class="fas fa-asterisk ic-w mr-1"></i>LedgerEntry</span></li>
 				<li><span class="entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="DebitPosting"><i class="fas fa-asterisk ic-w mr-1"></i>DebitPosting</span></li>
 				<li><span class="entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="CreditPosting"><i class="fas fa-asterisk ic-w mr-1"></i>CreditPosting</span></li>
 				<li><span class="entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="JournalEntry"><i class="fas fa-asterisk ic-w mr-1"></i>JournalEntry</span></li>
-			<li><span class="interface-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="IChildHierarchyNode"><i class="far fa-circle ic-w mr-1"></i>IChildHierarchyNode</span></li>
+			<li><span class="interface-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="IBusinessTransaction"><i class="far fa-circle ic-w mr-1"></i>IBusinessTransaction</span></li>
 			<li><span class="data-type-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="OriginatingTransation"><i class="fas fa-circle ic-w mr-1"></i>OriginatingTransation</span></li>
+			<li><span class="data-type-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="AccountCombination"><i class="fas fa-circle ic-w mr-1"></i>AccountCombination</span></li>
 			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="Ledger"><i class="far fa-dot-circle ic-w mr-1"></i>Ledger</span></li>
 			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="Journal"><i class="far fa-dot-circle ic-w mr-1"></i>Journal</span></li>
 			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="AccountingPeriod"><i class="far fa-dot-circle ic-w mr-1"></i>AccountingPeriod</span></li>
 			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="FiscalYear"><i class="far fa-dot-circle ic-w mr-1"></i>FiscalYear</span></li>
-			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="SegmentHierarchyNode"><i class="far fa-dot-circle ic-w mr-1"></i>SegmentHierarchyNode</span></li>
-			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="SegmentHierarchy"><i class="far fa-dot-circle ic-w mr-1"></i>SegmentHierarchy</span></li>
-			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="ParentHierarchyNode"><i class="far fa-dot-circle ic-w mr-1"></i>ParentHierarchyNode</span></li>
-			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="Segment"><i class="far fa-dot-circle ic-w mr-1"></i>Segment</span></li>
-			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="IntermediateHierarchyNode"><i class="far fa-dot-circle ic-w mr-1"></i>IntermediateHierarchyNode</span></li>
-			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="SegmentClass"><i class="far fa-dot-circle ic-w mr-1"></i>SegmentClass</span></li>
 			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="Account"><i class="far fa-dot-circle ic-w mr-1"></i>Account</span></li>
 			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="ControlAccount"><i class="far fa-dot-circle ic-w mr-1"></i>ControlAccount</span></li>
 			<li><span class="reference-entity-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="SubsidiaryLedger"><i class="far fa-dot-circle ic-w mr-1"></i>SubsidiaryLedger</span></li>
-			<li><span class="enumeration-select pointer" data-path="SharedServices/Finance/BookKeeping" data-name="AccountType"><i class="fas fa-dot-circle ic-w mr-1"></i>AccountType</span></li>
 		</ul>
 	</li>
 	<li>
