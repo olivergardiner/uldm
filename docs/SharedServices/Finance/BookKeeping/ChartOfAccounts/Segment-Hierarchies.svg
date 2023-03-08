@@ -208,12 +208,12 @@
             <line clip-path="url(#clipPath37)" fill="none" text-rendering="optimizeLegibility" x1="310" x2="310" y1="370" y2="270"/>
             <polygon fill="white" text-rendering="optimizeLegibility" clip-path="url(#clipPath39)" points=" 310 270 318 280 302 280" stroke="none"/>
             <polygon fill="none" text-rendering="optimizeLegibility" clip-path="url(#clipPath39)" points=" 310 270 318 280 302 280"/>
-            <line clip-path="url(#clipPath37)" fill="none" text-rendering="optimizeLegibility" x1="370" x2="310" y1="865" y2="865"/>
-            <line clip-path="url(#clipPath37)" fill="none" text-rendering="optimizeLegibility" x1="310" x2="310" y1="865" y2="270"/>
+            <line clip-path="url(#clipPath37)" fill="none" text-rendering="optimizeLegibility" x1="370" x2="310" y1="870" y2="870"/>
+            <line clip-path="url(#clipPath37)" fill="none" text-rendering="optimizeLegibility" x1="310" x2="310" y1="870" y2="270"/>
             <polygon fill="white" text-rendering="optimizeLegibility" clip-path="url(#clipPath39)" points=" 310 270 318 280 302 280" stroke="none"/>
             <polygon fill="none" text-rendering="optimizeLegibility" clip-path="url(#clipPath39)" points=" 310 270 318 280 302 280"/>
-            <line clip-path="url(#clipPath37)" fill="none" text-rendering="optimizeLegibility" x1="631" x2="1050" y1="865" y2="865" stroke-dasharray="5,5,5,5,5,5,5,5,5,5"/>
-            <line clip-path="url(#clipPath37)" fill="none" text-rendering="optimizeLegibility" x1="1050" x2="1050" y1="865" y2="430" stroke-dasharray="5,5,5,5,5,5,5,5,5,5"/>
+            <line clip-path="url(#clipPath37)" fill="none" text-rendering="optimizeLegibility" x1="631" x2="1050" y1="870" y2="870" stroke-dasharray="5,5,5,5,5,5,5,5,5,5"/>
+            <line clip-path="url(#clipPath37)" fill="none" text-rendering="optimizeLegibility" x1="1050" x2="1050" y1="870" y2="430" stroke-dasharray="5,5,5,5,5,5,5,5,5,5"/>
         </g>
         <g stroke-linecap="butt" fill="white" text-rendering="optimizeLegibility" font-family="'Segoe UI'" stroke-dasharray="5,5,5,5,5,5,5,5,5,5" stroke="white" stroke-width="1.1">
             <polygon points=" 1050 430 1055 445 1045 445" stroke="none" clip-path="url(#clipPath40)"/>

@@ -1285,23 +1285,11 @@
             <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_pkVZMCswEeyvWLBv3yth3w" client="_Fvnp8AvGEeyuhKbTMn6kag" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_w6iSECstEeyvWLBv3yth3w" name="AccountingPeriod">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_QEgawCsuEeyvWLBv3yth3w" client="_w6iSECstEeyvWLBv3yth3w" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+            <generalization xmi:type="uml:Generalization" xmi:id="_hZbz8L27Ee2Rbrgyz5QEFw" general="_w4TyML26Ee2Rbrgyz5QEFw"/>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_gMxMgL27Ee2Rbrgyz5QEFw" client="_w6iSECstEeyvWLBv3yth3w" supplier="_XFQOYL27Ee2Rbrgyz5QEFw" contract="_XFQOYL27Ee2Rbrgyz5QEFw"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_yw-2UCstEeyvWLBv3yth3w" name="FiscalYear">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_PES68CsuEeyvWLBv3yth3w" client="_yw-2UCstEeyvWLBv3yth3w" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Association" xmi:id="_XyINwCsuEeyvWLBv3yth3w" memberEnd="_XzjxISsuEeyvWLBv3yth3w _XzkYMCsuEeyvWLBv3yth3w">
-            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XzjKECsuEeyvWLBv3yth3w" source="org.eclipse.papyrus">
-              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XzjxICsuEeyvWLBv3yth3w" key="nature" value="UML_Nature"/>
-            </eAnnotations>
-            <ownedEnd xmi:type="uml:Property" xmi:id="_XzjxISsuEeyvWLBv3yth3w" name="accountingperiod" type="_w6iSECstEeyvWLBv3yth3w" association="_XyINwCsuEeyvWLBv3yth3w">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YodY0CsuEeyvWLBv3yth3w"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YodY0SsuEeyvWLBv3yth3w" value="*"/>
-            </ownedEnd>
-            <ownedEnd xmi:type="uml:Property" xmi:id="_XzkYMCsuEeyvWLBv3yth3w" name="fiscalyear" type="_yw-2UCstEeyvWLBv3yth3w" association="_XyINwCsuEeyvWLBv3yth3w">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YocKsCsuEeyvWLBv3yth3w" value="1"/>
-              <upperValue xmi:type="uml:LiteralInteger" xmi:id="_YocxwCsuEeyvWLBv3yth3w" value="1"/>
-            </ownedEnd>
+            <generalization xmi:type="uml:Generalization" xmi:id="_MzRoQL27Ee2Rbrgyz5QEFw" general="_0q5TAL26Ee2Rbrgyz5QEFw"/>
           </packagedElement>
           <packagedElement xmi:type="uml:DataType" xmi:id="_y2eXANBEEeyIL5G2wmXgzQ" name="OriginatingTransation">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_5ycqoNBEEeyIL5G2wmXgzQ" name="transactionOrigin" type="_q9tDgJ0gEeuosN6Nd1GBJQ"/>
@@ -1361,6 +1349,30 @@
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HvGhoLzoEe2w7bz5iZ360g" value="1"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HvHIsLzoEe2w7bz5iZ360g" value="*"/>
             </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_w4TyML26Ee2Rbrgyz5QEFw" name="AccountingPeriodHierarchyNode" isAbstract="true">
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Lpc5cL27Ee2Rbrgyz5QEFw" client="_w4TyML26Ee2Rbrgyz5QEFw" supplier="_BnjlQJ0hEeuosN6Nd1GBJQ" contract="_BnjlQJ0hEeuosN6Nd1GBJQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_0q5TAL26Ee2Rbrgyz5QEFw" name="AccountingPeriodParentNode" isAbstract="true">
+            <generalization xmi:type="uml:Generalization" xmi:id="_7MYqEL26Ee2Rbrgyz5QEFw" general="_w4TyML26Ee2Rbrgyz5QEFw"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_OXel8L27Ee2Rbrgyz5QEFw" name="AccountingPeriodIntermediateNode">
+            <generalization xmi:type="uml:Generalization" xmi:id="_iYIQ0L27Ee2Rbrgyz5QEFw" general="_0q5TAL26Ee2Rbrgyz5QEFw"/>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_fmsrAL27Ee2Rbrgyz5QEFw" client="_OXel8L27Ee2Rbrgyz5QEFw" supplier="_XFQOYL27Ee2Rbrgyz5QEFw" contract="_XFQOYL27Ee2Rbrgyz5QEFw"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_XFQOYL27Ee2Rbrgyz5QEFw" name="IAccountingPeriodChildNode"/>
+          <packagedElement xmi:type="uml:Association" xmi:id="_cDoM4L27Ee2Rbrgyz5QEFw" memberEnd="_cDqCEL27Ee2Rbrgyz5QEFw _cDqCEb27Ee2Rbrgyz5QEFw">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cDpbAL27Ee2Rbrgyz5QEFw" source="org.eclipse.papyrus">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cDpbAb27Ee2Rbrgyz5QEFw" key="nature" value="UML_Nature"/>
+            </eAnnotations>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_cDqCEL27Ee2Rbrgyz5QEFw" name="accountingperiodparentnode" type="_0q5TAL26Ee2Rbrgyz5QEFw" association="_cDoM4L27Ee2Rbrgyz5QEFw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dYixYL27Ee2Rbrgyz5QEFw" value="1"/>
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="_dYjYcL27Ee2Rbrgyz5QEFw" value="1"/>
+            </ownedEnd>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_cDqCEb27Ee2Rbrgyz5QEFw" name="iaccountingperiodchildnode" type="_XFQOYL27Ee2Rbrgyz5QEFw" association="_cDoM4L27Ee2Rbrgyz5QEFw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dYjYcb27Ee2Rbrgyz5QEFw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dYjYcr27Ee2Rbrgyz5QEFw" value="*"/>
+            </ownedEnd>
           </packagedElement>
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="_R3IFgKDiEeuXwMLKVSwySg" name="AccountsPayable"/>
@@ -1769,6 +1781,70 @@
               <body>&lt;p>If we consider the structure of a ${link=/SharedServices/Finance/BookKeeping/JournalEntry} it should be apparent from basic bookkeeping theory that each ${link=/SharedServices/Finance/BookKeeping/JournalEntry} must have at least one ${link=/SharedServices/Finance/BookKeeping/CreditPosting} and at least one ${link=/SharedServices/Finance/BookKeeping/DebitPosting} - this is required in order to satisfy the need for the double entry records to be balanced. In a paper-based Accounting System, the Accounting Transaction would be fully recorded in a Journal and then the postings would be &lt;u>copied&lt;/u> into the Ledgers where the balances of the Accounts could be determined. In a computer-based Accounting System, this duplicate recording of the Postings is clearly unnecessary. Accordingly, the model presented here (as per the Silverston model, albeit with different entity names)&amp;nbsp;treats the Postings recorded against the ${link=/SharedServices/Finance/BookKeeping/JournalEntry} directly as Ledger Entries. The use of the distinct sub-Classes of ${link=/SharedServices/Finance/BookKeeping/DebitPosting} and ${link=/SharedServices/Finance/BookKeeping/CreditPosting} confer no additional structure but further allow us to enforce the requirements of balanced double entry Accounting Transactions.&lt;/p>
 </body>
             </ownedComment>
+            <packagedElement xmi:type="uml:Package" xmi:id="_LYEcQL3AEe2Rbrgyz5QEFw" name="JournalsAndLedgers">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_frerEL3AEe2Rbrgyz5QEFw">
+                <body>&lt;p>Journals and Ledgers used to be physical books in which transactions were recorded but, in the world of computer-based Accounting Systems, these physical concepts have less significance. However, it is still useful to be able to classify how we group transactions and Accounts into Journals and Ledgers and so it is trivial to declare &amp;lt;&amp;lt;ReferenceData&amp;gt;&amp;gt; entities to reflect these concepts. JournalEntries are &amp;quot;recorded&amp;quot; in Journals and Postings are recorded in the Ledger relevant to the Account to which the Posting is made.&lt;/p>
+
+&lt;p>The only remaining point to examine is what we consider to be an Account. With Financial Accounting separate&amp;nbsp;from Management Accounting then statutory needs to can be met with a single hierarchy to represent the structure of the General Ledger. In an Integrated Accounting System a minor additional complexity is required to allow us to use the Account to understand the performance of the business. This is described in detail in the ${link=../ChartOfAccounts} section but is easily achieved by allowing an Account to be defined by the intersection of multiple hierarchies. The GL Account hierarchy will always be required but other segments or dimensions can be added as desired. In this way, the disposition of the accounts with regard to any one hierarchy can easily be determined by aggregating all of the accounts for that specific hierarchy.&lt;/p>
+
+&lt;p>${diagram=/SharedServices/Finance/BookKeeping/Journals, Accounts and Ledgers}&lt;/p>
+</body>
+              </ownedComment>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_C4u5cL21Ee2Rbrgyz5QEFw" name="AccountingPeriods">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_5b7OgL25Ee2Rbrgyz5QEFw">
+                <body>&lt;p>An ${link=/SharedServices/Finance/BookKeeping/AccountingPeriod} simply defines a period for which AccountBalances are managed within the Ledgers. At the end of one period the AccountBalance is confirmed as a Closing Balance which then also becomes the Opening Balance for the next AccountingPeriod. It follows, therefore, that AccountingPeriods should be contiguous. As reporting cycles are generally annual, AccountingPeriods will typically belong to a reporting year but it is important to note that it may be desirable to have rolled up views of AccountingPeriods that are more granular than just the FiscalYear. Typically, the underlying granularity of an AccountingPeriod may be a calendar month so it is potentially valuable to identify which months roll up to a given quarter in addition to knowing which fiscal year they belong to.&lt;/p>
+
+&lt;p>Some Accounting Systems choose to stick with the simple FiscalYear/AccountingPeriod model. Silverston opts for a simple hierachy but this requires some care as AccountBalances cannot be opened and closed at multiple levels of granularity - it is important that this process happens at the most granular level of the hierarchy, i.e. the leaf nodes. In LDML we have the ability to declare hierarchies where we can explicitly identify leaf and root nodes so the most flexible model is as defined here:&lt;/p>
+
+&lt;p>${diagram=/SharedServices/Finance/BookKeeping/Accounting Periods}&lt;/p>
+</body>
+              </ownedComment>
+              <ownedComment xmi:type="uml:Comment" xmi:id="_G6RYEL28Ee2Rbrgyz5QEFw">
+                <body>&lt;p>Within this structure, the FiscalYear is always the root of a given AccountingPeriod hierarchy and it is entirely possible for each FiscalYear to lead directly to a contiguous set of AccountingPeriod leaf nodes. However, it also allows an arbitrary number of intermediate levels for the purpose of rolling up.&lt;/p>
+</body>
+              </ownedComment>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_p1EnsL20Ee2Rbrgyz5QEFw" name="AccountBalances">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_Ojym0L2_Ee2Rbrgyz5QEFw">
+                <body>&lt;p>Again, as discussed by Silverston, there is a design decision to be made as to whether an AccountBalance should be considered an entity in its own right as it clearly represents the total impact of the LedgerEntries on each Account - it is clearly a derived concept and so it represents inherent data duplication. At the same time, transaction volumes, particularly in a Retail business, can be huge so it is important to consider the cost of recomputing balances from source.&lt;/p>
+
+&lt;p>From a data modelling perspective, however, the position is arguably a bit simpler as the structure of the AccountBalance remains independent of how it is derived. The ULDM formally declares the AccountBalance as a &amp;lt;&amp;lt;Derived&amp;gt;&amp;gt; entity to make this clear and it then becomes a choice as to whether the AccountBalances are assumed to be correct from the Accounting System in an analytical context or whether they should be recomputed.&lt;/p>
+
+&lt;p>&amp;nbsp;&lt;/p>
+
+&lt;p>${diagram=/SharedServices/Finance/BookKeeping/Book Keeping}&lt;/p>
+</body>
+              </ownedComment>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_sy8uEL20Ee2Rbrgyz5QEFw" name="ChartOfAccounts">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_uqS18L3PEe2Rbrgyz5QEFw">
+                <body>&lt;p>As previously discussed under ${link=../JournalsAndLedgers}, Accounts are defined as the intersection of multiple hierarchies, one of which &lt;strong>must&lt;/strong> reflect the structure of the General Ledger and the other facilitating an understanding of the performance of the business according to different lenses. It is perfectly possible to model this as a list of generic hierarchies (this is likely to reflect most physical implementations) but the GL Account hierarchy is specific for (at least)&amp;nbsp;a couple of reasons:&lt;/p>
+
+&lt;ul>
+	&lt;li>The GL Hierarchy determines the type of each Account and, hence, the impact on the Account of a Debit or Credit Posting&lt;/li>
+	&lt;li>The application of the GL Hierarchy is mandatory while all other &amp;quot;Segments&amp;quot; are defined according to the needs of the specific organisation&lt;/li>
+&lt;/ul>
+
+&lt;p>Accordingly, the ULDM models the GL Hierarchy separately from the Management Accounting Segment Hierarchies such that we can be clear about the construction of the unique&amp;nbsp;AccountCombination that is tied to each Account.&lt;/p>
+
+&lt;p>Note that the Accounts are maintained at the lowest level of granularity in the hierarchies (i.e.leaf nodes) and the disposition of the Accounts at intermediate levels of a hierarchy can be obtained by simply aggregating the nodes immediately below in the desired hierarchy. For this reason, the LDML pattern fo a hierarchy with Parent Node and Leaf Node identification is again used such that the model can robustly declare that the Account Combination references only leaf nodes.&lt;/p>
+
+&lt;p>The resulting GL Account Hierarchy data model is thus:&lt;/p>
+
+&lt;p>${diagram=/SharedServices/Finance/BookKeeping/ChartOfAccounts/GL Account Hierarchy}&lt;/p>
+
+&lt;p>Unsurprisingly, the generic hierarchies for Management Accounting are defined in a very similar manner:&lt;/p>
+
+&lt;p>${diagram=/SharedServices/Finance/BookKeeping/ChartOfAccounts/Segment Hierarchies}&lt;/p>
+
+&lt;p>&amp;nbsp;&lt;/p>
+
+&lt;p>&amp;nbsp;&lt;/p>
+</body>
+              </ownedComment>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_0rohkL20Ee2Rbrgyz5QEFw" name="ControlAccounts"/>
           </packagedElement>
         </packagedElement>
       </packagedElement>
@@ -1972,4 +2048,12 @@
   <ldml:Documentation xmi:id="_d1ymgL2ZEe2hVri8Wh2pVA" base_Comment="_d1jV8L2ZEe2hVri8Wh2pVA"/>
   <ldml:Documentation xmi:id="_d1zNkL2ZEe2hVri8Wh2pVA" base_Comment="_d1lLIL2ZEe2hVri8Wh2pVA"/>
   <ldml:Documentation xmi:id="_d1z0oL2ZEe2hVri8Wh2pVA" base_Comment="_d1lLIb2ZEe2hVri8Wh2pVA"/>
+  <ldml:Documentation xmi:id="_5b71kL25Ee2Rbrgyz5QEFw" base_Comment="_5b7OgL25Ee2Rbrgyz5QEFw"/>
+  <ldml:ReferenceData xmi:id="_zJHXML26Ee2Rbrgyz5QEFw" base_Class="_w4TyML26Ee2Rbrgyz5QEFw"/>
+  <ldml:ReferenceData xmi:id="_5XlEkL26Ee2Rbrgyz5QEFw" base_Class="_0q5TAL26Ee2Rbrgyz5QEFw"/>
+  <ldml:ReferenceData xmi:id="_QUz1UL27Ee2Rbrgyz5QEFw" base_Class="_OXel8L27Ee2Rbrgyz5QEFw"/>
+  <ldml:Documentation xmi:id="_G6R_IL28Ee2Rbrgyz5QEFw" base_Comment="_G6RYEL28Ee2Rbrgyz5QEFw"/>
+  <ldml:Documentation xmi:id="_OjzN4L2_Ee2Rbrgyz5QEFw" base_Comment="_Ojym0L2_Ee2Rbrgyz5QEFw"/>
+  <ldml:Documentation xmi:id="_frerEb3AEe2Rbrgyz5QEFw" base_Comment="_frerEL3AEe2Rbrgyz5QEFw"/>
+  <ldml:Documentation xmi:id="_uqTdAL3PEe2Rbrgyz5QEFw" base_Comment="_uqS18L3PEe2Rbrgyz5QEFw"/>
 </xmi:XMI>

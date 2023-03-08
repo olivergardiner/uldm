@@ -1,0 +1,16 @@
+<div>
+	<h2>Accounting Periods</h2>
+</div>
+<div>
+	<div>
+		<div>
+			<p style="white-space: pre-line"><p>An <span class="pointer" onclick="$('#main').load('SharedServices/Finance/BookKeeping/R_AccountingPeriod.html');window.scrollTo(0,0);">AccountingPeriod</span> simply defines a period for which AccountBalances are managed within the Ledgers. At the end of one period the AccountBalance is confirmed as a Closing Balance which then also becomes the Opening Balance for the next AccountingPeriod. It follows, therefore, that AccountingPeriods should be contiguous. As reporting cycles are generally annual, AccountingPeriods will typically belong to a reporting year but it is important to note that it may be desirable to have rolled up views of AccountingPeriods that are more granular than just the FiscalYear. Typically, the underlying granularity of an AccountingPeriod may be a calendar month so it is potentially valuable to identify which months roll up to a given quarter in addition to knowing which fiscal year they belong to.</p>
+
+<p>Some Accounting Systems choose to stick with the simple FiscalYear/AccountingPeriod model. Silverston opts for a simple hierachy but this requires some care as AccountBalances cannot be opened and closed at multiple levels of granularity - it is important that this process happens at the most granular level of the hierarchy, i.e. the leaf nodes. In LDML we have the ability to declare hierarchies where we can explicitly identify leaf and root nodes so the most flexible model is as defined here:</p>
+
+<p><br/><div style="margin: auto; width: 100%;" class="diagram-div"><embed id="-SharedServices-Finance-BookKeeping-Accounting-Periods-svg" type="image/svg+xml" class="diagram col-12" src="./SharedServices/Finance/BookKeeping/Accounting-Periods.svg" onload="spz('#-SharedServices-Finance-BookKeeping-Accounting-Periods-svg')"/></div><br/></p>
+</p><p style="white-space: pre-line"><p>Within this structure, the FiscalYear is always the root of a given AccountingPeriod hierarchy and it is entirely possible for each FiscalYear to lead directly to a contiguous set of AccountingPeriod leaf nodes. However, it also allows an arbitrary number of intermediate levels for the purpose of rolling up.</p>
+</p>
+		</div>
+	</div>
+</div>

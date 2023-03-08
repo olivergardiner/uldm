@@ -1,0 +1,32 @@
+<div>
+	<h2>Chart Of Accounts</h2>
+</div>
+<div>
+	<div>
+		<div>
+			<p style="white-space: pre-line"><p>As previously discussed under <span class="pointer" onclick="$('#main').load('Documentation/SharedServices/Finance/BookKeeping/JournalsAndLedgers/package.html');window.scrollTo(0,0);">JournalsAndLedgers</span>, Accounts are defined as the intersection of multiple hierarchies, one of which <strong>must</strong> reflect the structure of the General Ledger and the other facilitating an understanding of the performance of the business according to different lenses. It is perfectly possible to model this as a list of generic hierarchies (this is likely to reflect most physical implementations) but the GL Account hierarchy is specific for (at least)&nbsp;a couple of reasons:</p>
+
+<ul>
+	<li>The GL Hierarchy determines the type of each Account and, hence, the impact on the Account of a Debit or Credit Posting</li>
+	<li>The application of the GL Hierarchy is mandatory while all other &quot;Segments&quot; are defined according to the needs of the specific organisation</li>
+</ul>
+
+<p>Accordingly, the ULDM models the GL Hierarchy separately from the Management Accounting Segment Hierarchies such that we can be clear about the construction of the unique&nbsp;AccountCombination that is tied to each Account.</p>
+
+<p>Note that the Accounts are maintained at the lowest level of granularity in the hierarchies (i.e.leaf nodes) and the disposition of the Accounts at intermediate levels of a hierarchy can be obtained by simply aggregating the nodes immediately below in the desired hierarchy. For this reason, the LDML pattern fo a hierarchy with Parent Node and Leaf Node identification is again used such that the model can robustly declare that the Account Combination references only leaf nodes.</p>
+
+<p>The resulting GL Account Hierarchy data model is thus:</p>
+
+<p><br/><div style="margin: auto; width: 100%;" class="diagram-div"><embed id="-SharedServices-Finance-BookKeeping-ChartOfAccounts-GL-Account-Hierarchy-svg" type="image/svg+xml" class="diagram col-12" src="./SharedServices/Finance/BookKeeping/ChartOfAccounts/GL-Account-Hierarchy.svg" onload="spz('#-SharedServices-Finance-BookKeeping-ChartOfAccounts-GL-Account-Hierarchy-svg')"/></div><br/></p>
+
+<p>Unsurprisingly, the generic hierarchies for Management Accounting are defined in a very similar manner:</p>
+
+<p><br/><div style="margin: auto; width: 100%;" class="diagram-div"><embed id="-SharedServices-Finance-BookKeeping-ChartOfAccounts-Segment-Hierarchies-svg" type="image/svg+xml" class="diagram col-12" src="./SharedServices/Finance/BookKeeping/ChartOfAccounts/Segment-Hierarchies.svg" onload="spz('#-SharedServices-Finance-BookKeeping-ChartOfAccounts-Segment-Hierarchies-svg')"/></div><br/></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</p>
+		</div>
+	</div>
+</div>

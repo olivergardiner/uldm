@@ -1,5 +1,5 @@
 <div class="justify-content-start align-items-left pt-2 pb-2 mb-2 border-bottom">
-	<h5>ReferenceEntity SharedServices::Finance::BookKeeping::FiscalYear</h5>
+	<h5>ReferenceEntity SharedServices::Finance::BookKeeping::AccountingPeriodIntermediateNode</h5>
 	
 	<h6 class="mt-4">Inheritance</h6>
 	<ul class="inheritance">
@@ -14,7 +14,7 @@
 						<li>SharedServices::Finance::BookKeeping::AccountingPeriodParentNode</li>
 						<li>
 					<ul class="inheritance">
-						<li>SharedServices::Finance::BookKeeping::FiscalYear</li>
+						<li>SharedServices::Finance::BookKeeping::AccountingPeriodIntermediateNode</li>
 						<li>
 						</li>
 					</ul>
@@ -30,8 +30,8 @@
 
 <div class="justify-content-start align-items-left pt-2 pb-2 mb-2">
 	<h6 class="pb-2">
-		<pre><span class="strong">FiscalYear</span> extends AccountingPeriodParentNode</pre>
-		<pre> implements Common::Base::ReferenceData::IControlledVocabulary</pre>
+		<pre><span class="strong">AccountingPeriodIntermediateNode</span> extends AccountingPeriodParentNode</pre>
+		<pre> implements SharedServices::Finance::BookKeeping::IAccountingPeriodChildNodeCommon::Base::ReferenceData::IControlledVocabulary</pre>
 	</h6>
 
 	
@@ -118,6 +118,24 @@
 			</tbody>
 		</table>
 	
+		<h6 class="p-2">Associations inherited from SharedServices::Finance::BookKeeping::IAccountingPeriodChildNode</h6>
+		
+		<table class="table table-sm table-striped border ml-3 mr-5">
+			<col style="width: 35%">
+			<col style="width: *">
+			<thead class="table-dark">
+				<tr>
+					<th scope="col">Type and Cardinality</th>
+					<th scope="col">Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>AccountingPeriodParentNode 1..* to 1</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
 		
 	</div>
 </div>

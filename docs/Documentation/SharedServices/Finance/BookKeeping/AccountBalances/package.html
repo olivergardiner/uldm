@@ -1,0 +1,17 @@
+<div>
+	<h2>Account Balances</h2>
+</div>
+<div>
+	<div>
+		<div>
+			<p style="white-space: pre-line"><p>Again, as discussed by Silverston, there is a design decision to be made as to whether an AccountBalance should be considered an entity in its own right as it clearly represents the total impact of the LedgerEntries on each Account - it is clearly a derived concept and so it represents inherent data duplication. At the same time, transaction volumes, particularly in a Retail business, can be huge so it is important to consider the cost of recomputing balances from source.</p>
+
+<p>From a data modelling perspective, however, the position is arguably a bit simpler as the structure of the AccountBalance remains independent of how it is derived. The ULDM formally declares the AccountBalance as a &lt;&lt;Derived&gt;&gt; entity to make this clear and it then becomes a choice as to whether the AccountBalances are assumed to be correct from the Accounting System in an analytical context or whether they should be recomputed.</p>
+
+<p>&nbsp;</p>
+
+<p><br/><div style="margin: auto; width: 100%;" class="diagram-div"><embed id="-SharedServices-Finance-BookKeeping-Book-Keeping-svg" type="image/svg+xml" class="diagram col-12" src="./SharedServices/Finance/BookKeeping/Book-Keeping.svg" onload="spz('#-SharedServices-Finance-BookKeeping-Book-Keeping-svg')"/></div><br/></p>
+</p>
+		</div>
+	</div>
+</div>
