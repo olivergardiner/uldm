@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:ldml="http:///schemas/ldml/_VSLNYMKAEe26fqVRdlgYCA/4" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/ldml/_VSLNYMKAEe26fqVRdlgYCA/4 ldml.profile.uml#_VSNCkMKAEe26fqVRdlgYCA">
+  <uml:Package xmi:id="_wIJPcJ0dEeuosN6Nd1GBJQ" name="FinancialServices">
+    <packagedElement xmi:type="uml:Package" xmi:id="_w1oagKDhEeuXwMLKVSwySg" name="Insurance">
+      <packagedElement xmi:type="uml:Package" xmi:id="_vwjMUKDiEeuXwMLKVSwySg" name="Motor">
+        <packagedElement xmi:type="uml:Class" xmi:id="_1qrVcKGzEeuDk9H_gpfrgQ" name="MainDriver">
+          <generalization xmi:type="uml:Generalization" xmi:id="_5vywsKGzEeuDk9H_gpfrgQ" general="_ck4r4KDmEeuXwMLKVSwySg"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_1BZyIKG3EeuDk9H_gpfrgQ" client="_1qrVcKGzEeuDk9H_gpfrgQ" supplier="_juubUKG1EeuDk9H_gpfrgQ" contract="_juubUKG1EeuDk9H_gpfrgQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_-u22QKG0EeuDk9H_gpfrgQ" name="MotorInsurancePolicy">
+          <generalization xmi:type="uml:Generalization" xmi:id="_H6Z_0KG1EeuDk9H_gpfrgQ" general="_hObC0KDmEeuXwMLKVSwySg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_Kkiq0KG1EeuDk9H_gpfrgQ" memberEnd="_Kkj48aG1EeuDk9H_gpfrgQ _KkkgAKG1EeuDk9H_gpfrgQ">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KkjR4KG1EeuDk9H_gpfrgQ" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Kkj48KG1EeuDk9H_gpfrgQ" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_Kkj48aG1EeuDk9H_gpfrgQ" name="carinsurancepolicy" type="_-u22QKG0EeuDk9H_gpfrgQ" association="_Kkiq0KG1EeuDk9H_gpfrgQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LcSyMaG1EeuDk9H_gpfrgQ"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LcSyMqG1EeuDk9H_gpfrgQ" value="*"/>
+          </ownedEnd>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_KkkgAKG1EeuDk9H_gpfrgQ" name="maindriver" type="_1qrVcKGzEeuDk9H_gpfrgQ" association="_Kkiq0KG1EeuDk9H_gpfrgQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LcSLIKG1EeuDk9H_gpfrgQ" value="1"/>
+            <upperValue xmi:type="uml:LiteralInteger" xmi:id="_LcSyMKG1EeuDk9H_gpfrgQ" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_OXYqUKG1EeuDk9H_gpfrgQ" name="AdditionalDriver">
+          <generalization xmi:type="uml:Generalization" xmi:id="_XyVh0KG1EeuDk9H_gpfrgQ" general="_hG-TAKESEeuDk9H_gpfrgQ"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_2hiIIKG3EeuDk9H_gpfrgQ" client="_OXYqUKG1EeuDk9H_gpfrgQ" supplier="_juubUKG1EeuDk9H_gpfrgQ" contract="_juubUKG1EeuDk9H_gpfrgQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_juubUKG1EeuDk9H_gpfrgQ" name="IDriver">
+          <generalization xmi:type="uml:Generalization" xmi:id="_v57iAKG3EeuDk9H_gpfrgQ" general="_36DFIKG1EeuDk9H_gpfrgQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_5fd44KG3EeuDk9H_gpfrgQ" memberEnd="_5fef8qG3EeuDk9H_gpfrgQ _5ffHAKG3EeuDk9H_gpfrgQ">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5fef8KG3EeuDk9H_gpfrgQ" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5fef8aG3EeuDk9H_gpfrgQ" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_5fef8qG3EeuDk9H_gpfrgQ" name="additionaldriver" type="_OXYqUKG1EeuDk9H_gpfrgQ" association="_5fd44KG3EeuDk9H_gpfrgQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6MglEaG3EeuDk9H_gpfrgQ"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6MglEqG3EeuDk9H_gpfrgQ" value="*"/>
+          </ownedEnd>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_5ffHAKG3EeuDk9H_gpfrgQ" name="carinsurancepolicy" type="_-u22QKG0EeuDk9H_gpfrgQ" association="_5fd44KG3EeuDk9H_gpfrgQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6Mf-AKG3EeuDk9H_gpfrgQ" value="1"/>
+            <upperValue xmi:type="uml:LiteralInteger" xmi:id="_6MglEKG3EeuDk9H_gpfrgQ" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_vHlCkKG4EeuDk9H_gpfrgQ" name="ThirdPartyCover">
+          <generalization xmi:type="uml:Generalization" xmi:id="_8e63IKG4EeuDk9H_gpfrgQ" general="_3m7NcKG4EeuDk9H_gpfrgQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_3m7NcKG4EeuDk9H_gpfrgQ" name="MotorLiabilityCover" isAbstract="true">
+          <generalization xmi:type="uml:Generalization" xmi:id="_-AQHAKG4EeuDk9H_gpfrgQ" general="_mvzZMKEREeuDk9H_gpfrgQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_FJCuoKG5EeuDk9H_gpfrgQ" memberEnd="_FJCuo6G5EeuDk9H_gpfrgQ _FJDVsKG5EeuDk9H_gpfrgQ">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FJCuoaG5EeuDk9H_gpfrgQ" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FJCuoqG5EeuDk9H_gpfrgQ" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_FJCuo6G5EeuDk9H_gpfrgQ" name="carliabilitycover" type="_3m7NcKG4EeuDk9H_gpfrgQ" association="_FJCuoKG5EeuDk9H_gpfrgQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FrNnkKG5EeuDk9H_gpfrgQ"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FrNnkaG5EeuDk9H_gpfrgQ" value="*"/>
+          </ownedEnd>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_FJDVsKG5EeuDk9H_gpfrgQ" name="carinsurancepolicy" type="_-u22QKG0EeuDk9H_gpfrgQ" association="_FJCuoKG5EeuDk9H_gpfrgQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FrNAgKG5EeuDk9H_gpfrgQ" value="1"/>
+            <upperValue xmi:type="uml:LiteralInteger" xmi:id="_FrNAgaG5EeuDk9H_gpfrgQ" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_NPppYKG5EeuDk9H_gpfrgQ" name="MotorLegalProtection">
+          <generalization xmi:type="uml:Generalization" xmi:id="_Uf_qgKG5EeuDk9H_gpfrgQ" general="_3m7NcKG4EeuDk9H_gpfrgQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_QYSOQKG5EeuDk9H_gpfrgQ" name="PersonalInjuryCover">
+          <generalization xmi:type="uml:Generalization" xmi:id="_VRy64KG5EeuDk9H_gpfrgQ" general="_3m7NcKG4EeuDk9H_gpfrgQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Zmcm8KG5EeuDk9H_gpfrgQ" name="InsuredVehicle">
+          <generalization xmi:type="uml:Generalization" xmi:id="_2B3CMKG6EeuDk9H_gpfrgQ" general="_YO4hoKG6EeuDk9H_gpfrgQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_n9haMKG5EeuDk9H_gpfrgQ" memberEnd="_n9haM6G5EeuDk9H_gpfrgQ _n9iBQKG5EeuDk9H_gpfrgQ">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_n9haMaG5EeuDk9H_gpfrgQ" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n9haMqG5EeuDk9H_gpfrgQ" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_n9haM6G5EeuDk9H_gpfrgQ" name="insuredvehicle" type="_Zmcm8KG5EeuDk9H_gpfrgQ" association="_n9haMKG5EeuDk9H_gpfrgQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rXbTQaHPEeuDk9H_gpfrgQ" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rXbTQqHPEeuDk9H_gpfrgQ" value="*"/>
+          </ownedEnd>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_n9iBQKG5EeuDk9H_gpfrgQ" name="carinsurancepolicy" type="_-u22QKG0EeuDk9H_gpfrgQ" association="_n9haMKG5EeuDk9H_gpfrgQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rXasMKHPEeuDk9H_gpfrgQ" value="1"/>
+            <upperValue xmi:type="uml:LiteralInteger" xmi:id="_rXbTQKHPEeuDk9H_gpfrgQ" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_vdJikKG7EeuDk9H_gpfrgQ" name="MotorPropertyCover" isAbstract="true"/>
+        <packagedElement xmi:type="uml:Association" xmi:id="_zTdFwKG7EeuDk9H_gpfrgQ" memberEnd="_zTds0qG7EeuDk9H_gpfrgQ _zTds06G7EeuDk9H_gpfrgQ">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zTds0KG7EeuDk9H_gpfrgQ" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zTds0aG7EeuDk9H_gpfrgQ" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_zTds0qG7EeuDk9H_gpfrgQ" name="carpropertycover" type="_vdJikKG7EeuDk9H_gpfrgQ" association="_zTdFwKG7EeuDk9H_gpfrgQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_z9AZEqG7EeuDk9H_gpfrgQ"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_z9AZE6G7EeuDk9H_gpfrgQ" value="*"/>
+          </ownedEnd>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_zTds06G7EeuDk9H_gpfrgQ" name="carinsurancepolicy" type="_-u22QKG0EeuDk9H_gpfrgQ" association="_zTdFwKG7EeuDk9H_gpfrgQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_z9AZEKG7EeuDk9H_gpfrgQ" value="1"/>
+            <upperValue xmi:type="uml:LiteralInteger" xmi:id="_z9AZEaG7EeuDk9H_gpfrgQ" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_2zZ-cKG7EeuDk9H_gpfrgQ" name="CollisionCover">
+          <generalization xmi:type="uml:Generalization" xmi:id="_ei_SEKG8EeuDk9H_gpfrgQ" general="_vdJikKG7EeuDk9H_gpfrgQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_-BCCwKG7EeuDk9H_gpfrgQ" name="ComprehensiveCover">
+          <generalization xmi:type="uml:Generalization" xmi:id="_fI6poKG8EeuDk9H_gpfrgQ" general="_vdJikKG7EeuDk9H_gpfrgQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_DC6oQKG8EeuDk9H_gpfrgQ" name="MedicalExpensesCover">
+          <generalization xmi:type="uml:Generalization" xmi:id="_GmeOkKG8EeuDk9H_gpfrgQ" general="_3m7NcKG4EeuDk9H_gpfrgQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_WFDccKG8EeuDk9H_gpfrgQ" name="GapCover">
+          <generalization xmi:type="uml:Generalization" xmi:id="_gbJGgKG8EeuDk9H_gpfrgQ" general="_vdJikKG7EeuDk9H_gpfrgQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_YFiGcKG8EeuDk9H_gpfrgQ" name="UninsuredMotoristCover">
+          <generalization xmi:type="uml:Generalization" xmi:id="_hNwPMKG8EeuDk9H_gpfrgQ" general="_vdJikKG7EeuDk9H_gpfrgQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_ar1aUKG8EeuDk9H_gpfrgQ" name="UnderInsuredMotorist">
+          <generalization xmi:type="uml:Generalization" xmi:id="_h3xckKG8EeuDk9H_gpfrgQ" general="_vdJikKG7EeuDk9H_gpfrgQ"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_w31kgKDiEeuXwMLKVSwySg" name="Home"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_yXXdkKDiEeuXwMLKVSwySg" name="Event"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ck4r4KDmEeuXwMLKVSwySg" name="PolicyHolder" isAbstract="true">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_ciiPgKG3EeuDk9H_gpfrgQ" client="_ck4r4KDmEeuXwMLKVSwySg" supplier="_36DFIKG1EeuDk9H_gpfrgQ" contract="_36DFIKG1EeuDk9H_gpfrgQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_hObC0KDmEeuXwMLKVSwySg" name="Policy" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_-7ki8KG8EeuDk9H_gpfrgQ" name="startDate">
+          <type xmi:type="uml:PrimitiveType" href="uldm.uml#_v0B5QJ0gEeuosN6Nd1GBJQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_A8qQ8KG9EeuDk9H_gpfrgQ" name="endDate">
+          <type xmi:type="uml:PrimitiveType" href="uldm.uml#_v0B5QJ0gEeuosN6Nd1GBJQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_CFlA0KG9EeuDk9H_gpfrgQ" name="isCancelled">
+          <type xmi:type="uml:PrimitiveType" href="uldm.uml#_f3ztIJ0gEeuosN6Nd1GBJQ"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_k_-B0KDmEeuXwMLKVSwySg" memberEnd="_lAAeEKDmEeuXwMLKVSwySg _lABFIKDmEeuXwMLKVSwySg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_k__3AKDmEeuXwMLKVSwySg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_k__3AaDmEeuXwMLKVSwySg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_lAAeEKDmEeuXwMLKVSwySg" name="policy" type="_hObC0KDmEeuXwMLKVSwySg" association="_k_-B0KDmEeuXwMLKVSwySg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_l-DasaDmEeuXwMLKVSwySg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_l-DasqDmEeuXwMLKVSwySg" value="*"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_lABFIKDmEeuXwMLKVSwySg" name="policyholder" type="_ck4r4KDmEeuXwMLKVSwySg" association="_k_-B0KDmEeuXwMLKVSwySg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_l-CzoKDmEeuXwMLKVSwySg" value="1"/>
+          <upperValue xmi:type="uml:LiteralInteger" xmi:id="_l-DasKDmEeuXwMLKVSwySg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_n4vo8KDqEeuS5a_QgV3VlA" name="Cover" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_rfiJcKDqEeuS5a_QgV3VlA" memberEnd="_rfjXkaDqEeuS5a_QgV3VlA _rfj-oKDqEeuS5a_QgV3VlA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rfiwgKDqEeuS5a_QgV3VlA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rfjXkKDqEeuS5a_QgV3VlA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_rfjXkaDqEeuS5a_QgV3VlA" name="policy" type="_hObC0KDmEeuXwMLKVSwySg" association="_rfiJcKDqEeuS5a_QgV3VlA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_swdl0KDqEeuS5a_QgV3VlA" value="1"/>
+          <upperValue xmi:type="uml:LiteralInteger" xmi:id="_sweM4KDqEeuS5a_QgV3VlA" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_rfj-oKDqEeuS5a_QgV3VlA" name="coverage" type="_n4vo8KDqEeuS5a_QgV3VlA" association="_rfiJcKDqEeuS5a_QgV3VlA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sweM4aDqEeuS5a_QgV3VlA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sweM4qDqEeuS5a_QgV3VlA" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jOsC4KEREeuDk9H_gpfrgQ" name="PropertyCover" isAbstract="true">
+        <generalization xmi:type="uml:Generalization" xmi:id="_sZY34KEREeuDk9H_gpfrgQ" general="_n4vo8KDqEeuS5a_QgV3VlA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_mvzZMKEREeuDk9H_gpfrgQ" name="LiabilityCover" isAbstract="true">
+        <generalization xmi:type="uml:Generalization" xmi:id="_tKY3AKEREeuDk9H_gpfrgQ" general="_n4vo8KDqEeuS5a_QgV3VlA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_hG-TAKESEeuDk9H_gpfrgQ" name="AdditionalInsured" isAbstract="true">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_buzFcKG3EeuDk9H_gpfrgQ" client="_hG-TAKESEeuDk9H_gpfrgQ" supplier="_36DFIKG1EeuDk9H_gpfrgQ" contract="_36DFIKG1EeuDk9H_gpfrgQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_lgNkIKESEeuDk9H_gpfrgQ" memberEnd="_lgOLMaESEeuDk9H_gpfrgQ _lgOLMqESEeuDk9H_gpfrgQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lgNkIaESEeuDk9H_gpfrgQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_lgOLMKESEeuDk9H_gpfrgQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_lgOLMaESEeuDk9H_gpfrgQ" name="additionalinsured" type="_hG-TAKESEeuDk9H_gpfrgQ" association="_lgNkIKESEeuDk9H_gpfrgQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mjm60aESEeuDk9H_gpfrgQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mjm60qESEeuDk9H_gpfrgQ" value="*"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_lgOLMqESEeuDk9H_gpfrgQ" name="policy" type="_hObC0KDmEeuXwMLKVSwySg" association="_lgNkIKESEeuDk9H_gpfrgQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mjmTwKESEeuDk9H_gpfrgQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralInteger" xmi:id="_mjm60KESEeuDk9H_gpfrgQ" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_xWRZ4KEXEeuDk9H_gpfrgQ" name="LifeCover" isAbstract="true">
+        <generalization xmi:type="uml:Generalization" xmi:id="_03kWYKEXEeuDk9H_gpfrgQ" general="_n4vo8KDqEeuS5a_QgV3VlA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_36DFIKG1EeuDk9H_gpfrgQ" name="IInsuredParty" isAbstract="true">
+        <generalization xmi:type="uml:Generalization" xmi:id="_Pj6dAMPTEe2Lu61MUBYm3A">
+          <general xmi:type="uml:Interface" href="uldm.uml#_lSkM0KHaEeunjrVPm6TZ0Q"/>
+        </generalization>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_YO4hoKG6EeuDk9H_gpfrgQ" name="InsurableObject" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_daXIAKG6EeuDk9H_gpfrgQ" memberEnd="_daXvEqG6EeuDk9H_gpfrgQ _daYWIKG6EeuDk9H_gpfrgQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_daXvEKG6EeuDk9H_gpfrgQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_daXvEaG6EeuDk9H_gpfrgQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_daXvEqG6EeuDk9H_gpfrgQ" name="insuredasset" type="_YO4hoKG6EeuDk9H_gpfrgQ" association="_daXIAKG6EeuDk9H_gpfrgQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eSGBQqG6EeuDk9H_gpfrgQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eSGBQ6G6EeuDk9H_gpfrgQ" value="*"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_daYWIKG6EeuDk9H_gpfrgQ" name="policy" type="_hObC0KDmEeuXwMLKVSwySg" association="_daXIAKG6EeuDk9H_gpfrgQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eSGBQKG6EeuDk9H_gpfrgQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralInteger" xmi:id="_eSGBQaG6EeuDk9H_gpfrgQ" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_yhFYMKG8EeuDk9H_gpfrgQ" name="EventCover" isAbstract="true">
+        <generalization xmi:type="uml:Generalization" xmi:id="_2D5-sKG8EeuDk9H_gpfrgQ" general="_n4vo8KDqEeuS5a_QgV3VlA"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_yM3TMKDhEeuXwMLKVSwySg" name="Banking">
+      <packagedElement xmi:type="uml:Package" xmi:id="_7As1cKDjEeuXwMLKVSwySg" name="Account"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_polvkKDiEeuXwMLKVSwySg" name="Credit"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_rR3agKDiEeuXwMLKVSwySg" name="Loan"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_seZfEKDiEeuXwMLKVSwySg" name="ForeignExchange"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_5f04kKDjEeuXwMLKVSwySg" name="Investment">
+      <packagedElement xmi:type="uml:Package" xmi:id="_-U-poKDjEeuXwMLKVSwySg" name="Pension"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="__liSkKDjEeuXwMLKVSwySg" name="StocksShares"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_CBxrgKDkEeuXwMLKVSwySg" name="UnitTrust"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o3oTcBcWEe6Oxc-aV78flg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o3oTcRcWEe6Oxc-aV78flg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o3oTchcWEe6Oxc-aV78flg" key="Version" value="0.1.4"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o3oTcxcWEe6Oxc-aV78flg" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o3oTdBcWEe6Oxc-aV78flg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o3oTdRcWEe6Oxc-aV78flg" key="Date" value="2023-03-14"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o3oTdhcWEe6Oxc-aV78flg" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o3oTdxcWEe6Oxc-aV78flg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="ldml.profile.uml#_VSNCkMKAEe26fqVRdlgYCA"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o3o6gBcWEe6Oxc-aV78flg" source="duplicatedProfile"/>
+      <appliedProfile xmi:type="uml:Profile" href="ldml.profile.uml#_e7vP0J0HEeuosN6Nd1GBJQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o3o6gRcWEe6Oxc-aV78flg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o3o6ghcWEe6Oxc-aV78flg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o3o6gxcWEe6Oxc-aV78flg" source="duplicatedProfile"/>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
+  </uml:Package>
+  <ldml:Conceptual xmi:id="_dnvkEKG3EeuDk9H_gpfrgQ" base_InterfaceRealization="_ciiPgKG3EeuDk9H_gpfrgQ"/>
+  <ldml:Conceptual xmi:id="_es6cYKG3EeuDk9H_gpfrgQ" base_InterfaceRealization="_buzFcKG3EeuDk9H_gpfrgQ"/>
+</xmi:XMI>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_uXs2YG1vEeyGYpzd-2skXA" name="Manufacturing">
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_5kU6QBcWEe6Oxc-aV78flg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5kU6QRcWEe6Oxc-aV78flg" source="PapyrusVersion">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5kU6QhcWEe6Oxc-aV78flg" key="Version" value="0.1.4"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5kU6QxcWEe6Oxc-aV78flg" key="Comment" value=""/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5kU6RBcWEe6Oxc-aV78flg" key="Copyright" value=""/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5kU6RRcWEe6Oxc-aV78flg" key="Date" value="2023-03-14"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5kU6RhcWEe6Oxc-aV78flg" key="Author" value=""/>
+    </eAnnotations>
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5kU6RxcWEe6Oxc-aV78flg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="ldml.profile.uml#_VSNCkMKAEe26fqVRdlgYCA"/>
+    </eAnnotations>
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5kU6SBcWEe6Oxc-aV78flg" source="duplicatedProfile"/>
+    <appliedProfile xmi:type="uml:Profile" href="ldml.profile.uml#_e7vP0J0HEeuosN6Nd1GBJQ"/>
+  </profileApplication>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_5kVhUBcWEe6Oxc-aV78flg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5kVhURcWEe6Oxc-aV78flg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5kVhUhcWEe6Oxc-aV78flg" source="duplicatedProfile"/>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Package>
