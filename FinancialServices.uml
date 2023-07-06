@@ -241,6 +241,8 @@
       <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
     </profileApplication>
   </uml:Package>
-  <ldml:Conceptual xmi:id="_dnvkEKG3EeuDk9H_gpfrgQ" base_InterfaceRealization="_ciiPgKG3EeuDk9H_gpfrgQ"/>
-  <ldml:Conceptual xmi:id="_es6cYKG3EeuDk9H_gpfrgQ" base_InterfaceRealization="_buzFcKG3EeuDk9H_gpfrgQ"/>
+  <ldml:Conceptual xmi:id="_vLRmUBcXEe6Oxc-aV78flg" base_Association="_k_-B0KDmEeuXwMLKVSwySg"/>
+  <ldml:Conceptual xmi:id="_w5k7MBcXEe6Oxc-aV78flg" base_Association="_daXIAKG6EeuDk9H_gpfrgQ"/>
+  <ldml:Conceptual xmi:id="_yF6ygBcXEe6Oxc-aV78flg" base_Association="_lgNkIKESEeuDk9H_gpfrgQ"/>
+  <ldml:Conceptual xmi:id="_zYnJcBcXEe6Oxc-aV78flg" base_Association="_rfiJcKDqEeuS5a_QgV3VlA"/>
 </xmi:XMI>
