@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:ldml="http:///schemas/ldml/_VSLNYMKAEe26fqVRdlgYCA/4" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/ldml/_VSLNYMKAEe26fqVRdlgYCA/4 ldml.profile.uml#_VSNCkMKAEe26fqVRdlgYCA">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:ldml="http:///schemas/ldml/_NXIFYB8lEe6xidVdYBsEUg/8" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/ldml/_NXIFYB8lEe6xidVdYBsEUg/8 ldml.profile.uml#_NXJ6kB8lEe6xidVdYBsEUg">
   <uml:Package xmi:id="_vSeywJ0dEeuosN6Nd1GBJQ" name="Retail">
     <packagedElement xmi:type="uml:Package" xmi:id="_0cDHkKDhEeuXwMLKVSwySg" name="CustomerEngagement"/>
     <packagedElement xmi:type="uml:Package" xmi:id="_2HsKAKDhEeuXwMLKVSwySg" name="Selling">
@@ -696,6 +696,7 @@
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_zp2n0KjzEeu3rbV5FKwqjg" name="BasicLine">
           <generalization xmi:type="uml:Generalization" xmi:id="_60wIQKjzEeu3rbV5FKwqjg" general="_qfFpwKZ0EeuFv72Lf76jxQ"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_vk27ABypEe6UmLgZOXeSog" name="Property4"/>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_9PaM0KjzEeu3rbV5FKwqjg" client="_zp2n0KjzEeu3rbV5FKwqjg" supplier="_eOaH0KjQEeu3rbV5FKwqjg" contract="_eOaH0KjQEeu3rbV5FKwqjg"/>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Nk4mcKj0Eeu3rbV5FKwqjg" client="_zp2n0KjzEeu3rbV5FKwqjg" supplier="_KeY38KZ1EeuFv72Lf76jxQ" contract="_KeY38KZ1EeuFv72Lf76jxQ"/>
         </packagedElement>
@@ -927,15 +928,15 @@
       </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_kgOOUBcWEe6Oxc-aV78flg">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kgOOURcWEe6Oxc-aV78flg" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kgOOUhcWEe6Oxc-aV78flg" key="Version" value="0.1.4"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kgOOUxcWEe6Oxc-aV78flg" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kgOOVBcWEe6Oxc-aV78flg" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kgOOVRcWEe6Oxc-aV78flg" key="Date" value="2023-03-14"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kgOOVhcWEe6Oxc-aV78flg" key="Author" value=""/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Oz8osB8lEe6xidVdYBsEUg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Oz8osR8lEe6xidVdYBsEUg" key="Version" value="0.1.8"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Oz8osh8lEe6xidVdYBsEUg" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Oz8osx8lEe6xidVdYBsEUg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Oz8otB8lEe6xidVdYBsEUg" key="Date" value="2023-07-10"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Oz8otR8lEe6xidVdYBsEUg" key="Author" value=""/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kgOOVxcWEe6Oxc-aV78flg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="ldml.profile.uml#_VSNCkMKAEe26fqVRdlgYCA"/>
+        <references xmi:type="ecore:EPackage" href="ldml.profile.uml#_NXJ6kB8lEe6xidVdYBsEUg"/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kgR4sBcWEe6Oxc-aV78flg" source="duplicatedProfile"/>
       <appliedProfile xmi:type="uml:Profile" href="ldml.profile.uml#_e7vP0J0HEeuosN6Nd1GBJQ"/>

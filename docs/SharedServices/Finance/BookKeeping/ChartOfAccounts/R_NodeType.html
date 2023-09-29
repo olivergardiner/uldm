@@ -1,5 +1,5 @@
 <div class="justify-content-start align-items-left pt-2 pb-2 mb-2 border-bottom">
-	<h5>ReferenceEntity SharedServices::Finance::BookKeeping::ChartOfAccounts::SegmentHierarchy</h5>
+	<h5>ReferenceEntity SharedServices::Finance::BookKeeping::ChartOfAccounts::NodeType</h5>
 	
 	<h6 class="mt-4">Inheritance</h6>
 	<ul class="inheritance">
@@ -8,18 +8,8 @@
 				<li>ReferenceEntity</li>
 				<li>
 					<ul class="inheritance">
-						<li>SharedServices::Finance::BookKeeping::ChartOfAccounts::SegmentHierarchyNode</li>
+						<li>SharedServices::Finance::BookKeeping::ChartOfAccounts::NodeType</li>
 						<li>
-					<ul class="inheritance">
-						<li>SharedServices::Finance::BookKeeping::ChartOfAccounts::ParentSegmentNode</li>
-						<li>
-					<ul class="inheritance">
-						<li>SharedServices::Finance::BookKeeping::ChartOfAccounts::SegmentHierarchy</li>
-						<li>
-						</li>
-					</ul>
-						</li>
-					</ul>
 						</li>
 					</ul>
 				</li>
@@ -30,7 +20,7 @@
 
 <div class="justify-content-start align-items-left pt-2 pb-2 mb-2">
 	<h6 class="pb-2">
-		<pre><span class="strong">SegmentHierarchy</span> extends ParentSegmentNode</pre>
+		<pre><span class="strong">NodeType</span></pre>
 		<pre> implements Common::Base::ReferenceData::IControlledVocabulary</pre>
 	</h6>
 
@@ -56,35 +46,14 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr id="attr_segmentType">
+				<tr id="attr_validFor">
 					<td><code>SegmentType[1]</code></td>
-					<td>segmentType</td>
+					<td>validFor</td>
 					<td></td>
 				</tr>
 			</tbody>
 		</table>
 		
-		<h6 class="p-2">Attributes inherited from SharedServices::Finance::BookKeeping::ChartOfAccounts::SegmentHierarchyNode</h6>
-
-		<table class="table table-sm table-striped border ml-3 mr-5">
-			<col style="width: 20%">
-			<col style="width: 15%">
-			<col style="width: *">
-			<thead class="table-dark">
-				<tr>
-					<th scope="col">Type and Multiplicity</th>
-					<th scope="col">Name</th>
-					<th scope="col">Description</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td><code>NodeType[1]</code></td>
-					<td>nodeType</td>
-					<td></td>
-				</tr>
-			</tbody>
-		</table>
 
 		<h6 class="p-2">Attributes directly implemented from Common::Base::ReferenceData::IReferenceEntity (does not include implied sub-interfaces)</h6>
 
@@ -143,32 +112,8 @@
 <div class="justify-content-start align-items-left px-2 py-3 mb-2">
 	<div class="my-1 mx-2 p-1 bg-light border">
 	
-		<h6 class="p-2">Associations inherited from SharedServices::Finance::BookKeeping::ChartOfAccounts::ParentSegmentNode</h6>
-		
-		<table class="table table-sm table-striped border ml-3 mr-5">
-			<col style="width: 35%">
-			<col style="width: *">
-			<thead class="table-dark">
-				<tr>
-					<th scope="col">Type and Cardinality</th>
-					<th scope="col">Description</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>IChildSegmentNode 1 to 1..*</td>
-					<td></td>
-				</tr>
-			</tbody>
-		</table>
 	
 		
 	</div>
 </div>
 
-<div class="justify-content-start align-items-left px-2 py-3 mb-2">
-	<div class="my-1 mx-2 p-1 bg-light border">
-
-	
-	</div>
-</div>

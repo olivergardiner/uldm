@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Package xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_uXs2YG1vEeyGYpzd-2skXA" name="Manufacturing">
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_5kU6QBcWEe6Oxc-aV78flg">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5kU6QRcWEe6Oxc-aV78flg" source="PapyrusVersion">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5kU6QhcWEe6Oxc-aV78flg" key="Version" value="0.1.4"/>
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5kU6QxcWEe6Oxc-aV78flg" key="Comment" value=""/>
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5kU6RBcWEe6Oxc-aV78flg" key="Copyright" value=""/>
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5kU6RRcWEe6Oxc-aV78flg" key="Date" value="2023-03-14"/>
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5kU6RhcWEe6Oxc-aV78flg" key="Author" value=""/>
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Ozq74B8lEe6xidVdYBsEUg" source="PapyrusVersion">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ozq74R8lEe6xidVdYBsEUg" key="Version" value="0.1.8"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ozq74h8lEe6xidVdYBsEUg" key="Comment" value=""/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ozq74x8lEe6xidVdYBsEUg" key="Copyright" value=""/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ozq75B8lEe6xidVdYBsEUg" key="Date" value="2023-07-10"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ozq75R8lEe6xidVdYBsEUg" key="Author" value=""/>
     </eAnnotations>
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5kU6RxcWEe6Oxc-aV78flg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-      <references xmi:type="ecore:EPackage" href="ldml.profile.uml#_VSNCkMKAEe26fqVRdlgYCA"/>
+      <references xmi:type="ecore:EPackage" href="ldml.profile.uml#_NXJ6kB8lEe6xidVdYBsEUg"/>
     </eAnnotations>
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5kU6SBcWEe6Oxc-aV78flg" source="duplicatedProfile"/>
     <appliedProfile xmi:type="uml:Profile" href="ldml.profile.uml#_e7vP0J0HEeuosN6Nd1GBJQ"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:ldml="http:///schemas/ldml/_VSLNYMKAEe26fqVRdlgYCA/4" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/ldml/_VSLNYMKAEe26fqVRdlgYCA/4 ldml.profile.uml#_VSNCkMKAEe26fqVRdlgYCA">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:ldml="http:///schemas/ldml/_NXIFYB8lEe6xidVdYBsEUg/8" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/ldml/_NXIFYB8lEe6xidVdYBsEUg/8 ldml.profile.uml#_NXJ6kB8lEe6xidVdYBsEUg">
   <uml:Package xmi:id="_xRjHgJ0dEeuosN6Nd1GBJQ" name="SharedServices">
     <packagedElement xmi:type="uml:Package" xmi:id="_-wAqsKDhEeuXwMLKVSwySg" name="People">
       <packagedElement xmi:type="uml:Package" xmi:id="_amm-IKDiEeuXwMLKVSwySg" name="Employee">
@@ -590,15 +590,15 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_EuJdEKDiEeuXwMLKVSwySg" name="Procurement"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_rFNlUBcWEe6Oxc-aV78flg">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rFNlURcWEe6Oxc-aV78flg" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rFNlUhcWEe6Oxc-aV78flg" key="Version" value="0.1.4"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rFNlUxcWEe6Oxc-aV78flg" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rFNlVBcWEe6Oxc-aV78flg" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rFNlVRcWEe6Oxc-aV78flg" key="Date" value="2023-03-14"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rFNlVhcWEe6Oxc-aV78flg" key="Author" value=""/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_O0MgUB8lEe6xidVdYBsEUg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_O0MgUR8lEe6xidVdYBsEUg" key="Version" value="0.1.8"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_O0MgUh8lEe6xidVdYBsEUg" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_O0MgUx8lEe6xidVdYBsEUg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_O0MgVB8lEe6xidVdYBsEUg" key="Date" value="2023-07-10"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_O0MgVR8lEe6xidVdYBsEUg" key="Author" value=""/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rFNlVxcWEe6Oxc-aV78flg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="ldml.profile.uml#_VSNCkMKAEe26fqVRdlgYCA"/>
+        <references xmi:type="ecore:EPackage" href="ldml.profile.uml#_NXJ6kB8lEe6xidVdYBsEUg"/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rFNlWBcWEe6Oxc-aV78flg" source="duplicatedProfile"/>
       <appliedProfile xmi:type="uml:Profile" href="ldml.profile.uml#_e7vP0J0HEeuosN6Nd1GBJQ"/>

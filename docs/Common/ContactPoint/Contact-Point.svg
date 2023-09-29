@@ -227,7 +227,7 @@
                 <path d="M875 767 L973 767 L973 784 L875 784 L875 767 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath62">
-                <path d="M875 783 L980 783 L980 800 L875 800 L875 783 Z"/>
+                <path d="M875 783 L1025 783 L1025 800 L875 800 L875 783 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath63">
                 <path d="M870 765 L1112 765 L1112 831 L870 831 L870 765 Z"/>
@@ -330,7 +330,7 @@
             <text x="961" xml:space="preserve" y="746" clip-path="url(#clipPath59)" stroke="none">«DataType»</text>
             <text x="934" xml:space="preserve" y="762" clip-path="url(#clipPath60)" stroke="none">SocialNetworkHandle</text>
             <text x="876" xml:space="preserve" y="781" clip-path="url(#clipPath61)" stroke="none">  handle: String [1]</text>
-            <text x="876" xml:space="preserve" y="797" clip-path="url(#clipPath62)" stroke="none">  network: String [1]</text>
+            <text x="876" xml:space="preserve" y="797" clip-path="url(#clipPath62)" stroke="none">  network: SocialNetwork [1]</text>
             <line y2="766" fill="none" x1="870" clip-path="url(#clipPath63)" x2="1111" y1="766"/>
             <rect x="870" y="730" clip-path="url(#clipPath64)" fill="none" width="240" rx="0" ry="0" height="99"/>
             <rect x="190" y="690" clip-path="url(#clipPath65)" fill="url(#linearGradient10)" width="241" height="100" stroke="none"/>

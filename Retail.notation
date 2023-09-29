@@ -2740,6 +2740,10 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_Sjywcqj0Eeu3rbV5FKwqjg" y="15"/>
       </children>
       <children xmi:type="notation:BasicCompartment" xmi:id="_Sjywc6j0Eeu3rbV5FKwqjg" type="Class_AttributeCompartment">
+        <children xmi:type="notation:Shape" xmi:id="_vmUTkBypEe6UmLgZOXeSog" type="Property_ClassAttributeLabel">
+          <element xmi:type="uml:Property" href="Retail.uml#_vk27ABypEe6UmLgZOXeSog"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_vmUTkRypEe6UmLgZOXeSog"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_SjywdKj0Eeu3rbV5FKwqjg"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_Sjywdaj0Eeu3rbV5FKwqjg"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_Sjywdqj0Eeu3rbV5FKwqjg"/>

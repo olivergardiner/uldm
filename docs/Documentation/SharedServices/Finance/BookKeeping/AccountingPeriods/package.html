@@ -8,7 +8,7 @@
 
 <p>Some Accounting Systems choose to stick with the simple FiscalYear/AccountingPeriod model. Silverston opts for a simple hierachy but this requires some care as AccountBalances cannot be opened and closed at multiple levels of granularity - it is important that this process happens at the most granular level of the hierarchy, i.e. the leaf nodes. In LDML we have the ability to declare hierarchies where we can explicitly identify leaf and root nodes so the most flexible model is as defined here:</p>
 
-<p><br/><div style="margin: auto; width: 100%;" class="diagram-div"><embed id="-SharedServices-Finance-BookKeeping-Accounting-Periods-svg" type="image/svg+xml" class="diagram col-12" src="./SharedServices/Finance/BookKeeping/Accounting-Periods.svg" onload="spz('#-SharedServices-Finance-BookKeeping-Accounting-Periods-svg')"/></div><br/></p>
+<p><br/><div style="margin: auto; width: 50%;" class="diagram-div"><embed type="image/svg+xml" class="diagram col-12" src="./SharedServices/Finance/BookKeeping/Accounting-Periods.svg"></div><br/></p>
 </p><p style="white-space: pre-line"><p>Within this structure, the FiscalYear is always the root of a given AccountingPeriod hierarchy and it is entirely possible for each FiscalYear to lead directly to a contiguous set of AccountingPeriod leaf nodes. However, it also allows an arbitrary number of intermediate levels for the purpose of rolling up.</p>
 </p>
 		</div>

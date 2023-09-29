@@ -29,7 +29,7 @@
                 <path d="M330 37 L572 37 L572 63 L330 63 L330 37 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath4">
-                <path d="M354 37 L395 37 L395 60 L354 60 L354 37 Z"/>
+                <path d="M349 38 L390 38 L390 61 L349 61 L349 38 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath5">
                 <path d="M10 170 L10 251 L251 251 L251 170 Z"/>
@@ -41,7 +41,7 @@
                 <path d="M10 197 L252 197 L252 223 L10 223 L10 197 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath8">
-                <path d="M34 197 L84 197 L84 220 L34 220 L34 197 Z"/>
+                <path d="M29 198 L79 198 L79 221 L29 221 L29 198 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath9">
                 <path d="M330 170 L330 251 L571 251 L571 170 Z"/>
@@ -53,7 +53,7 @@
                 <path d="M330 197 L572 197 L572 223 L330 223 L330 197 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath12">
-                <path d="M354 197 L409 197 L409 220 L354 220 L354 197 Z"/>
+                <path d="M349 198 L404 198 L404 221 L349 221 L349 198 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath13">
                 <path d="M650 170 L650 251 L891 251 L891 170 Z"/>
@@ -65,7 +65,7 @@
                 <path d="M650 197 L892 197 L892 223 L650 223 L650 197 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath16">
-                <path d="M674 197 L765 197 L765 220 L674 220 L674 197 Z"/>
+                <path d="M669 198 L760 198 L760 221 L669 221 L669 198 Z"/>
             </clipPath>
             <clipPath clipPathUnits="userSpaceOnUse" id="clipPath17">
                 <path d="M-1 -1 L902 -1 L902 262 L-1 262 L-1 -1 Z"/>
@@ -82,29 +82,29 @@
             <line y2="91" fill="none" x1="571" clip-path="url(#clipPath2)" x2="571" y1="10"/>
             <line y2="91" fill="none" x1="571" clip-path="url(#clipPath2)" x2="330" y1="91"/>
             <line y2="10" fill="none" x1="330" clip-path="url(#clipPath2)" x2="330" y1="91"/>
-            <image font-size="16px" x="336" y="40" clip-path="url(#clipPath3)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAATUlEQVR4XmNgGB5A&#13;&#10;IWPBf1wYXS1WAFKIDZBkADkYxYALzz6QhLEa8Ozzf6IxbQx4++0/0RirAR++/yca&#13;&#10;YzXg88//RGMMA8jBcAOGNgAAGEWQck25h0sAAAAASUVORK5CYII=" xlink:type="simple" xlink:actuate="onLoad" height="16" preserveAspectRatio="none" xlink:show="embed"/>
-            <text x="355" xml:space="preserve" font-size="16px" y="56" clip-path="url(#clipPath4)" stroke="none">Retail</text>
+            <image font-size="16px" x="331" y="41" clip-path="url(#clipPath3)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVR4XmNg6FX4&#13;&#10;D8dkAYo0gwBMM5BecWPz/+bjk/77rk8mzVCFjAVgzSBN/3++BWMQGySOrhYrACkE&#13;&#10;2fzr+zuwRhhNkgEgZ7/+8AmOYQbgwygGoMQGFF949gEnxjAAJPjs83+iMW0MePvt&#13;&#10;P9EYqwEfvv8nGmM14PPP/0RjDAPIwXADhjYAAAEenp0k+5TKAAAAAElFTkSuQmCC&#13;&#10;" xlink:type="simple" xlink:actuate="onLoad" height="16" preserveAspectRatio="none" xlink:show="embed"/>
+            <text x="350" xml:space="preserve" font-size="16px" y="57" clip-path="url(#clipPath4)" stroke="none">Retail</text>
             <rect x="10" y="170" clip-path="url(#clipPath5)" fill="url(#linearGradient2)" width="241" height="81" stroke="none"/>
             <line y2="170" fill="none" x1="10" clip-path="url(#clipPath6)" x2="251" y1="170"/>
             <line y2="251" fill="none" x1="251" clip-path="url(#clipPath6)" x2="251" y1="170"/>
             <line y2="251" fill="none" x1="251" clip-path="url(#clipPath6)" x2="10" y1="251"/>
             <line y2="170" fill="none" x1="10" clip-path="url(#clipPath6)" x2="10" y1="251"/>
-            <image font-size="16px" x="16" y="200" clip-path="url(#clipPath7)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAATUlEQVR4XmNgGB5A&#13;&#10;IWPBf1wYXS1WAFKIDZBkADkYxYALzz6QhLEa8Ozzf6IxbQx4++0/0RirAR++/yca&#13;&#10;YzXg88//RGMMA8jBcAOGNgAAGEWQck25h0sAAAAASUVORK5CYII=" xlink:type="simple" xlink:actuate="onLoad" height="16" preserveAspectRatio="none" xlink:show="embed"/>
-            <text x="35" xml:space="preserve" font-size="16px" y="216" clip-path="url(#clipPath8)" stroke="none">Selling</text>
+            <image font-size="16px" x="11" y="201" clip-path="url(#clipPath7)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAATUlEQVR4XmNgGB5A&#13;&#10;IWPBf1wYXS1WAFKIDZBkADkYxYALzz6QhLEa8Ozzf6IxbQx4++0/0RirAR++/yca&#13;&#10;YzXg88//RGMMA8jBcAOGNgAAGEWQck25h0sAAAAASUVORK5CYII=" xlink:type="simple" xlink:actuate="onLoad" height="16" preserveAspectRatio="none" xlink:show="embed"/>
+            <text x="30" xml:space="preserve" font-size="16px" y="217" clip-path="url(#clipPath8)" stroke="none">Selling</text>
             <rect x="330" y="170" clip-path="url(#clipPath9)" fill="url(#linearGradient3)" width="241" height="81" stroke="none"/>
             <line y2="170" fill="none" x1="330" clip-path="url(#clipPath10)" x2="571" y1="170"/>
             <line y2="251" fill="none" x1="571" clip-path="url(#clipPath10)" x2="571" y1="170"/>
             <line y2="251" fill="none" x1="571" clip-path="url(#clipPath10)" x2="330" y1="251"/>
             <line y2="170" fill="none" x1="330" clip-path="url(#clipPath10)" x2="330" y1="251"/>
-            <image font-size="16px" x="336" y="200" clip-path="url(#clipPath11)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAATUlEQVR4XmNgGB5A&#13;&#10;IWPBf1wYXS1WAFKIDZBkADkYxYALzz6QhLEa8Ozzf6IxbQx4++0/0RirAR++/yca&#13;&#10;YzXg88//RGMMA8jBcAOGNgAAGEWQck25h0sAAAAASUVORK5CYII=" xlink:type="simple" xlink:actuate="onLoad" height="16" preserveAspectRatio="none" xlink:show="embed"/>
-            <text x="355" xml:space="preserve" font-size="16px" y="216" clip-path="url(#clipPath12)" stroke="none">Trading</text>
+            <image font-size="16px" x="331" y="201" clip-path="url(#clipPath11)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAATUlEQVR4XmNgGB5A&#13;&#10;IWPBf1wYXS1WAFKIDZBkADkYxYALzz6QhLEa8Ozzf6IxbQx4++0/0RirAR++/yca&#13;&#10;YzXg88//RGMMA8jBcAOGNgAAGEWQck25h0sAAAAASUVORK5CYII=" xlink:type="simple" xlink:actuate="onLoad" height="16" preserveAspectRatio="none" xlink:show="embed"/>
+            <text x="350" xml:space="preserve" font-size="16px" y="217" clip-path="url(#clipPath12)" stroke="none">Trading</text>
             <rect x="650" y="170" clip-path="url(#clipPath13)" fill="url(#linearGradient4)" width="241" height="81" stroke="none"/>
             <line y2="170" fill="none" x1="650" clip-path="url(#clipPath14)" x2="891" y1="170"/>
             <line y2="251" fill="none" x1="891" clip-path="url(#clipPath14)" x2="891" y1="170"/>
             <line y2="251" fill="none" x1="891" clip-path="url(#clipPath14)" x2="650" y1="251"/>
             <line y2="170" fill="none" x1="650" clip-path="url(#clipPath14)" x2="650" y1="251"/>
-            <image font-size="16px" x="656" y="200" clip-path="url(#clipPath15)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAATUlEQVR4XmNgGB5A&#13;&#10;IWPBf1wYXS1WAFKIDZBkADkYxYALzz6QhLEa8Ozzf6IxbQx4++0/0RirAR++/yca&#13;&#10;YzXg88//RGMMA8jBcAOGNgAAGEWQck25h0sAAAAASUVORK5CYII=" xlink:type="simple" xlink:actuate="onLoad" height="16" preserveAspectRatio="none" xlink:show="embed"/>
-            <text x="675" xml:space="preserve" font-size="16px" y="216" clip-path="url(#clipPath16)" stroke="none">SupplyChain</text>
+            <image font-size="16px" x="651" y="201" clip-path="url(#clipPath15)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAATUlEQVR4XmNgGB5A&#13;&#10;IWPBf1wYXS1WAFKIDZBkADkYxYALzz6QhLEa8Ozzf6IxbQx4++0/0RirAR++/yca&#13;&#10;YzXg88//RGMMA8jBcAOGNgAAGEWQck25h0sAAAAASUVORK5CYII=" xlink:type="simple" xlink:actuate="onLoad" height="16" preserveAspectRatio="none" xlink:show="embed"/>
+            <text x="670" xml:space="preserve" font-size="16px" y="217" clip-path="url(#clipPath16)" stroke="none">SupplyChain</text>
             <line clip-path="url(#clipPath17)" fill="none" text-rendering="optimizeLegibility" x1="450" x2="450" y1="91" y2="129"/>
             <line clip-path="url(#clipPath17)" fill="none" text-rendering="optimizeLegibility" x1="450" x2="130" y1="129" y2="129"/>
             <line clip-path="url(#clipPath17)" fill="none" text-rendering="optimizeLegibility" x1="130" x2="130" y1="129" y2="170"/>

@@ -5,7 +5,13 @@
 	<projects>
 	</projects>
 	<buildSpec>
+		<buildCommand>
+			<name>uk.org.whitecottage.palladium.builder.ldmlBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 	</buildSpec>
 	<natures>
+		<nature>uk.org.whitecottage.palladium.builder.ldmlNature</nature>
 	</natures>
 </projectDescription>
