@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:ldml="http:///schemas/ldml/_NXIFYB8lEe6xidVdYBsEUg/8" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/ldml/_NXIFYB8lEe6xidVdYBsEUg/8 ldml.profile.uml#_NXJ6kB8lEe6xidVdYBsEUg">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:ldml="http:///schemas/ldml/_Fgv60OxAEe61G9x-vNlaow/10" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/ldml/_Fgv60OxAEe61G9x-vNlaow/10 ldml.profile.uml#_FgxI8OxAEe61G9x-vNlaow">
   <uml:Package xmi:id="_vSeywJ0dEeuosN6Nd1GBJQ" name="Retail">
     <packagedElement xmi:type="uml:Package" xmi:id="_0cDHkKDhEeuXwMLKVSwySg" name="CustomerEngagement"/>
     <packagedElement xmi:type="uml:Package" xmi:id="_2HsKAKDhEeuXwMLKVSwySg" name="Selling">
@@ -928,15 +928,15 @@
       </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_kgOOUBcWEe6Oxc-aV78flg">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Oz8osB8lEe6xidVdYBsEUg" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Oz8osR8lEe6xidVdYBsEUg" key="Version" value="0.1.8"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Oz8osh8lEe6xidVdYBsEUg" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Oz8osx8lEe6xidVdYBsEUg" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Oz8otB8lEe6xidVdYBsEUg" key="Date" value="2023-07-10"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Oz8otR8lEe6xidVdYBsEUg" key="Author" value=""/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PvWOEOxGEe61G9x-vNlaow" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PvWOEexGEe61G9x-vNlaow" key="Version" value="0.1.10"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PvWOEuxGEe61G9x-vNlaow" key="Comment" value="Allowed &lt;&lt;TypeConsistent>> to be applied to Interfaces"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PvWOE-xGEe61G9x-vNlaow" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PvWOFOxGEe61G9x-vNlaow" key="Date" value="2024-03-27"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PvWOFexGEe61G9x-vNlaow" key="Author" value="Oliver Gardiner"/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kgOOVxcWEe6Oxc-aV78flg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="ldml.profile.uml#_NXJ6kB8lEe6xidVdYBsEUg"/>
+        <references xmi:type="ecore:EPackage" href="ldml.profile.uml#_FgxI8OxAEe61G9x-vNlaow"/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kgR4sBcWEe6Oxc-aV78flg" source="duplicatedProfile"/>
       <appliedProfile xmi:type="uml:Profile" href="ldml.profile.uml#_e7vP0J0HEeuosN6Nd1GBJQ"/>
