@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:ldml="http:///schemas/ldml/_NXIFYB8lEe6xidVdYBsEUg/8" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/ldml/_NXIFYB8lEe6xidVdYBsEUg/8 ldml.profile.uml#_NXJ6kB8lEe6xidVdYBsEUg">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:ldml="http:///schemas/ldml/_Fgv60OxAEe61G9x-vNlaow/10" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/ldml/_Fgv60OxAEe61G9x-vNlaow/10 ldml.profile.uml#_FgxI8OxAEe61G9x-vNlaow">
   <uml:Package xmi:id="_vSeywJ0dEeuosN6Nd1GBJQ" name="Retail">
     <packagedElement xmi:type="uml:Package" xmi:id="_0cDHkKDhEeuXwMLKVSwySg" name="CustomerEngagement"/>
     <packagedElement xmi:type="uml:Package" xmi:id="_2HsKAKDhEeuXwMLKVSwySg" name="Selling">
@@ -66,23 +66,10 @@
           <packagedElement xmi:type="uml:Class" xmi:id="_FG4OkL1cEeu2H99e-q4qgQ" name="Charge" isAbstract="true">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_AfUfcL4eEeujfLsUf8U-Bw" name="jurisdiction" type="_PL_S0L1bEeu2H99e-q4qgQ"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_BqpDEL4eEeujfLsUf8U-Bw" name="rateType" type="_V8FYcL4dEeujfLsUf8U-Bw"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Kjlu4L1cEeu2H99e-q4qgQ" client="_FG4OkL1cEeu2H99e-q4qgQ">
-              <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </interfaceRealization>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_BiYUYL4dEeujfLsUf8U-Bw" name="ChargeType">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Z8SegL4dEeujfLsUf8U-Bw" client="_BiYUYL4dEeujfLsUf8U-Bw">
-              <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </interfaceRealization>
-          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_BiYUYL4dEeujfLsUf8U-Bw" name="ChargeType"/>
           <packagedElement xmi:type="uml:Class" xmi:id="_V8FYcL4dEeujfLsUf8U-Bw" name="RateType">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_4vjXYL4dEeujfLsUf8U-Bw" name="chargeType" type="_BiYUYL4dEeujfLsUf8U-Bw"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_av2CYL4dEeujfLsUf8U-Bw" client="_V8FYcL4dEeujfLsUf8U-Bw">
-              <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </interfaceRealization>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_hPsasL4dEeujfLsUf8U-Bw" name="FixedCharge">
             <generalization xmi:type="uml:Generalization" xmi:id="_toEsoL4dEeujfLsUf8U-Bw" general="_FG4OkL1cEeu2H99e-q4qgQ"/>
@@ -110,10 +97,6 @@
         <packagedElement xmi:type="uml:Package" xmi:id="_vGyDEKZzEeuFv72Lf76jxQ" name="Restriction">
           <packagedElement xmi:type="uml:Class" xmi:id="_78KRYMK_EeujfLsUf8U-Bw" name="SellingRestriction" isAbstract="true">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_x2P74MLAEeujfLsUf8U-Bw" name="jurisdiction" type="_PL_S0L1bEeu2H99e-q4qgQ"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_EkpxMMLAEeujfLsUf8U-Bw" client="_78KRYMK_EeujfLsUf8U-Bw">
-              <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </interfaceRealization>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_JgGXgMLAEeujfLsUf8U-Bw" name="AgeRestriction">
             <generalization xmi:type="uml:Generalization" xmi:id="_TIcx0MLAEeujfLsUf8U-Bw" general="_78KRYMK_EeujfLsUf8U-Bw"/>
@@ -155,31 +138,11 @@
               <upperValue xmi:type="uml:LiteralInteger" xmi:id="_pYyccG_MEey8yOs7T6D48g" value="1"/>
             </ownedAttribute>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_r61icG_MEey8yOs7T6D48g" name="AdjustmentType">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_2t7RkG_MEey8yOs7T6D48g" client="_r61icG_MEey8yOs7T6D48g">
-              <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </interfaceRealization>
-          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_r61icG_MEey8yOs7T6D48g" name="AdjustmentType"/>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_e1mVEG_NEey8yOs7T6D48g" name="FundsExchangeType">
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_pVVqYG_NEey8yOs7T6D48g" client="_e1mVEG_NEey8yOs7T6D48g">
-            <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </interfaceRealization>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_lqB2QG_NEey8yOs7T6D48g" name="ProductExchangeType">
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_qE-XkG_NEey8yOs7T6D48g" client="_lqB2QG_NEey8yOs7T6D48g">
-            <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </interfaceRealization>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_a22yIG_OEey8yOs7T6D48g" name="TransactionOrigin">
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_eY6joG_OEey8yOs7T6D48g" client="_a22yIG_OEey8yOs7T6D48g">
-            <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </interfaceRealization>
-        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_e1mVEG_NEey8yOs7T6D48g" name="FundsExchangeType"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_lqB2QG_NEey8yOs7T6D48g" name="ProductExchangeType"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_a22yIG_OEey8yOs7T6D48g" name="TransactionOrigin"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_mbsgUKDjEeuXwMLKVSwySg" name="Product">
         <packagedElement xmi:type="uml:Class" xmi:id="_DMnUcNTNEeuW8fcvHu-kJw" name="Product">
@@ -190,12 +153,7 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_Uyyr8G4jEeyk79Vd6xgsXA" name="Catalogue">
         <packagedElement xmi:type="uml:Package" xmi:id="_tDXa0L7SEeujfLsUf8U-Bw" name="Brand">
-          <packagedElement xmi:type="uml:Class" xmi:id="_xaNfQL7SEeujfLsUf8U-Bw" name="BrandHierarchyNode" isAbstract="true">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UT3lwL7TEeujfLsUf8U-Bw" client="_xaNfQL7SEeujfLsUf8U-Bw">
-              <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </interfaceRealization>
-          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_xaNfQL7SEeujfLsUf8U-Bw" name="BrandHierarchyNode" isAbstract="true"/>
           <packagedElement xmi:type="uml:Class" xmi:id="_9rpbsL7SEeujfLsUf8U-Bw" name="MasterBrand">
             <generalization xmi:type="uml:Generalization" xmi:id="_VDaMUL7TEeujfLsUf8U-Bw" general="_xaNfQL7SEeujfLsUf8U-Bw"/>
           </packagedElement>
@@ -219,12 +177,7 @@
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="_J9RX4KDjEeuXwMLKVSwySg" name="Merchandising">
           <packagedElement xmi:type="uml:Package" xmi:id="_painEKZ1EeuFv72Lf76jxQ" name="SellingPrice">
-            <packagedElement xmi:type="uml:Class" xmi:id="_zc7SAKZ1EeuFv72Lf76jxQ" name="PriceType">
-              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_9EELYKZ1EeuFv72Lf76jxQ" client="_zc7SAKZ1EeuFv72Lf76jxQ">
-                <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-                <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              </interfaceRealization>
-            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_zc7SAKZ1EeuFv72Lf76jxQ" name="PriceType"/>
             <packagedElement xmi:type="uml:DataType" xmi:id="_-u58kKZ1EeuFv72Lf76jxQ" name="Price">
               <ownedAttribute xmi:type="uml:Property" xmi:id="_JSQmkKZ2EeuFv72Lf76jxQ" name="priceType" type="_zc7SAKZ1EeuFv72Lf76jxQ"/>
               <ownedAttribute xmi:type="uml:Property" xmi:id="_NIq3cKZ2EeuFv72Lf76jxQ" name="amount">
@@ -232,12 +185,7 @@
               </ownedAttribute>
             </packagedElement>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_H1ztIL7UEeujfLsUf8U-Bw" name="MerchandisingHierarchyNode" isAbstract="true">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_YSYNQL7UEeujfLsUf8U-Bw" client="_H1ztIL7UEeujfLsUf8U-Bw">
-              <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </interfaceRealization>
-          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_H1ztIL7UEeujfLsUf8U-Bw" name="MerchandisingHierarchyNode" isAbstract="true"/>
           <packagedElement xmi:type="uml:Class" xmi:id="_ZhGDIL7UEeujfLsUf8U-Bw" name="MerchandisingParentNode" isAbstract="true">
             <generalization xmi:type="uml:Generalization" xmi:id="_jjk_QL7VEeujfLsUf8U-Bw" general="_H1ztIL7UEeujfLsUf8U-Bw"/>
           </packagedElement>
@@ -273,18 +221,8 @@
     <packagedElement xmi:type="uml:Package" xmi:id="_3RV5sKDhEeuXwMLKVSwySg" name="Trading">
       <packagedElement xmi:type="uml:Package" xmi:id="_noHQIKDjEeuXwMLKVSwySg" name="Line">
         <packagedElement xmi:type="uml:Package" xmi:id="_kKxogKZzEeuFv72Lf76jxQ" name="Description">
-          <packagedElement xmi:type="uml:Class" xmi:id="_ATiGIKZ4EeuFv72Lf76jxQ" name="NameType">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_QRTxcKZ4EeuFv72Lf76jxQ" client="_ATiGIKZ4EeuFv72Lf76jxQ">
-              <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </interfaceRealization>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_DZoUYKZ4EeuFv72Lf76jxQ" name="DescriptionType">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_RCnSkKZ4EeuFv72Lf76jxQ" client="_DZoUYKZ4EeuFv72Lf76jxQ">
-              <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </interfaceRealization>
-          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_ATiGIKZ4EeuFv72Lf76jxQ" name="NameType"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DZoUYKZ4EeuFv72Lf76jxQ" name="DescriptionType"/>
           <packagedElement xmi:type="uml:Class" xmi:id="_EKr94KZ4EeuFv72Lf76jxQ" name="GeographicMarket">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_TwGrMKaGEeuFv72Lf76jxQ" name="region" type="_KmIGkKaUEeuFv72Lf76jxQ"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_VB8tkKaGEeuFv72Lf76jxQ" name="language">
@@ -293,10 +231,6 @@
             <ownedAttribute xmi:type="uml:Property" xmi:id="_WHup4KaGEeuFv72Lf76jxQ" name="currency">
               <type xmi:type="uml:Class" href="uldm.uml#_ydvuUKHSEeuDk9H_gpfrgQ"/>
             </ownedAttribute>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Rw-0cKZ4EeuFv72Lf76jxQ" client="_EKr94KZ4EeuFv72Lf76jxQ">
-              <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </interfaceRealization>
           </packagedElement>
           <packagedElement xmi:type="uml:DataType" xmi:id="_gHp2sKaGEeuFv72Lf76jxQ" name="Name">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_laXtgKaGEeuFv72Lf76jxQ" name="nameType" type="_ATiGIKZ4EeuFv72Lf76jxQ"/>
@@ -310,12 +244,7 @@
               <type xmi:type="uml:DataType" href="uldm.uml#_ZZrskKHVEeuDk9H_gpfrgQ"/>
             </ownedAttribute>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_Xhj3wL45EeujfLsUf8U-Bw" name="ExclusivityType">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Z0jOEL45EeujfLsUf8U-Bw" client="_Xhj3wL45EeujfLsUf8U-Bw">
-              <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </interfaceRealization>
-          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_Xhj3wL45EeujfLsUf8U-Bw" name="ExclusivityType"/>
           <packagedElement xmi:type="uml:DataType" xmi:id="_ca9PoL45EeujfLsUf8U-Bw" name="Exclusivity">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_ePg9gL45EeujfLsUf8U-Bw" name="exclusivityType" type="_Xhj3wL45EeujfLsUf8U-Bw"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_fqwMcL45EeujfLsUf8U-Bw" name="startDate">
@@ -332,23 +261,10 @@
             <ownedAttribute xmi:type="uml:Property" xmi:id="_nPcS0LcbEeubwaRFUw9mNw" name="values" type="_KlIT8KaHEeuFv72Lf76jxQ">
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nPcS0bcbEeubwaRFUw9mNw" value="*"/>
             </ownedAttribute>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_bRZc8KaHEeuFv72Lf76jxQ" client="_JJD-kKaHEeuFv72Lf76jxQ">
-              <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </interfaceRealization>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_J9r5cKaHEeuFv72Lf76jxQ" name="VariantDimension">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_b0e74KaHEeuFv72Lf76jxQ" client="_J9r5cKaHEeuFv72Lf76jxQ">
-              <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </interfaceRealization>
-          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_J9r5cKaHEeuFv72Lf76jxQ" name="VariantDimension"/>
           <packagedElement xmi:type="uml:Class" xmi:id="_KlIT8KaHEeuFv72Lf76jxQ" name="VariantValue">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_jRmkQLcbEeubwaRFUw9mNw" name="variantDimension" type="_J9r5cKaHEeuFv72Lf76jxQ"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_cWpNwKaHEeuFv72Lf76jxQ" client="_KlIT8KaHEeuFv72Lf76jxQ">
-              <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </interfaceRealization>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_Ei090KaIEeuFv72Lf76jxQ" name="VariantStringValue">
             <generalization xmi:type="uml:Generalization" xmi:id="_QFxckKaIEeuFv72Lf76jxQ" general="_KlIT8KaHEeuFv72Lf76jxQ"/>
@@ -369,17 +285,8 @@
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_W5_MUL43EeujfLsUf8U-Bw"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_W5_zYL43EeujfLsUf8U-Bw" value="*"/>
             </ownedAttribute>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_E-k8ML4iEeujfLsUf8U-Bw" client="_3i9roL4hEeujfLsUf8U-Bw">
-              <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </interfaceRealization>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_RX_v8L4iEeujfLsUf8U-Bw" name="Taxonomy">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Uq0LkL4iEeujfLsUf8U-Bw" client="_RX_v8L4iEeujfLsUf8U-Bw">
-              <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </interfaceRealization>
-          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_RX_v8L4iEeujfLsUf8U-Bw" name="Taxonomy"/>
           <packagedElement xmi:type="uml:Class" xmi:id="_ErffwL4wEeujfLsUf8U-Bw" name="TaxonomyParentNode" isAbstract="true">
             <generalization xmi:type="uml:Generalization" xmi:id="_e55GUL4wEeujfLsUf8U-Bw" general="_3i9roL4hEeujfLsUf8U-Bw"/>
           </packagedElement>
@@ -416,10 +323,6 @@
             <ownedAttribute xmi:type="uml:Property" xmi:id="_ZelakL44EeujfLsUf8U-Bw" name="isItemLevel">
               <type xmi:type="uml:PrimitiveType" href="uldm.uml#_f3ztIJ0gEeuosN6Nd1GBJQ"/>
             </ownedAttribute>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_EPSaAL4yEeujfLsUf8U-Bw" client="_yWvrIL4xEeujfLsUf8U-Bw">
-              <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </interfaceRealization>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_JO0PEL4yEeujfLsUf8U-Bw" name="ArrayAttribute">
             <generalization xmi:type="uml:Generalization" xmi:id="_l2kdML4zEeujfLsUf8U-Bw" general="_yWvrIL4xEeujfLsUf8U-Bw"/>
@@ -472,12 +375,7 @@
           <packagedElement xmi:type="uml:Class" xmi:id="_DqwUIL4zEeujfLsUf8U-Bw" name="ListAttribute">
             <generalization xmi:type="uml:Generalization" xmi:id="_6x4kEL40EeujfLsUf8U-Bw" general="_NT2KwL4yEeujfLsUf8U-Bw"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_dF2OcL4zEeujfLsUf8U-Bw" name="ListValue">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rA83YL4zEeujfLsUf8U-Bw" client="_dF2OcL4zEeujfLsUf8U-Bw">
-              <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </interfaceRealization>
-          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_dF2OcL4zEeujfLsUf8U-Bw" name="ListValue"/>
           <packagedElement xmi:type="uml:Class" xmi:id="_ZQl-sL40EeujfLsUf8U-Bw" name="MapAttribute">
             <generalization xmi:type="uml:Generalization" xmi:id="_ufbT8L40EeujfLsUf8U-Bw" general="_yWvrIL4xEeujfLsUf8U-Bw"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_eVHBcL40EeujfLsUf8U-Bw" name="attributeType" type="_yWvrIL4xEeujfLsUf8U-Bw">
@@ -751,18 +649,8 @@
             <upperValue xmi:type="uml:LiteralInteger" xmi:id="_i7yUccLQEeujfLsUf8U-Bw" value="1"/>
           </ownedAttribute>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_E_VyUKaWEeuFv72Lf76jxQ" name="LifeType">
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_MMcSMKaWEeuFv72Lf76jxQ" client="_E_VyUKaWEeuFv72Lf76jxQ">
-            <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </interfaceRealization>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_H9wEMKaWEeuFv72Lf76jxQ" name="RegionPurpose">
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_ObFUAKaWEeuFv72Lf76jxQ" client="_H9wEMKaWEeuFv72Lf76jxQ">
-            <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </interfaceRealization>
-        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_E_VyUKaWEeuFv72Lf76jxQ" name="LifeType"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_H9wEMKaWEeuFv72Lf76jxQ" name="RegionPurpose"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_dBe8sKaWEeuFv72Lf76jxQ" name="StorageType">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_nY9G0KaWEeuFv72Lf76jxQ" name="minimumTemperature">
             <type xmi:type="uml:DataType" href="uldm.uml#_3C6UsKaKEeuFv72Lf76jxQ"/>
@@ -770,29 +658,10 @@
           <ownedAttribute xmi:type="uml:Property" xmi:id="_oimPcKaWEeuFv72Lf76jxQ" name="maximumTemperature">
             <type xmi:type="uml:DataType" href="uldm.uml#_3C6UsKaKEeuFv72Lf76jxQ"/>
           </ownedAttribute>
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_jkCDsKaWEeuFv72Lf76jxQ" client="_dBe8sKaWEeuFv72Lf76jxQ">
-            <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </interfaceRealization>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_doOMkKaWEeuFv72Lf76jxQ" name="RecipeBuildType">
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_jDsWwKaWEeuFv72Lf76jxQ" client="_doOMkKaWEeuFv72Lf76jxQ">
-            <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </interfaceRealization>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_PEbWgKaXEeuFv72Lf76jxQ" name="DimensionPurpose">
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_S5KzcKaXEeuFv72Lf76jxQ" client="_PEbWgKaXEeuFv72Lf76jxQ">
-            <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </interfaceRealization>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_OCjNUKaYEeuFv72Lf76jxQ" name="NameType">
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_PfoPUKaYEeuFv72Lf76jxQ" client="_OCjNUKaYEeuFv72Lf76jxQ">
-            <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </interfaceRealization>
-        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_doOMkKaWEeuFv72Lf76jxQ" name="RecipeBuildType"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_PEbWgKaXEeuFv72Lf76jxQ" name="DimensionPurpose"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_OCjNUKaYEeuFv72Lf76jxQ" name="NameType"/>
         <packagedElement xmi:type="uml:DataType" xmi:id="_3xkUAKaWEeuFv72Lf76jxQ" name="RegionRecord">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_WXzdgKaXEeuFv72Lf76jxQ" name="purpose" type="_H9wEMKaWEeuFv72Lf76jxQ"/>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_YXdoIKaXEeuFv72Lf76jxQ" name="region" type="_KmIGkKaUEeuFv72Lf76jxQ"/>
@@ -856,10 +725,6 @@
           <ownedAttribute xmi:type="uml:Property" xmi:id="_DE-IoKacEeuFv72Lf76jxQ" name="isTraded">
             <type xmi:type="uml:PrimitiveType" href="uldm.uml#_f3ztIJ0gEeuosN6Nd1GBJQ"/>
           </ownedAttribute>
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_vSOzYKaaEeuFv72Lf76jxQ" client="_rV5gsKaaEeuFv72Lf76jxQ">
-            <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </interfaceRealization>
         </packagedElement>
         <packagedElement xmi:type="uml:DataType" xmi:id="_5PyosKaaEeuFv72Lf76jxQ" name="PriceLookupCode">
           <generalization xmi:type="uml:Generalization" xmi:id="_djXIcKabEeuFv72Lf76jxQ" general="_7UNM8KaZEeuFv72Lf76jxQ"/>
@@ -883,18 +748,8 @@
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_5hI7kKaTEeuFv72Lf76jxQ" name="Region">
-        <packagedElement xmi:type="uml:Class" xmi:id="_I97ZsKaUEeuFv72Lf76jxQ" name="RegionType">
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_vtIOYKaUEeuFv72Lf76jxQ" client="_I97ZsKaUEeuFv72Lf76jxQ">
-            <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </interfaceRealization>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_KmIGkKaUEeuFv72Lf76jxQ" name="Region" isAbstract="true">
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_wUH88KaUEeuFv72Lf76jxQ" client="_KmIGkKaUEeuFv72Lf76jxQ">
-            <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </interfaceRealization>
-        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_I97ZsKaUEeuFv72Lf76jxQ" name="RegionType"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_KmIGkKaUEeuFv72Lf76jxQ" name="Region" isAbstract="true"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_SKLG0KaUEeuFv72Lf76jxQ" name="GenericRegion">
           <generalization xmi:type="uml:Generalization" xmi:id="_qyW9gKaUEeuFv72Lf76jxQ" general="_KmIGkKaUEeuFv72Lf76jxQ"/>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_lIB38KaUEeuFv72Lf76jxQ" name="regionType" type="_I97ZsKaUEeuFv72Lf76jxQ"/>
@@ -920,23 +775,19 @@
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_PL_S0L1bEeu2H99e-q4qgQ" name="Jurisdiction">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_UQg8oL1bEeu2H99e-q4qgQ" name="region" type="_KmIGkKaUEeuFv72Lf76jxQ"/>
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_eBvmIL1bEeu2H99e-q4qgQ" client="_PL_S0L1bEeu2H99e-q4qgQ">
-            <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </interfaceRealization>
         </packagedElement>
       </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_kgOOUBcWEe6Oxc-aV78flg">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Oz8osB8lEe6xidVdYBsEUg" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Oz8osR8lEe6xidVdYBsEUg" key="Version" value="0.1.8"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Oz8osh8lEe6xidVdYBsEUg" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Oz8osx8lEe6xidVdYBsEUg" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Oz8otB8lEe6xidVdYBsEUg" key="Date" value="2023-07-10"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Oz8otR8lEe6xidVdYBsEUg" key="Author" value=""/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xB4YAOxBEe61G9x-vNlaow" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xB4YAexBEe61G9x-vNlaow" key="Version" value="0.1.10"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xB4YAuxBEe61G9x-vNlaow" key="Comment" value="Allowed &lt;&lt;TypeConsistent>> to be applied to Interfaces"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xB4YA-xBEe61G9x-vNlaow" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xB4YBOxBEe61G9x-vNlaow" key="Date" value="2024-03-27"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xB4YBexBEe61G9x-vNlaow" key="Author" value="Oliver Gardiner"/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kgOOVxcWEe6Oxc-aV78flg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="ldml.profile.uml#_NXJ6kB8lEe6xidVdYBsEUg"/>
+        <references xmi:type="ecore:EPackage" href="ldml.profile.uml#_FgxI8OxAEe61G9x-vNlaow"/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kgR4sBcWEe6Oxc-aV78flg" source="duplicatedProfile"/>
       <appliedProfile xmi:type="uml:Profile" href="ldml.profile.uml#_e7vP0J0HEeuosN6Nd1GBJQ"/>

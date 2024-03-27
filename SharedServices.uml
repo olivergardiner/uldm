@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:ldml="http:///schemas/ldml/_NXIFYB8lEe6xidVdYBsEUg/8" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/ldml/_NXIFYB8lEe6xidVdYBsEUg/8 ldml.profile.uml#_NXJ6kB8lEe6xidVdYBsEUg">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:ldml="http:///schemas/ldml/_Fgv60OxAEe61G9x-vNlaow/10" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/ldml/_Fgv60OxAEe61G9x-vNlaow/10 ldml.profile.uml#_FgxI8OxAEe61G9x-vNlaow">
   <uml:Package xmi:id="_xRjHgJ0dEeuosN6Nd1GBJQ" name="SharedServices">
     <packagedElement xmi:type="uml:Package" xmi:id="_-wAqsKDhEeuXwMLKVSwySg" name="People">
       <packagedElement xmi:type="uml:Package" xmi:id="_amm-IKDiEeuXwMLKVSwySg" name="Employee">
@@ -44,18 +44,8 @@
           <ownedEnd xmi:type="uml:Property" xmi:id="_ONqX8EoSEe2EspI0DeAKsA" name="employee" type="_CBcSsEoSEe2EspI0DeAKsA" association="_ONn7sEoSEe2EspI0DeAKsA"/>
           <ownedEnd xmi:type="uml:Property" xmi:id="_ONq_AEoSEe2EspI0DeAKsA" name="position" type="_EI7ykEoxEe2MX-ARbAwz1Q" association="_ONn7sEoSEe2EspI0DeAKsA"/>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_64h9AEoWEe2MX-ARbAwz1Q" name="Grade">
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TJhOIEo3Ee2MX-ARbAwz1Q" client="_64h9AEoWEe2MX-ARbAwz1Q">
-            <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </interfaceRealization>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_ZikBYEoXEe2MX-ARbAwz1Q" name="JobFamily">
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_T4f0AEo3Ee2MX-ARbAwz1Q" client="_ZikBYEoXEe2MX-ARbAwz1Q">
-            <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </interfaceRealization>
-        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_64h9AEoWEe2MX-ARbAwz1Q" name="Grade"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_ZikBYEoXEe2MX-ARbAwz1Q" name="JobFamily"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_EI7ykEoxEe2MX-ARbAwz1Q" name="Position" isAbstract="true">
           <ownedComment xmi:type="uml:Comment" xmi:id="_qbeSoErwEe2JaYM2HfjWkA">
             <body>&lt;p>A Position is any role that exists within the Organisation, whether filled or not. While a simple hierarchy could have been used, the abstract Position is further specialised into ChiefExecutive (who has no direct manager but is accountable to the Board, Trustees or similar governance framework) and ManagedPosition which represents every other Position within the Organisation. This structure facilitates the attribute of a ChiefExecutive to an Organisation and also reinforces the fact that the top of any Position hierarchy must be responsible at an Organisation level.&lt;/p>
@@ -179,15 +169,10 @@
               <body>&lt;p>A SegmentHierarchyNode is an abstract entity that defines the identity space of all nodes&amp;nbsp;across all Sement Hierarchies. The concrete entities derived from this abstract entity are SegmentHierarchy (a root node), a Segment (a leaf node), and IntermediateHierarchyNode (any other node, which must have both a parent and child nodes).&lt;/p>
 </body>
             </ownedComment>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_YAMOsL9SEe2JB8PjOYiKTw" name="nodeType" type="_Su1p0L9SEe2JB8PjOYiKTw"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_IvO7kNBcEeytCvXriojvrw" client="_pBwaANBXEeytCvXriojvrw">
-              <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </interfaceRealization>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UpAI0Ow_Ee61G9x-vNlaow" client="_pBwaANBXEeytCvXriojvrw" supplier="_CofwwOw_Ee61G9x-vNlaow" contract="_CofwwOw_Ee61G9x-vNlaow"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_2xqfkNBXEeytCvXriojvrw" name="SegmentHierarchy">
             <generalization xmi:type="uml:Generalization" xmi:id="_YDz1sNBYEeytCvXriojvrw" general="_6EHu0NBXEeytCvXriojvrw"/>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_Th9awL9QEe2JB8PjOYiKTw" name="segmentType" type="_G9a8IL9QEe2JB8PjOYiKTw"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_6EHu0NBXEeytCvXriojvrw" name="ParentSegmentNode" isAbstract="true">
             <generalization xmi:type="uml:Generalization" xmi:id="_8wpmgNBXEeytCvXriojvrw" general="_pBwaANBXEeytCvXriojvrw"/>
@@ -205,11 +190,7 @@
             <generalization xmi:type="uml:Generalization" xmi:id="_v7n_YNBYEeytCvXriojvrw" general="_6EHu0NBXEeytCvXriojvrw"/>
             <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_uOtKkNBYEeytCvXriojvrw" client="_ZC234NBYEeytCvXriojvrw" supplier="_HLemoNBYEeytCvXriojvrw" contract="_HLemoNBYEeytCvXriojvrw"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_-fQ_sLzAEe2w7bz5iZ360g" name="GLAccountHierarchyNode" isAbstract="true">
-            <generalization xmi:type="uml:Generalization" xmi:id="_5LVLcLzBEe2w7bz5iZ360g">
-              <general xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </generalization>
-          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_-fQ_sLzAEe2w7bz5iZ360g" name="GLAccountHierarchyNode" isAbstract="true"/>
           <packagedElement xmi:type="uml:Class" xmi:id="_LXM7cLzBEe2w7bz5iZ360g" name="ParentGLAccountNode" isAbstract="true">
             <generalization xmi:type="uml:Generalization" xmi:id="_wXxrILzBEe2w7bz5iZ360g" general="_-fQ_sLzAEe2w7bz5iZ360g"/>
           </packagedElement>
@@ -249,24 +230,8 @@
             <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_hBaeoCtsEeyvWLBv3yth3w" name="Purchases"/>
             <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_iU6t4CtsEeyvWLBv3yth3w" name="Sales"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_AHnysLzDEe2w7bz5iZ360g" name="GLAccountSet">
-            <generalization xmi:type="uml:Generalization" xmi:id="_OGYMkLzDEe2w7bz5iZ360g">
-              <general xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </generalization>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_G9a8IL9QEe2JB8PjOYiKTw" name="SegmentType">
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_SMXg0L9QEe2JB8PjOYiKTw" client="_G9a8IL9QEe2JB8PjOYiKTw">
-              <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </interfaceRealization>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_Su1p0L9SEe2JB8PjOYiKTw" name="NodeType">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_em8gQL9SEe2JB8PjOYiKTw" name="validFor" type="_G9a8IL9QEe2JB8PjOYiKTw"/>
-            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_V3xwsL9SEe2JB8PjOYiKTw" client="_Su1p0L9SEe2JB8PjOYiKTw">
-              <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-              <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            </interfaceRealization>
-          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_AHnysLzDEe2w7bz5iZ360g" name="GLAccountSet"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_CofwwOw_Ee61G9x-vNlaow" name="ISegmentCharacteristics" isAbstract="true"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_FvixcAvGEeyuhKbTMn6kag" name="LedgerEntry" isAbstract="true">
           <ownedComment xmi:type="uml:Comment" xmi:id="_FvixcQvGEeyuhKbTMn6kag" annotatedElement="_FvixcAvGEeyuhKbTMn6kag">
@@ -424,23 +389,17 @@
             <body>&lt;p>A Ledger is (nominally) a book in which Accounts are maintained.&lt;/p>
 </body>
           </ownedComment>
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_qehJgCswEeyvWLBv3yth3w" client="_FvqtQAvGEeyuhKbTMn6kag">
-            <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </interfaceRealization>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_Fvnp8AvGEeyuhKbTMn6kag" name="Journal">
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_pkVZMCswEeyvWLBv3yth3w" client="_Fvnp8AvGEeyuhKbTMn6kag">
-            <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </interfaceRealization>
-        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Fvnp8AvGEeyuhKbTMn6kag" name="Journal"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_w6iSECstEeyvWLBv3yth3w" name="AccountingPeriod">
           <generalization xmi:type="uml:Generalization" xmi:id="_hZbz8L27Ee2Rbrgyz5QEFw" general="_w4TyML26Ee2Rbrgyz5QEFw"/>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_gMxMgL27Ee2Rbrgyz5QEFw" client="_w6iSECstEeyvWLBv3yth3w" supplier="_XFQOYL27Ee2Rbrgyz5QEFw" contract="_XFQOYL27Ee2Rbrgyz5QEFw"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_yw-2UCstEeyvWLBv3yth3w" name="FiscalYear">
           <generalization xmi:type="uml:Generalization" xmi:id="_MzRoQL27Ee2Rbrgyz5QEFw" general="_0q5TAL26Ee2Rbrgyz5QEFw"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_OdResNesEe6Xsc5ufzhAPA" name="yearStart">
+            <type xmi:type="uml:Class" href="uldm.uml#_orwk0NesEe6Xsc5ufzhAPA"/>
+          </ownedAttribute>
         </packagedElement>
         <packagedElement xmi:type="uml:DataType" xmi:id="_y2eXANBEEeyIL5G2wmXgzQ" name="OriginatingTransation">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_5ycqoNBEEeyIL5G2wmXgzQ" name="transactionOrigin">
@@ -479,10 +438,6 @@
 </body>
             </ownedComment>
           </ownedAttribute>
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_ny5EsLzcEe2w7bz5iZ360g" client="_I1H50NzhEeyORqA-BnZOvA">
-            <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </interfaceRealization>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_UHESsNziEeyORqA-BnZOvA" name="ControlAccount">
           <ownedComment xmi:type="uml:Comment" xmi:id="_-48kYOGdEey8IpheLQ_a1A">
@@ -508,12 +463,7 @@
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HvHIsLzoEe2w7bz5iZ360g" value="*"/>
           </ownedAttribute>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_w4TyML26Ee2Rbrgyz5QEFw" name="AccountingPeriodHierarchyNode" isAbstract="true">
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Lpc5cL27Ee2Rbrgyz5QEFw" client="_w4TyML26Ee2Rbrgyz5QEFw">
-            <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </interfaceRealization>
-        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_w4TyML26Ee2Rbrgyz5QEFw" name="AccountingPeriodHierarchyNode" isAbstract="true"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_0q5TAL26Ee2Rbrgyz5QEFw" name="AccountingPeriodParentNode" isAbstract="true">
           <generalization xmi:type="uml:Generalization" xmi:id="_7MYqEL26Ee2Rbrgyz5QEFw" general="_w4TyML26Ee2Rbrgyz5QEFw"/>
         </packagedElement>
@@ -539,12 +489,7 @@
       <packagedElement xmi:type="uml:Package" xmi:id="_R3IFgKDiEeuXwMLKVSwySg" name="AccountsPayable"/>
       <packagedElement xmi:type="uml:Package" xmi:id="_TmpiYKDiEeuXwMLKVSwySg" name="AccountsReceivable"/>
       <packagedElement xmi:type="uml:Package" xmi:id="_VJcK0KDiEeuXwMLKVSwySg" name="ManagementAccounting">
-        <packagedElement xmi:type="uml:Class" xmi:id="_drOdEJDREeyax4bMuIxOyA" name="CostObject" isAbstract="true">
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_jcjigJDREeyax4bMuIxOyA" client="_drOdEJDREeyax4bMuIxOyA">
-            <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </interfaceRealization>
-        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_drOdEJDREeyax4bMuIxOyA" name="CostObject" isAbstract="true"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_ZhJC4JLtEeyax4bMuIxOyA" name="Organisation">
           <generalization xmi:type="uml:Generalization" xmi:id="_Dvf0IJLwEeyax4bMuIxOyA" general="_a5SFEJLuEeyax4bMuIxOyA"/>
         </packagedElement>
@@ -577,28 +522,83 @@
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JDwjEZLwEeyax4bMuIxOyA" value="*"/>
           </ownedEnd>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_evWFwJLwEeyax4bMuIxOyA" name="ResponsibilityType">
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_nJsxAJLyEeyax4bMuIxOyA" client="_evWFwJLwEeyax4bMuIxOyA">
-            <supplier xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-            <contract xmi:type="uml:Interface" href="uldm.uml#_BnjlQJ0hEeuosN6Nd1GBJQ"/>
-          </interfaceRealization>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_xB8BcJLyEeyax4bMuIxOyA" name="Project">
+        <packagedElement xmi:type="uml:Class" xmi:id="_evWFwJLwEeyax4bMuIxOyA" name="ResponsibilityType"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_xB8BcJLyEeyax4bMuIxOyA" name="WBSElement" isAbstract="true">
           <generalization xmi:type="uml:Generalization" xmi:id="_zye2cJLyEeyax4bMuIxOyA" general="_drOdEJDREeyax4bMuIxOyA"/>
         </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_tx8f8OgdEe6r5JSZSsdf6Q" name="Project">
+          <generalization xmi:type="uml:Generalization" xmi:id="_w9SakOgdEe6r5JSZSsdf6Q" general="_xB8BcJLyEeyax4bMuIxOyA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_yFNr8OgdEe6r5JSZSsdf6Q" name="ChildWBSElement">
+          <generalization xmi:type="uml:Generalization" xmi:id="_1S9aUOgdEe6r5JSZSsdf6Q" general="_xB8BcJLyEeyax4bMuIxOyA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_5Cdx8OgdEe6r5JSZSsdf6Q" memberEnd="_5CeZAegdEe6r5JSZSsdf6Q _5CeZAugdEe6r5JSZSsdf6Q">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5Cdx8egdEe6r5JSZSsdf6Q" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5CeZAOgdEe6r5JSZSsdf6Q" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_5CeZAegdEe6r5JSZSsdf6Q" name="wbselement" type="_xB8BcJLyEeyax4bMuIxOyA" association="_5Cdx8OgdEe6r5JSZSsdf6Q">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8NOdwOgdEe6r5JSZSsdf6Q" value="1"/>
+            <upperValue xmi:type="uml:LiteralInteger" xmi:id="_8NPE0OgdEe6r5JSZSsdf6Q" value="1"/>
+          </ownedEnd>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_5CeZAugdEe6r5JSZSsdf6Q" name="childwbselement" type="_yFNr8OgdEe6r5JSZSsdf6Q" association="_5Cdx8OgdEe6r5JSZSsdf6Q">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8NPE0egdEe6r5JSZSsdf6Q"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8NPE0ugdEe6r5JSZSsdf6Q" value="*"/>
+          </ownedEnd>
+        </packagedElement>
       </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_sFR-YOafEe6r5JSZSsdf6Q" name="ProjectAccounting">
+        <packagedElement xmi:type="uml:Class" xmi:id="_JLxQwOa-Ee6r5JSZSsdf6Q" name="Project"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_gaL4IOa-Ee6r5JSZSsdf6Q" name="WorkBreakdownElement" isAbstract="true">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_I_DYgObAEe6r5JSZSsdf6Q" name="controlAccount" type="_UHESsNziEeyORqA-BnZOvA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_3c7bAOa-Ee6r5JSZSsdf6Q" name="WorkBreakdownClass">
+          <generalization xmi:type="uml:Generalization" xmi:id="_E1vZwObAEe6r5JSZSsdf6Q" general="_gaL4IOa-Ee6r5JSZSsdf6Q"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_U1-_sOa_Ee6r5JSZSsdf6Q" name="ChildWorkBreakdownElement">
+          <generalization xmi:type="uml:Generalization" xmi:id="_HicQkObAEe6r5JSZSsdf6Q" general="_gaL4IOa-Ee6r5JSZSsdf6Q"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_vhW2IOa_Ee6r5JSZSsdf6Q" memberEnd="_vhYrUOa_Ee6r5JSZSsdf6Q _vhZSYOa_Ee6r5JSZSsdf6Q">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vhYEQOa_Ee6r5JSZSsdf6Q" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vhYEQea_Ee6r5JSZSsdf6Q" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_vhYrUOa_Ee6r5JSZSsdf6Q" name="parentwbselement" type="_gaL4IOa-Ee6r5JSZSsdf6Q" association="_vhW2IOa_Ee6r5JSZSsdf6Q">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wcoLkOa_Ee6r5JSZSsdf6Q" value="1"/>
+            <upperValue xmi:type="uml:LiteralInteger" xmi:id="_wcoyoOa_Ee6r5JSZSsdf6Q" value="1"/>
+          </ownedEnd>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_vhZSYOa_Ee6r5JSZSsdf6Q" name="ichildwbselement" type="_U1-_sOa_Ee6r5JSZSsdf6Q" association="_vhW2IOa_Ee6r5JSZSsdf6Q">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wcoyoea_Ee6r5JSZSsdf6Q"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wcoyoua_Ee6r5JSZSsdf6Q" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_gRyhYObPEe6r5JSZSsdf6Q" memberEnd="_gRzvgObPEe6r5JSZSsdf6Q _gRzvgebPEe6r5JSZSsdf6Q">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gRzIcObPEe6r5JSZSsdf6Q" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gRzIcebPEe6r5JSZSsdf6Q" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_gRzvgObPEe6r5JSZSsdf6Q" name="workbreakdownclass" type="_3c7bAOa-Ee6r5JSZSsdf6Q" association="_gRyhYObPEe6r5JSZSsdf6Q">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_B_MQIebQEe6r5JSZSsdf6Q"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_B_MQIubQEe6r5JSZSsdf6Q" value="*"/>
+          </ownedEnd>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_gRzvgebPEe6r5JSZSsdf6Q" name="project" type="_JLxQwOa-Ee6r5JSZSsdf6Q" association="_gRyhYObPEe6r5JSZSsdf6Q">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_B_LpEObQEe6r5JSZSsdf6Q" value="1"/>
+            <upperValue xmi:type="uml:LiteralInteger" xmi:id="_B_MQIObQEe6r5JSZSsdf6Q" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_mo_WAOa5Ee6r5JSZSsdf6Q" name="FixedAssets"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_EuJdEKDiEeuXwMLKVSwySg" name="Procurement"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_r26MYOa5Ee6r5JSZSsdf6Q" name="FacilitiesManagement"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_uwwHUOa5Ee6r5JSZSsdf6Q" name="ProjectManagement"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_rFNlUBcWEe6Oxc-aV78flg">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_O0MgUB8lEe6xidVdYBsEUg" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_O0MgUR8lEe6xidVdYBsEUg" key="Version" value="0.1.8"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_O0MgUh8lEe6xidVdYBsEUg" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_O0MgUx8lEe6xidVdYBsEUg" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_O0MgVB8lEe6xidVdYBsEUg" key="Date" value="2023-07-10"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_O0MgVR8lEe6xidVdYBsEUg" key="Author" value=""/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xBsKwOxBEe61G9x-vNlaow" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xBsKwexBEe61G9x-vNlaow" key="Version" value="0.1.10"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xBsKwuxBEe61G9x-vNlaow" key="Comment" value="Allowed &lt;&lt;TypeConsistent>> to be applied to Interfaces"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xBsKw-xBEe61G9x-vNlaow" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xBsKxOxBEe61G9x-vNlaow" key="Date" value="2024-03-27"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xBsKxexBEe61G9x-vNlaow" key="Author" value="Oliver Gardiner"/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rFNlVxcWEe6Oxc-aV78flg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="ldml.profile.uml#_NXJ6kB8lEe6xidVdYBsEUg"/>
+        <references xmi:type="ecore:EPackage" href="ldml.profile.uml#_FgxI8OxAEe61G9x-vNlaow"/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rFNlWBcWEe6Oxc-aV78flg" source="duplicatedProfile"/>
       <appliedProfile xmi:type="uml:Profile" href="ldml.profile.uml#_e7vP0J0HEeuosN6Nd1GBJQ"/>
@@ -618,21 +618,9 @@
   <ldml:ReferenceData xmi:id="_cidhAEoXEe2MX-ARbAwz1Q" base_Class="_ZikBYEoXEe2MX-ARbAwz1Q"/>
   <ldml:Documentation xmi:id="_qbe5sErwEe2JaYM2HfjWkA" base_Comment="_qbeSoErwEe2JaYM2HfjWkA"/>
   <ldml:Documentation xmi:id="_ACURUL2GEe2w7bz5iZ360g" base_Comment="_ACScIL2GEe2w7bz5iZ360g"/>
-  <ldml:ReferenceData xmi:id="_slBscNBXEeytCvXriojvrw" base_Class="_pBwaANBXEeytCvXriojvrw"/>
   <ldml:Documentation xmi:id="__NfQke5MEeyVg4QP7lSj1A" base_Comment="__NfQkO5MEeyVg4QP7lSj1A"/>
-  <ldml:ReferenceData xmi:id="_0uFBwNBYEeytCvXriojvrw" base_Class="_2xqfkNBXEeytCvXriojvrw"/>
-  <ldml:ReferenceData xmi:id="_0uDzoNBYEeytCvXriojvrw" base_Class="_6EHu0NBXEeytCvXriojvrw"/>
-  <ldml:ReferenceData xmi:id="_0uFo0NBYEeytCvXriojvrw" base_Class="_7O-YYNBXEeytCvXriojvrw"/>
   <ldml:Documentation xmi:id="_ewxN8O5JEeyVg4QP7lSj1A" base_Comment="_ewwm4O5JEeyVg4QP7lSj1A"/>
-  <ldml:ReferenceData xmi:id="_0uFBwdBYEeytCvXriojvrw" base_Class="_ZC234NBYEeytCvXriojvrw"/>
-  <ldml:ReferenceData xmi:id="_KNb3ALzBEe2w7bz5iZ360g" base_Class="_-fQ_sLzAEe2w7bz5iZ360g"/>
-  <ldml:ReferenceData xmi:id="_PPwhYLzBEe2w7bz5iZ360g" base_Class="_LXM7cLzBEe2w7bz5iZ360g"/>
-  <ldml:ReferenceData xmi:id="_Z7LiQLzBEe2w7bz5iZ360g" base_Class="_Q7DlkLzBEe2w7bz5iZ360g"/>
-  <ldml:ReferenceData xmi:id="_drqKQLzBEe2w7bz5iZ360g" base_Class="_b3O_QLzBEe2w7bz5iZ360g"/>
-  <ldml:ReferenceData xmi:id="_k_AcELzBEe2w7bz5iZ360g" base_Class="_hjU_YLzBEe2w7bz5iZ360g"/>
   <ldml:ReferenceData xmi:id="_Deyi0LzDEe2w7bz5iZ360g" base_Class="_AHnysLzDEe2w7bz5iZ360g"/>
-  <ldml:ReferenceData xmi:id="_KLjFAL9QEe2JB8PjOYiKTw" base_Class="_G9a8IL9QEe2JB8PjOYiKTw"/>
-  <ldml:ReferenceData xmi:id="_Uo8mEL9SEe2JB8PjOYiKTw" base_Class="_Su1p0L9SEe2JB8PjOYiKTw"/>
   <ldml:Documentation xmi:id="_sVkoENA_EeyIL5G2wmXgzQ" base_Comment="_FvixcQvGEeyuhKbTMn6kag"/>
   <ldml:Documentation xmi:id="_sVl2MNA_EeyIL5G2wmXgzQ" base_Comment="_ptNesNA_EeyIL5G2wmXgzQ"/>
   <ldml:Documentation xmi:id="_dJxaANBEEeyIL5G2wmXgzQ" base_Comment="_kwUcANBBEeyIL5G2wmXgzQ"/>
@@ -651,27 +639,18 @@
   <ldml:Documentation xmi:id="_-T94gNEJEey8Yoj-2WBBqw" base_Comment="_Q4v7ANBJEeyIL5G2wmXgzQ"/>
   <ldml:Documentation xmi:id="_-T-fkNEJEey8Yoj-2WBBqw" base_Comment="_Q4v7AdBJEeyIL5G2wmXgzQ"/>
   <ldml:Derived xmi:id="_uVyXENBlEeytCvXriojvrw" base_Class="_FvoRBgvGEeyuhKbTMn6kag"/>
-  <ldml:ReferenceData xmi:id="_n-jHICswEeyvWLBv3yth3w" base_Class="_FvqtQAvGEeyuhKbTMn6kag"/>
   <ldml:Documentation xmi:id="_J1EqAOG6EeybPvVpZUerTw" base_Comment="_J00LUOG6EeybPvVpZUerTw"/>
-  <ldml:ReferenceData xmi:id="_n-k8UCswEeyvWLBv3yth3w" base_Class="_Fvnp8AvGEeyuhKbTMn6kag"/>
   <ldml:ReferenceData xmi:id="_MsxC4CsuEeyvWLBv3yth3w" base_Class="_w6iSECstEeyvWLBv3yth3w"/>
   <ldml:ReferenceData xmi:id="_MshLQCsuEeyvWLBv3yth3w" base_Class="_yw-2UCstEeyvWLBv3yth3w"/>
-  <ldml:ReferenceData xmi:id="_LW1BkNzhEeyORqA-BnZOvA" base_Class="_I1H50NzhEeyORqA-BnZOvA"/>
   <ldml:Documentation xmi:id="_zJd18NzxEeyORqA-BnZOvA" base_Comment="_x9nt4NzxEeyORqA-BnZOvA"/>
   <ldml:Unique xmi:id="_pWfvALzoEe2w7bz5iZ360g" base_Property="_LbxLALzEEe2w7bz5iZ360g"/>
   <ldml:Documentation xmi:id="_5A1R8NzxEeyORqA-BnZOvA" base_Comment="_3wHQ8NzxEeyORqA-BnZOvA"/>
-  <ldml:ReferenceData xmi:id="_Ws33UNziEeyORqA-BnZOvA" base_Class="_UHESsNziEeyORqA-BnZOvA"/>
   <ldml:Documentation xmi:id="_CCg9YOGeEey8IpheLQ_a1A" base_Comment="_-48kYOGdEey8IpheLQ_a1A"/>
-  <ldml:ReferenceData xmi:id="_JU0wwNzlEeyORqA-BnZOvA" base_Class="_FyZL0NzlEeyORqA-BnZOvA"/>
   <ldml:ReferenceData xmi:id="_zJHXML26Ee2Rbrgyz5QEFw" base_Class="_w4TyML26Ee2Rbrgyz5QEFw"/>
   <ldml:ReferenceData xmi:id="_5XlEkL26Ee2Rbrgyz5QEFw" base_Class="_0q5TAL26Ee2Rbrgyz5QEFw"/>
   <ldml:ReferenceData xmi:id="_QUz1UL27Ee2Rbrgyz5QEFw" base_Class="_OXel8L27Ee2Rbrgyz5QEFw"/>
-  <ldml:ReferenceData xmi:id="_fqj3kJDREeyax4bMuIxOyA" base_Class="_drOdEJDREeyax4bMuIxOyA"/>
-  <ldml:ReferenceData xmi:id="_h4ox8JLwEeyax4bMuIxOyA" base_Class="_ZhJC4JLtEeyax4bMuIxOyA"/>
-  <ldml:ReferenceData xmi:id="_jwY9wJLwEeyax4bMuIxOyA" base_Class="_eMGWIJLtEeyax4bMuIxOyA"/>
   <ldml:Documentation xmi:id="_andUsFXPEe2AS-AxgfYWgA" base_Comment="_am3e0FXPEe2AS-AxgfYWgA"/>
   <ldml:Documentation xmi:id="_anei0FXPEe2AS-AxgfYWgA" base_Comment="_and7wFXPEe2AS-AxgfYWgA"/>
-  <ldml:ReferenceData xmi:id="_hN39sJLwEeyax4bMuIxOyA" base_Class="_a5SFEJLuEeyax4bMuIxOyA"/>
   <ldml:ReferenceData xmi:id="_goTLcJLwEeyax4bMuIxOyA" base_Class="_evWFwJLwEeyax4bMuIxOyA"/>
-  <ldml:ReferenceData xmi:id="_y44U8JLyEeyax4bMuIxOyA" base_Class="_xB8BcJLyEeyax4bMuIxOyA"/>
+  <ldml:TypeConsistent xmi:id="_Xh428Ow-Ee61G9x-vNlaow" type="segmentHierarchy" base_Class="_pBwaANBXEeytCvXriojvrw"/>
 </xmi:XMI>
